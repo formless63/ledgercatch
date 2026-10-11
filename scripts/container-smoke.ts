@@ -11,8 +11,9 @@ function compose(args:string[],capture=false){const r=spawnSync('docker',[...pre
 try {
  compose(['up','-d','--wait']);
  compose(['exec','-T','worker','node','.output/jobs-doctor.mjs']);
+ compose(['exec','-T','app','node','--input-type=module','-e',"import {createWorker} from 'tesseract.js';const worker=await createWorker('eng',1,{langPath:'/app/tessdata',gzip:true});await worker.terminate();console.log('Bundled OCR language loaded without download');"]);
  for(const path of ['/api/health','/api/openapi.json','/downloads/ledgercatch-extension.zip']){const response=await fetch('http://127.0.0.1:44300'+path);if(!response.ok)throw new Error(`Smoke HTTP ${response.status} for ${path}`);if(path.endsWith('.zip')){const expected=readFileSync('public/downloads/ledgercatch-extension.zip');if(!expected.equals(Buffer.from(await response.arrayBuffer())))throw new Error('Served extension differs from verified ZIP');}}
  const image=spawnSync('docker',['image','inspect',process.env.VERIFY_IMAGE,'--format','{{.Id}} {{.Architecture}}'],{encoding:'utf8'}).stdout.trim();
- writeFileSync('artifacts/container-verification.json',JSON.stringify({image,checks:['fresh migrations','jobs schema doctor','app readiness','OpenAPI','exact served extension ZIP'],verifiedAt:new Date().toISOString()},null,2));
+ writeFileSync('artifacts/container-verification.json',JSON.stringify({image,checks:['fresh migrations','jobs schema doctor','app readiness','OpenAPI','exact served extension ZIP','bundled offline OCR language'],verifiedAt:new Date().toISOString()},null,2));
  console.log('Disposable app/worker container verification passed.');
 }finally{compose(['down','--volumes','--remove-orphans']);}

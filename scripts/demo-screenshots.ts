@@ -38,6 +38,12 @@ try {
   await page.evaluate(()=>document.fonts.ready);
   if(name==='reconciliation')await expect(page.getByText('SYNTHETIC EXAMPLE SUPPLIES',{exact:false}).first()).toBeVisible({timeout:30000});
   if(name==='inbox')await expect(page.getByText('DEMO-0001',{exact:false}).first()).toBeVisible({timeout:30000});
+  if(name==='order-detail'){
+   const href=await page.locator('a[href^="/api/documents/"]').first().getAttribute('href');
+   if(!href)throw new Error('Missing synthetic invoice download');
+   const document=await context.request.get(base+href);if(!document.ok()||!(await document.body()).subarray(0,5).equals(Buffer.from('%PDF-')))throw new Error('Authenticated invoice download failed');
+   const denied=await fetch(base+href);if(denied.status!==401&&denied.status!==403)throw new Error('Anonymous document request was not denied');
+  }
   await page.screenshot({path:`docs/images/${name}.png`,fullPage:true,animations:'disabled'});
  }
  // Exercise a real authenticated mutation and its undo before mobile capture.
