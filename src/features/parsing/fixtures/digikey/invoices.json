@@ -1,0 +1,21 @@
+[
+	{
+		"orderNumber": 91234567,
+		"dateEntered": "2026-09-18T15:42:10Z",
+		"currencyIso": "USD",
+		"poNumber": "LAB-2026-114",
+		"invoicePricing": [{ "salesTax": 312, "freightValue": 699 }],
+		"invoices": [
+			{ "invoiceId": 120044551, "orderValue": 4870, "invoiceTotalPrice": 58.81 }
+		]
+	},
+	{
+		"orderNumber": 9910000352694747,
+		"dateEntered": "2026-10-01T09:05:00Z",
+		"currencyIso": "CAD",
+		"invoicePricing": [{ "salesTax": 0, "freightValue": 0 }],
+		"invoices": [
+			{ "invoiceId": 120051234, "orderValue": 2214, "invoiceTotalPrice": 22.14 }
+		]
+	}
+]

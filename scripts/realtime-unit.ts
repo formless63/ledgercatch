@@ -1,0 +1,13 @@
+import assert from "node:assert/strict";
+import { z } from "zod";
+import { createRealtime, defineRealtimeEvents, openSse, openSocket, realtimeTransports, encodeEvent } from "../src/integrations/realtime/realtime.server";
+assert.deepEqual([...realtimeTransports("sse,websocket")], ["sse", "websocket"]); assert.throws(() => realtimeTransports("sse,sse"));
+const registry = defineRealtimeEvents({ "fixture.event": z.strictObject({ value: z.string() }) }); const realtime = createRealtime(registry), abort = new AbortController();
+const response = openSse(realtime, ["fixture"], abort.signal), reader = response.body?.getReader(); assert.ok(reader);
+assert.equal(new TextDecoder().decode((await reader.read()).value), ": connected\n\n");
+const event = realtime.publish("fixture", "fixture.event", { value: "hello" }); const wire = new TextDecoder().decode((await reader.read()).value);
+assert.equal(wire, `event: fixture.event\ndata: ${event.body}\n\n`); assert.ok(!wire.includes("\nid:")); abort.abort(); assert.equal(realtime.activeConnections, 0);
+assert.throws(() => encodeEvent(registry, "fixture.event", { value: "x".repeat(65536) }));
+let terminated = false; openSocket(realtime, ["fixture"], { bufferedAmount: 262144, send() { throw new Error("must not send"); }, ping() {}, terminate() { terminated = true; } });
+realtime.publish("fixture", "fixture.event", { value: "slow" }); assert.ok(terminated); realtime.close();
+console.info("Backendless Realtime SSE/WS envelopes, bounded buffers, cleanup and configuration verified without Cache");

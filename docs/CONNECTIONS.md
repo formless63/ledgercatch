@@ -1,0 +1,13 @@
+# Accounting connections
+
+Connections belong to an owner and one entity. Credentials are encrypted server-side and never returned to the browser. Invoice Ninja remains available. Create a new connection when changing providers; existing connection identities are not repurposed.
+
+Custom HTTP uses the existing export queue. The administrator must set `CUSTOM_HTTP_ENDPOINTS` to a JSON array of exact origins with approved IP addresses, for example `[{"origin":"https://accounting.example.test","addresses":["203.0.113.10"]}]`. The example address is documentation-only. Requests pin the approved network address while retaining the original HTTPS hostname for TLS verification; DNS changes cannot silently redirect them. The first configured address is used. Empty policy denies all endpoints. Explicit LAN/loopback origins and HTTP are possible only when the administrator approves that exact origin/address; use HTTPS for credentials outside a local test environment.
+
+Users configure a read-only GET test, POST/PUT expense operation, exact decimal-string/boolean/string-array field mappings, result identifier path and idempotency header. The provider must durably bind that key to the original request and reject changed bodies. Confirm this against provider documentation and the real API before enabling exports. Stable full allocation UUIDs are used for custom HTTP keys. No fuzzy duplicate inference or universal idempotency promise is made. Redirects are never followed; response bodies are limited to 1 MiB and never included in errors; total request time is 15 seconds. Network/429/5xx failures can retry only under the configured idempotency contract. Missing result IDs require reconciliation before retry.
+
+Settings → Connections includes local uploaded OpenAPI inspection. Only JSON 3.0/3.1, at most 256 KiB, 100 operations, 10,000 nodes and depth 20 are accepted. References, callbacks, webhooks, links and executable templates are rejected; nothing is fetched remotely. Selecting an operation does not infer expense mappings. The dry run shows a synthetic mapped request and sends nothing.
+
+Optional attachments use a configured POST path containing `{id}` and a JSON body with a base64 file field, filename, media type and SHA-256. Maximum 10 MiB per attachment and ten attachments per expense. Attachment requests have their own confirmed idempotency header/key. An attachment failure reports a warning without replaying the expense as a new record. No arbitrary scripts, expressions or dynamic remote operations are executed.
+
+`demo/provider.ts` and connector tests supply local fake-provider evidence. Production provider behavior, including idempotency retention, remains operator-owned validation.

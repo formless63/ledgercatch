@@ -1,0 +1,28 @@
+{
+  "input": {
+    "pageType": "order_detail",
+    "pageUrl": "https://biz.alibaba.com/ta/detail.htm?orderId=200000000000000001"
+  },
+  "payload": {
+    "file": "split-table.html"
+  },
+  "expect": {
+    "outcome": "orders",
+    "orderCount": 1,
+    "orders": [
+      {
+        "externalOrderId": "200000000000000001",
+        "totalMinor": 2500,
+        "status": "delivered",
+        "items": [
+          {
+            "title": "Example cable",
+            "quantity": 10,
+            "unitPriceMinor": 200,
+            "totalMinor": 2000
+          }
+        ]
+      }
+    ]
+  }
+}

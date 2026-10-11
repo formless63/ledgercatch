@@ -1,0 +1,29 @@
+{
+	"description": "mtop.ae.ld.querydetail tracking: id from the request data param, one in-transit package",
+	"input": {
+		"kind": "api_json",
+		"pageType": "unknown",
+		"pageUrl": "https://www.aliexpress.com/p/tracking/index.html?tradeOrderId=8203145566781234"
+	},
+	"payload": {
+		"file": "tracking-querydetail.json",
+		"requestUrl": "https://acs.aliexpress.com/h5/mtop.ae.ld.querydetail/1.0/?api=mtop.ae.ld.querydetail&data=%7B%22tradeOrderId%22%3A%228203145566781234%22%2C%22terminalType%22%3A%22PC%22%7D"
+	},
+	"expect": {
+		"outcome": "orders",
+		"orders": [
+			{
+				"externalOrderId": "8203145566781234",
+				"status": "shipped",
+				"shipments": [
+					{
+						"trackingNumber": "LP00612345678901",
+						"carrier": "Cainiao Super Economy Global",
+						"status": "Departed from sorting center",
+						"etaText": "Estimated delivery: Oct 15 - Oct 22"
+					}
+				]
+			}
+		]
+	}
+}

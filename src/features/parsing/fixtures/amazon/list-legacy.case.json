@@ -1,0 +1,38 @@
+{
+	"description": "Legacy (≤2023) amazon.co.uk order history: div.order.js-order-card, order-info label/value columns, yohtmlc-item rows with prices",
+	"input": {
+		"kind": "html_snapshot",
+		"pageType": "order_list",
+		"pageUrl": "https://www.amazon.co.uk/gp/your-account/order-history?orderFilter=year-2018"
+	},
+	"payload": { "file": "list-legacy.html" },
+	"expect": {
+		"outcome": "orders",
+		"orderCount": 1,
+		"orders": [
+			{
+				"externalOrderId": "202-1971284-5573839",
+				"orderDate": "2018-12-30",
+				"status": "delivered",
+				"currency": "GBP",
+				"totalMinor": 7190,
+				"itemsPartial": true,
+				"items": [
+					{
+						"sku": "B01G3CEE2S",
+						"title": "Storage Box Organiser with Lid",
+						"quantity": 1,
+						"unitPriceMinor": 2190,
+						"itemUrl": "https://www.amazon.co.uk/dp/B01G3CEE2S"
+					},
+					{
+						"sku": "B00ZV1B5JI",
+						"quantity": 2,
+						"unitPriceMinor": 2500,
+						"totalMinor": 5000
+					}
+				]
+			}
+		]
+	}
+}

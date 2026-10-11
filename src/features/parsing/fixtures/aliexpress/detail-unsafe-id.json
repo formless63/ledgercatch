@@ -1,0 +1,31 @@
+{
+	"api": "mtop.aliexpress.trade.buyer.order.detail",
+	"data": {
+		"data": {
+			"detail_simple_order_info_component_3": {
+				"tag": "detail_simple_order_info_component",
+				"fields": {
+					"tradeOrderId": 3045678912345678912,
+					"orderCreatTime": "Oct 1, 2026, 08:00",
+					"paymentMethod": "PayPal"
+				}
+			},
+			"detail_order_status_block_1": {
+				"tag": "detail_order_status_block",
+				"fields": { "title": "Awaiting shipment" }
+			},
+			"detail_order_price_block_4": {
+				"tag": "detail_order_price_block",
+				"fields": {
+					"priceDetails": [],
+					"totalPrice": {
+						"value": "R$126,59",
+						"formatPriceInfo": "R$126,59|126|59",
+						"currencyCode": "BRL"
+					}
+				}
+			}
+		}
+	},
+	"ret": ["SUCCESS::调用成功"]
+}

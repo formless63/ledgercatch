@@ -1,0 +1,20 @@
+{
+	"description": "Amazon shipped notice forwarded from Gmail (inline forward block)",
+	"mime": {
+		"source": "amazon",
+		"from": "shipment-tracking@amazon.com",
+		"forwarded": "inline",
+		"subject": "Shipped: \"Anker USB C Charger, 735 Charger...\" and 1 more item"
+	},
+	"expect": {
+		"outcome": "orders",
+		"parserId": "amazon-email",
+		"orderCount": 1,
+		"orders": [
+			{
+				"externalOrderId": "112-4567890-1234567",
+				"status": "shipped"
+			}
+		]
+	}
+}

@@ -1,0 +1,36 @@
+{
+	"api": "mtop.ae.ld.querydetail",
+	"data": {
+		"module": {
+			"trackingDetailLineList": [
+				{
+					"mailNo": "LP00612345678901",
+					"originMailNo": "AEUS001234567890RU1",
+					"logisticsCarrierName": "Cainiao Super Economy Global",
+					"logisticsCpInfo": { "cpName": "Cainiao" },
+					"etaInfo": { "etaTimeText": "Estimated delivery: Oct 15 - Oct 22" },
+					"packageItemList": [
+						{
+							"itemId": "1005006123456789",
+							"itemTitle": "ESP32-C3 SuperMini",
+							"count": 5
+						}
+					],
+					"detailList": [
+						{
+							"trackingPrimaryCode": "AE_GTMS_IN_TRANSIT",
+							"standerdDesc": "Departed from sorting center",
+							"time": 1791300000000
+						},
+						{
+							"trackingPrimaryCode": "AE_GTMS_ACCEPT",
+							"standerdDesc": "Accepted by carrier",
+							"time": 1791200000000
+						}
+					]
+				}
+			]
+		}
+	},
+	"ret": ["SUCCESS::SUCCESS"]
+}

@@ -1,0 +1,1 @@
+{"payload": {"file": "cashier.json", "requestUrl": "https://cashier.alibaba.com/payment/ajaxIndex.json"}, "expect": {"outcome": "no_orders"}}

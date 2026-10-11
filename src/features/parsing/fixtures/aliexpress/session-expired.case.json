@@ -1,0 +1,13 @@
+{
+	"description": "Logged-out MTOP response yields no_orders, not an error",
+	"input": {
+		"kind": "api_json",
+		"pageType": "order_list",
+		"pageUrl": "https://www.aliexpress.com/p/order/index.html"
+	},
+	"payload": {
+		"file": "session-expired.json",
+		"requestUrl": "https://acs.aliexpress.com/h5/mtop.aliexpress.trade.buyer.order.list/1.0/"
+	},
+	"expect": { "outcome": "no_orders" }
+}

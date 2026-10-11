@@ -1,0 +1,6 @@
+{
+ "description": "Explicit shipment carriers survive; ambiguous numbers, requested service and item branding never imply a carrier",
+ "input": {"pageType":"order_detail","pageUrl":"https://order.ebay.com/ord/show?orderId=14-10000-20001"},
+ "payload":{"file":"order-details-carriers.html"},
+ "expect":{"outcome":"orders","orderCount":1,"orders":[{"externalOrderId":"14-10000-20001","shipments":[{"trackingNumber":"123456789012","carrier":"FedEx"},{"trackingNumber":"D100000000001","carrier":"DHL eCommerce"},{"trackingNumber":"223456789012"},{"trackingNumber":"D100000000002"}]}]}
+}

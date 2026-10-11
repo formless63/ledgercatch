@@ -1,0 +1,18 @@
+import { spawnSync } from 'node:child_process';
+import { mkdirSync, readFileSync, copyFileSync, writeFileSync } from 'node:fs';
+import { createHash } from 'node:crypto';
+const app=JSON.parse(readFileSync('package.json','utf8'));
+const pkg=JSON.parse(readFileSync('extension/package.json','utf8'));
+if(pkg.version!==app.version||!/^\d+\.\d+\.\d+$/.test(app.version))throw new Error('Stable app/extension numeric versions must match');
+copyFileSync('THIRD_PARTY_NOTICES.txt','extension/public/THIRD_PARTY_NOTICES.txt');
+const result=spawnSync('bun',['run','zip'],{cwd:'extension',stdio:'inherit'});if(result.status!==0)process.exit(result.status??1);
+const manifest=JSON.parse(readFileSync('extension/.output/chrome-mv3/manifest.json','utf8'));
+if(manifest.manifest_version!==3||manifest.version!==app.version||manifest.permissions.includes('debugger'))throw new Error('Release manifest rejected');
+const zip=`extension/.output/ledgercatch-extension-${app.version}-chrome.zip`;
+mkdirSync('artifacts',{recursive:true});mkdirSync('public/downloads',{recursive:true});
+const artifact=`ledgercatch-extension-${app.version}.zip`;
+copyFileSync(zip,'artifacts/'+artifact);copyFileSync(zip,'public/downloads/ledgercatch-extension.zip');
+const hash=createHash('sha256').update(readFileSync(zip)).digest('hex');
+writeFileSync('artifacts/SHA256SUMS',`${hash}  ${artifact}\n`);
+writeFileSync('public/downloads/SHA256SUMS',`${hash}  ledgercatch-extension.zip\n`);
+console.log(`Verified MV3 ${app.version}; identical ZIP for download, image and optional store upload: ${hash}`);

@@ -1,0 +1,35 @@
+{
+	"description": "amazon.ca printable order summary (print.html, 2025+ layout): $ means CAD, GST/HST + PST rows summed into tax",
+	"input": {
+		"kind": "html_snapshot",
+		"pageType": "invoice",
+		"pageUrl": "https://www.amazon.ca/gp/css/summary/print.html?orderID=702-3344556-7788990"
+	},
+	"payload": { "file": "invoice-ca.html" },
+	"expect": {
+		"outcome": "orders",
+		"orders": [
+			{
+				"externalOrderId": "702-3344556-7788990",
+				"merchantName": "PiShop.ca",
+				"orderDate": "2026-09-14",
+				"status": "processing",
+				"currency": "CAD",
+				"subtotalMinor": 8998,
+				"shippingMinor": 0,
+				"taxMinor": 1080,
+				"totalMinor": 10078,
+				"paymentHint": "Mastercard ending in 0042",
+				"paymentLast4": "0042",
+				"items": [
+					{
+						"title": "Raspberry Pi 5 8GB",
+						"quantity": 2,
+						"unitPriceMinor": 4499,
+						"totalMinor": 8998
+					}
+				]
+			}
+		]
+	}
+}

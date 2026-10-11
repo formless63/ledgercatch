@@ -1,0 +1,36 @@
+{
+	"description": "DigiKey order confirmation keyed by sales order #",
+	"mime": {
+		"source": "digikey"
+	},
+	"expect": {
+		"outcome": "orders",
+		"parserId": "digikey-email",
+		"orders": [
+			{
+				"externalOrderId": "91234567",
+				"merchantName": "DigiKey",
+				"status": "placed",
+				"orderDate": "2026-10-05",
+				"totalMinor": 4010,
+				"subtotalMinor": 3111,
+				"shippingMinor": 899,
+				"taxMinor": 0,
+				"items": [
+					{
+						"title": "EVAL MODULE FOR TPS7A54",
+						"sku": "296-49421-ND",
+						"quantity": 1,
+						"totalMinor": 3011
+					},
+					{
+						"title": "RES 10K OHM 1% 1/10W 0603",
+						"sku": "311-10.0KHRCT-ND",
+						"quantity": 10,
+						"totalMinor": 100
+					}
+				]
+			}
+		]
+	}
+}

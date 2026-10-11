@@ -1,0 +1,30 @@
+From: "Mouser Electronics" <sales@mouser.com>
+To: william@example.com
+Subject: Mouser Electronics Order Acknowledgement - Web Order # 271234567
+Date: Mon, 05 Oct 2026 15:01:00 -0500
+Message-ID: <mouser.ack.271234567@mouser.com>
+MIME-Version: 1.0
+Content-Type: text/html; charset="utf-8"
+Content-Transfer-Encoding: quoted-printable
+
+<html><body>
+<p>Thank you for your order. This is an acknowledgement of your order.</p>
+<p>Web Order #: 271234567</p><p>Sales Order #: 70123456</p><p>Order Date: 10/=
+05/2026</p>
+<table>
+<tr><th>Mouser #</th><th>Mfr. #</th><th>Customer #</th><th>Description</th><t=
+h>Qty.</th><th>Unit Price</th><th>Ext. Price</th></tr>
+<tr><td>595-TPS7A4701RGWR</td><td>TPS7A4701RGWR</td><td></td><td>LDO Voltage =
+Regulators 1.4-20V 1A</td><td>2</td><td>$6.12</td><td>$12.24</td></tr>
+<tr><td>81-GRM188R71C104KA1D</td><td>GRM188R71C104KA01D</td><td></td><td>Mult=
+ilayer Ceramic Capacitors MLCC - SMD/SMT 0603 0.1uF 16V</td><td>50</td><td>$0=
+.017</td><td>$0.85</td></tr>
+</table>
+<table>
+<tr><td>Merchandise Total:</td><td>$13.09</td></tr>
+<tr><td>Shipping/Handling:</td><td>$7.99</td></tr>
+<tr><td>Tax:</td><td>$0.00</td></tr>
+<tr><td>Order Total:</td><td>$21.08</td></tr>
+</table>
+<p>Payment Method: Visa ending in 4821</p>
+</body></html>

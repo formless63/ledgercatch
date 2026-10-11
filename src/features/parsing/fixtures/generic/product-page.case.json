@@ -1,0 +1,10 @@
+{
+	"description": "A product page (Product JSON-LD, prices) is not an order → no_orders so AI is not misled",
+	"input": {
+		"kind": "html_snapshot",
+		"pageType": "unknown",
+		"pageUrl": "https://gadget.example.net/products/logic-analyzer"
+	},
+	"payload": { "file": "product-page.html" },
+	"expect": { "outcome": "no_orders" }
+}

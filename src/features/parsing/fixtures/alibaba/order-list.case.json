@@ -1,0 +1,43 @@
+{
+	"description": "Inferred biz.alibaba.com order list JSON (LOW confidence shape): 18-digit ids as strings, amount objects, trade status codes",
+	"input": {
+		"kind": "api_json",
+		"pageType": "order_list",
+		"pageUrl": "https://biz.alibaba.com/order/list.htm"
+	},
+	"payload": {
+		"file": "order-list.json",
+		"requestUrl": "https://acs.h.alibaba.com/h5/mtop.alibaba.intl.buyer.order.list/1.0/"
+	},
+	"expect": {
+		"outcome": "orders",
+		"orderCount": 2,
+		"orders": [
+			{
+				"externalOrderId": "268518575501029968",
+				"merchantName": "Shenzhen Example Electronic Technology Co., Ltd.",
+				"orderUrl": "https://biz.alibaba.com/ta/detail.htm?orderId=268518575501029968",
+				"orderDate": "2026-09-26",
+				"status": "processing",
+				"currency": "USD",
+				"totalMinor": 124560,
+				"shippingMinor": 8500,
+				"items": [
+					{
+						"title": "Custom PCB Assembly SMT Service 2-layer FR4",
+						"quantity": 200,
+						"unitPriceMinor": 580,
+						"totalMinor": 116000,
+						"itemUrl": "https://www.alibaba.com/product-detail/_1600123456789.html"
+					}
+				]
+			},
+			{
+				"externalOrderId": "271122334455667788",
+				"orderDate": "2026-08-14",
+				"status": "delivered",
+				"totalMinor": 31000
+			}
+		]
+	}
+}

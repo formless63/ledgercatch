@@ -1,0 +1,23 @@
+{
+	"description": "Gmail email markup: schema.org ParcelDelivery",
+	"mime": {
+		"source": "generic"
+	},
+	"expect": {
+		"outcome": "orders",
+		"orders": [
+			{
+				"externalOrderId": "BS-20931",
+				"merchantName": "Bolt Supply",
+				"status": "shipped",
+				"orderUrl": "https://boltsupply.example/",
+				"shipments": [
+					{
+						"trackingNumber": "771234567890",
+						"carrier": "FedEx"
+					}
+				]
+			}
+		]
+	}
+}

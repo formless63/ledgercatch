@@ -1,0 +1,32 @@
+{
+	"description": "Purchase history ajax JSON (2025+ PurchaseActivityCard): labels end with a colon (\"Order date:\") and the value is the next span; a refunded order totals US $0.00",
+	"input": {
+		"kind": "api_json",
+		"pageType": "order_list",
+		"pageUrl": "https://www.ebay.com/mye/myebay/purchase"
+	},
+	"payload": {
+		"file": "purchase-history-colon-labels.json",
+		"requestUrl": "https://www.ebay.com/mye/myebay/ajax/v2/purchase/mp/get?page=2&modules=ALL_TRANSACTIONS"
+	},
+	"expect": {
+		"outcome": "orders",
+		"orderCount": 2,
+		"orders": [
+			{
+				"externalOrderId": "21-11111-22222",
+				"orderUrl": "https://order.ebay.com/ord/show?orderId=21-11111-22222&purchaseOrderId=21-1111-122221",
+				"orderDate": "2025-01-17",
+				"status": "delivered",
+				"currency": "USD",
+				"totalMinor": 39897
+			},
+			{
+				"externalOrderId": "11-33333-44444",
+				"orderDate": "2025-01-28",
+				"status": "returned",
+				"totalMinor": 0
+			}
+		]
+	}
+}

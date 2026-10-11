@@ -1,0 +1,27 @@
+{
+	"description": "Gmail email markup: schema.org Order in JSON-LD",
+	"mime": {
+		"source": "generic"
+	},
+	"expect": {
+		"outcome": "orders",
+		"parserId": "email-schema",
+		"orders": [
+			{
+				"externalOrderId": "GH-778812",
+				"merchantName": "Gadget Hub",
+				"orderUrl": "https://gadgethub.example/account/orders/GH-778812",
+				"orderDate": "2026-10-03",
+				"currency": "USD",
+				"totalMinor": 12900,
+				"items": [
+					{
+						"title": "USB-C Logic Analyzer 24MHz 8ch",
+						"sku": "LA-8",
+						"quantity": 1
+					}
+				]
+			}
+		]
+	}
+}

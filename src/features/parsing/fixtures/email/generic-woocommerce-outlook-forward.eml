@@ -1,0 +1,36 @@
+From: William C <william@example.com>
+To: orders-inbox@example.com
+Subject: FW: Your Maker Shop order has been received!
+Date: Mon, 05 Oct 2026 20:30:00 +0000
+Message-ID: <DM6PR11MB1234.namprd11.prod.outlook.com>
+MIME-Version: 1.0
+Content-Type: text/plain; charset="utf-8"
+Content-Transfer-Encoding: quoted-printable
+
+FYI
+
+________________________________
+From: Maker Shop <orders@makershop.example>
+Sent: Monday, October 5, 2026 12:02 PM
+To: William <william@example.com>
+Subject: Your Maker Shop order has been received!
+
+Thank you for your order
+
+Hi William,
+
+Just to let you know =E2=80=94 we've received your order #4521, and it is now=
+ being processed:
+
+[Order #4521] (October 5, 2026)
+
+Product Quantity Price
+Arduino Nano Every 2 $26.00
+Breadboard 830 tie points 4 $32.00
+
+Subtotal: $58.00
+Shipping: $6.95 via Flat rate
+Payment method: Credit Card (Stripe)
+Total: $64.95
+
+Thanks for using makershop.example!

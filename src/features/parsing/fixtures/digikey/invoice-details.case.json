@@ -1,0 +1,39 @@
+{
+	"description": "invoiceDetails collection: unitPrice in 1e-5 units, extendedPrice in cents, protocol-relative images",
+	"input": {
+		"kind": "api_json",
+		"pageType": "order_list",
+		"pageUrl": "https://www.digikey.com/OrderHistory/List"
+	},
+	"payload": {
+		"file": "invoice-details.json",
+		"requestUrl": "https://www.digikey.com/OrderHistory/api/invoicedetails"
+	},
+	"expect": {
+		"outcome": "orders",
+		"orders": [
+			{
+				"externalOrderId": "91234567",
+				"items": [
+					{
+						"externalItemId": "1234567",
+						"title": "IC MCU 32BIT 64KB FLASH 48LQFP",
+						"sku": "STM32F103C8T6",
+						"variant": "STMicroelectronics",
+						"quantity": 5,
+						"unitPriceMinor": 742,
+						"totalMinor": 3710,
+						"imageUrl": "https://mm.digikey.com/Volume0/opasdata/d220001/medias/images/1234/48-LQFP.jpg",
+						"itemUrl": "https://www.digikey.com/en/products/detail/-/-/1234567"
+					},
+					{
+						"title": "CAP CER 0.1UF 50V X7R 0805",
+						"quantity": 100,
+						"unitPriceMinor": 12,
+						"totalMinor": 1160
+					}
+				]
+			}
+		]
+	}
+}

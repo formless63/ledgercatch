@@ -1,0 +1,58 @@
+{
+	"description": "Unknown store thank-you page with schema.org Order JSON-LD inside @graph (offers, delivery, payment)",
+	"input": {
+		"kind": "html_snapshot",
+		"pageType": "order_confirmation",
+		"pageUrl": "https://parts.example.com/checkout/thank-you?order=PC-104233"
+	},
+	"payload": { "file": "jsonld-order.html" },
+	"expect": {
+		"outcome": "orders",
+		"orderCount": 1,
+		"orders": [
+			{
+				"externalOrderId": "PC-104233",
+				"merchantName": "Parts Co.",
+				"orderUrl": "https://parts.example.com/account/orders/PC-104233",
+				"orderDate": "2026-10-03",
+				"status": "processing",
+				"currency": "USD",
+				"totalMinor": 5743,
+				"discountMinor": 500,
+				"paymentHint": "Visa",
+				"paymentLast4": "4242",
+				"items": [
+					{
+						"title": "Feather RP2040",
+						"sku": "4884",
+						"quantity": 3,
+						"unitPriceMinor": 1195,
+						"totalMinor": 3585,
+						"itemUrl": "https://parts.example.com/product/4884",
+						"imageUrl": "https://parts.example.com/img/4884.jpg"
+					},
+					{
+						"title": "STEMMA QT Cable 100mm",
+						"sku": "4210",
+						"quantity": 2,
+						"unitPriceMinor": 95,
+						"totalMinor": 190
+					}
+				],
+				"shipments": [
+					{
+						"trackingNumber": "1Z999AA10123456784",
+						"carrier": "UPS",
+						"etaText": "2026-10-08"
+					}
+				],
+				"documentLinks": [
+					{
+						"kind": "invoice",
+						"url": "https://parts.example.com/account/orders/PC-104233/invoice.pdf"
+					}
+				]
+			}
+		]
+	}
+}

@@ -1,0 +1,13 @@
+{
+	"description": "First order history request returns no rows yet (iTotalRecords only)",
+	"input": {
+		"kind": "api_json",
+		"pageType": "unknown",
+		"pageUrl": "https://www.mouser.com/en/account/orders"
+	},
+	"payload": {
+		"file": "order-history-api-empty.json",
+		"requestUrl": "https://www.mouser.com/api/OrderHistory/Orders?cultureCode=en-US&currencyCulture=en-US"
+	},
+	"expect": { "outcome": "no_orders" }
+}

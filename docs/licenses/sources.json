@@ -1,0 +1,284 @@
+[
+  {
+    "name": "@aws-sdk/credential-provider-http",
+    "version": "3.972.74",
+    "url": "https://raw.githubusercontent.com/aws/aws-sdk-js-v3/main/LICENSE",
+    "file": "@aws-sdk__credential-provider-http@3.972.74.txt",
+    "sha256": "edea91454b811f127fbdea3d86f378f6719bd372ed440abf82b232f6fca06c3d",
+    "versionRef": false
+  },
+  {
+    "name": "@aws-sdk/credential-provider-login",
+    "version": "3.972.79",
+    "url": "https://raw.githubusercontent.com/aws/aws-sdk-js-v3/main/LICENSE",
+    "file": "@aws-sdk__credential-provider-login@3.972.79.txt",
+    "sha256": "edea91454b811f127fbdea3d86f378f6719bd372ed440abf82b232f6fca06c3d",
+    "versionRef": false
+  },
+  {
+    "name": "@aws-sdk/nested-clients",
+    "version": "3.997.46",
+    "url": "https://raw.githubusercontent.com/aws/aws-sdk-js-v3/main/LICENSE",
+    "file": "@aws-sdk__nested-clients@3.997.46.txt",
+    "sha256": "edea91454b811f127fbdea3d86f378f6719bd372ed440abf82b232f6fca06c3d",
+    "versionRef": false
+  },
+  {
+    "name": "@biomejs/cli-linux-x64-musl",
+    "version": "2.4.5",
+    "url": "https://raw.githubusercontent.com/biomejs/biome/3bc07ab8deec56d5f0ba4d84ecfd609c8eed6984/packages/@biomejs/biome/LICENSE-MIT",
+    "file": "@biomejs__cli-linux-x64-musl@2.4.5.txt",
+    "sha256": "4f6a0d776a00c0f46e1da1879321896071494229aa3219862a625e4560691a3a",
+    "versionRef": true
+  },
+  {
+    "name": "@biomejs/cli-linux-x64",
+    "version": "2.4.5",
+    "url": "https://raw.githubusercontent.com/biomejs/biome/3bc07ab8deec56d5f0ba4d84ecfd609c8eed6984/packages/@biomejs/biome/LICENSE-MIT",
+    "file": "@biomejs__cli-linux-x64@2.4.5.txt",
+    "sha256": "4f6a0d776a00c0f46e1da1879321896071494229aa3219862a625e4560691a3a",
+    "versionRef": true
+  },
+  {
+    "name": "@drizzle-team/brocli",
+    "version": "0.10.2",
+    "url": "https://raw.githubusercontent.com/drizzle-team/brocli/main/LICENSE",
+    "file": "@drizzle-team__brocli@0.10.2.txt",
+    "sha256": "c71d239df91726fc519c6eb72d318ec65820627232b2f796219e87dcf35d0ab4",
+    "versionRef": false
+  },
+  {
+    "name": "@esbuild/linux-x64",
+    "version": "0.28.2",
+    "url": "https://raw.githubusercontent.com/evanw/esbuild/609683d892977362a0f99026cb74b96263d728a9/LICENSE.md",
+    "file": "@esbuild__linux-x64@0.28.2.txt",
+    "sha256": "b40ec5baec7bb34fa5b1c09521fa3cd52d5fad7adafed74932a2010d3612a681",
+    "versionRef": true
+  },
+  {
+    "name": "@napi-rs/canvas-linux-x64-gnu",
+    "version": "1.0.10",
+    "url": "https://raw.githubusercontent.com/Brooooooklyn/canvas/v1.0.10/LICENSE",
+    "file": "@napi-rs__canvas-linux-x64-gnu@1.0.10.txt",
+    "sha256": "8802fecf9da4367bc23bcf20b21cc143785fc6c92b152f3fa7fbe6ce08d344d6",
+    "versionRef": true
+  },
+  {
+    "name": "@napi-rs/canvas-linux-x64-musl",
+    "version": "1.0.10",
+    "url": "https://raw.githubusercontent.com/Brooooooklyn/canvas/v1.0.10/LICENSE",
+    "file": "@napi-rs__canvas-linux-x64-musl@1.0.10.txt",
+    "sha256": "8802fecf9da4367bc23bcf20b21cc143785fc6c92b152f3fa7fbe6ce08d344d6",
+    "versionRef": true
+  },
+  {
+    "name": "@oxc-parser/binding-linux-x64-gnu",
+    "version": "0.120.0",
+    "url": "https://raw.githubusercontent.com/oxc-project/oxc/8741e6532a869a45f5882e2f1dfae959c8cda90d/LICENSE",
+    "file": "@oxc-parser__binding-linux-x64-gnu@0.120.0.txt",
+    "sha256": "95ced5ecf1133fbf41d409b5555c86c344f83f3b019926057ddbc07cfdcc27b3",
+    "versionRef": true
+  },
+  {
+    "name": "@oxc-parser/binding-linux-x64-musl",
+    "version": "0.120.0",
+    "url": "https://raw.githubusercontent.com/oxc-project/oxc/8741e6532a869a45f5882e2f1dfae959c8cda90d/LICENSE",
+    "file": "@oxc-parser__binding-linux-x64-musl@0.120.0.txt",
+    "sha256": "95ced5ecf1133fbf41d409b5555c86c344f83f3b019926057ddbc07cfdcc27b3",
+    "versionRef": true
+  },
+  {
+    "name": "@resvg/resvg-js-linux-x64-gnu",
+    "version": "2.6.2",
+    "url": "https://raw.githubusercontent.com/yisibl/resvg-js/9ca058462ac529120c8cc84ddcd6fef644cc5406/LICENSE",
+    "file": "@resvg__resvg-js-linux-x64-gnu@2.6.2.txt",
+    "sha256": "4b89d4518bd135ab4ee154a7bce722246b57a98c3d7efc1a09409898160c2bd1",
+    "versionRef": true
+  },
+  {
+    "name": "@resvg/resvg-js-linux-x64-musl",
+    "version": "2.6.2",
+    "url": "https://raw.githubusercontent.com/yisibl/resvg-js/9ca058462ac529120c8cc84ddcd6fef644cc5406/LICENSE",
+    "file": "@resvg__resvg-js-linux-x64-musl@2.6.2.txt",
+    "sha256": "4b89d4518bd135ab4ee154a7bce722246b57a98c3d7efc1a09409898160c2bd1",
+    "versionRef": true
+  },
+  {
+    "name": "@rolldown/binding-linux-x64-gnu",
+    "version": "1.2.11",
+    "url": "https://raw.githubusercontent.com/rolldown/rolldown/v1.2.11/LICENSE",
+    "file": "@rolldown__binding-linux-x64-gnu@1.2.11.txt",
+    "sha256": "23ecfff35a5a2e80d92142f75228912c3b1abc4b5a8337a821ff4397e2f9f734",
+    "versionRef": true
+  },
+  {
+    "name": "@rolldown/binding-linux-x64-gnu",
+    "version": "1.2.13",
+    "url": "https://raw.githubusercontent.com/rolldown/rolldown/v1.2.13/LICENSE",
+    "file": "@rolldown__binding-linux-x64-gnu@1.2.13.txt",
+    "sha256": "23ecfff35a5a2e80d92142f75228912c3b1abc4b5a8337a821ff4397e2f9f734",
+    "versionRef": true
+  },
+  {
+    "name": "@rolldown/binding-linux-x64-musl",
+    "version": "1.2.11",
+    "url": "https://raw.githubusercontent.com/rolldown/rolldown/v1.2.11/LICENSE",
+    "file": "@rolldown__binding-linux-x64-musl@1.2.11.txt",
+    "sha256": "23ecfff35a5a2e80d92142f75228912c3b1abc4b5a8337a821ff4397e2f9f734",
+    "versionRef": true
+  },
+  {
+    "name": "@rolldown/binding-linux-x64-musl",
+    "version": "1.2.13",
+    "url": "https://raw.githubusercontent.com/rolldown/rolldown/v1.2.13/LICENSE",
+    "file": "@rolldown__binding-linux-x64-musl@1.2.13.txt",
+    "sha256": "23ecfff35a5a2e80d92142f75228912c3b1abc4b5a8337a821ff4397e2f9f734",
+    "versionRef": true
+  },
+  {
+    "name": "@rollup/rollup-linux-x64-gnu",
+    "version": "4.63.5",
+    "url": "https://raw.githubusercontent.com/rollup/rollup/3722484c33c58b3ab0cbbfcca09b8f267d420329/LICENSE.md",
+    "file": "@rollup__rollup-linux-x64-gnu@4.63.5.txt",
+    "sha256": "fa1bd040c5bdeefe65b3821cebf474f2733ce65df13089bd151dda1778e62fe8",
+    "versionRef": true
+  },
+  {
+    "name": "@rollup/rollup-linux-x64-musl",
+    "version": "4.63.5",
+    "url": "https://raw.githubusercontent.com/rollup/rollup/3722484c33c58b3ab0cbbfcca09b8f267d420329/LICENSE.md",
+    "file": "@rollup__rollup-linux-x64-musl@4.63.5.txt",
+    "sha256": "fa1bd040c5bdeefe65b3821cebf474f2733ce65df13089bd151dda1778e62fe8",
+    "versionRef": true
+  },
+  {
+    "name": "@t3-oss/env-core",
+    "version": "0.13.11",
+    "url": "https://raw.githubusercontent.com/t3-oss/t3-env/23ddb79a92800665daa54b90c99f7c1099eeb6fb/LICENSE",
+    "file": "@t3-oss__env-core@0.13.11.txt",
+    "sha256": "a45df7d7f8a36144864a3ac08a25be6856d455239dfcbf502519245e1e1f87df",
+    "versionRef": true
+  },
+  {
+    "name": "@webext-core/fake-browser",
+    "version": "2.0.1",
+    "url": "https://raw.githubusercontent.com/aklinker1/webext-core/0852666b1cb1330eb8f471508208682ecc22ea26/LICENSE",
+    "file": "@webext-core__fake-browser@2.0.1.txt",
+    "sha256": "3ecd2df3daf4e8ad35ab437323b9338ce315dbeb95a7ef03184ed64f182bc074",
+    "versionRef": true
+  },
+  {
+    "name": "@webext-core/isolated-element",
+    "version": "3.0.0",
+    "url": "https://raw.githubusercontent.com/aklinker1/webext-core/b80a9ea9ce1894add1fc6e0963f1d8d250bcbb8d/LICENSE",
+    "file": "@webext-core__isolated-element@3.0.0.txt",
+    "sha256": "3ecd2df3daf4e8ad35ab437323b9338ce315dbeb95a7ef03184ed64f182bc074",
+    "versionRef": true
+  },
+  {
+    "name": "@webext-core/match-patterns",
+    "version": "2.0.0",
+    "url": "https://raw.githubusercontent.com/aklinker1/webext-core/65626157c7a7ee3ac400b10df719beb1cc62ab78/LICENSE",
+    "file": "@webext-core__match-patterns@2.0.0.txt",
+    "sha256": "3ecd2df3daf4e8ad35ab437323b9338ce315dbeb95a7ef03184ed64f182bc074",
+    "versionRef": true
+  },
+  {
+    "name": "@wxt-dev/browser",
+    "version": "0.3.4",
+    "url": "https://raw.githubusercontent.com/wxt-dev/wxt/main/LICENSE",
+    "file": "@wxt-dev__browser@0.3.4.txt",
+    "sha256": "7b0b00fcdbc6a036078aad84d0bc0fae240ac67144b86c911149c2daa37c9f85",
+    "versionRef": false
+  },
+  {
+    "name": "@wxt-dev/storage",
+    "version": "1.3.0",
+    "url": "https://raw.githubusercontent.com/wxt-dev/wxt/main/LICENSE",
+    "file": "@wxt-dev__storage@1.3.0.txt",
+    "sha256": "7b0b00fcdbc6a036078aad84d0bc0fae240ac67144b86c911149c2daa37c9f85",
+    "versionRef": false
+  },
+  {
+    "name": "boolbase",
+    "version": "1.0.0",
+    "url": "https://raw.githubusercontent.com/fb55/boolbase/master/LICENSE",
+    "file": "boolbase@1.0.0.txt",
+    "sha256": "cdf4d87ae0a6c160227263bf4e39a0a10e30e89ae7256e0f7ac7bde0836552c6",
+    "versionRef": false
+  },
+  {
+    "name": "buffers",
+    "version": "0.1.1",
+    "error": "license not found"
+  },
+  {
+    "name": "chainsaw",
+    "version": "0.1.0",
+    "error": "license not found"
+  },
+  {
+    "name": "drizzle-kit",
+    "version": "0.31.11",
+    "url": "https://raw.githubusercontent.com/drizzle-team/drizzle-orm/main/LICENSE",
+    "file": "drizzle-kit@0.31.11.txt",
+    "sha256": "c71d239df91726fc519c6eb72d318ec65820627232b2f796219e87dcf35d0ab4",
+    "versionRef": false
+  },
+  {
+    "name": "drizzle-orm",
+    "version": "0.45.3",
+    "url": "https://raw.githubusercontent.com/drizzle-team/drizzle-orm/0.45.3/LICENSE",
+    "file": "drizzle-orm@0.45.3.txt",
+    "sha256": "c71d239df91726fc519c6eb72d318ec65820627232b2f796219e87dcf35d0ab4",
+    "versionRef": true
+  },
+  {
+    "name": "filelist",
+    "version": "1.0.6",
+    "url": "https://raw.githubusercontent.com/mde/filelist/v1.0.6/LICENSE",
+    "file": "filelist@1.0.6.txt",
+    "sha256": "cfc7749b96f63bd31c3c42b5c471bf756814053e847c10f3eb003417bc523d30",
+    "versionRef": true
+  },
+  {
+    "name": "saxes",
+    "version": "6.0.0",
+    "url": "https://raw.githubusercontent.com/lddubeau/saxes/211fa0ebec9b628affc09219199639887174bfc3/LICENSE",
+    "file": "saxes@6.0.0.txt",
+    "sha256": "0fac2374380621b22e6b50451057721a9c52935b02d16d106a9f04897f061d0e",
+    "versionRef": true
+  },
+  {
+    "name": "stackback",
+    "version": "0.0.2",
+    "error": "license not found"
+  },
+  {
+    "name": "@ai-sdk/provider-utils",
+    "version": "4.0.57",
+    "url": "https://raw.githubusercontent.com/vercel/ai/main/LICENSE",
+    "file": "@ai-sdk__provider-utils@4.0.57.txt",
+    "sha256": "b4f9adb7c568904834d0dd6cc98d16c390d21ca32fc17ae7a267715269bd5529",
+    "versionRef": false,
+    "basis": "Upstream repository license; package declares Apache-2.0"
+  },
+  {
+    "name": "@napi-rs/lzma-linux-x64-gnu",
+    "version": "1.5.1",
+    "url": "https://registry.npmjs.org/@napi-rs/lzma-linux-x64-gnu/1.5.1",
+    "file": "@napi-rs__lzma-linux-x64-gnu@1.5.1.txt",
+    "sha256": "49c18b3d6077600afd21adca39cd32381dfbe298c466a6a5434252d308ec34f3",
+    "versionRef": true,
+    "basis": "MIT declaration in exact upstream package metadata; no separate upstream license file"
+  },
+  {
+    "name": "@replit/codemirror-css-color-picker",
+    "version": "6.3.0",
+    "url": "https://registry.npmjs.org/@replit/codemirror-css-color-picker/6.3.0",
+    "file": "@replit__codemirror-css-color-picker@6.3.0.txt",
+    "sha256": "71032bb5602ac2dff362c656df9d496e11de5096179e4582c9372fc91941ad1f",
+    "versionRef": true,
+    "basis": "MIT declaration in exact upstream package metadata; no separate upstream license file"
+  }
+]

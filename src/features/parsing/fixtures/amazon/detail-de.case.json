@@ -1,0 +1,49 @@
+{
+	"description": "amazon.de order details: German labels, decimal comma + NBSP euro, 'mit der Endung' last-4, EU invoice PDF in popover preload",
+	"input": {
+		"kind": "html_snapshot",
+		"pageType": "order_detail",
+		"pageUrl": "https://www.amazon.de/your-orders/order-details?orderID=302-5512345-6677889"
+	},
+	"payload": { "file": "detail-de.html" },
+	"expect": {
+		"outcome": "orders",
+		"orders": [
+			{
+				"externalOrderId": "302-5512345-6677889",
+				"merchantName": "AZ-Delivery Vertriebs GmbH",
+				"orderDate": "2026-10-03",
+				"status": "delivered",
+				"currency": "EUR",
+				"subtotalMinor": 4298,
+				"shippingMinor": 399,
+				"taxMinor": 750,
+				"totalMinor": 4697,
+				"paymentLast4": "5310",
+				"items": [
+					{
+						"sku": "B08L5NP6NG",
+						"title": "AZDelivery 5 x ESP32 NodeMCU Module",
+						"quantity": 1,
+						"unitPriceMinor": 4298,
+						"itemUrl": "https://www.amazon.de/dp/B08L5NP6NG"
+					}
+				],
+				"documentLinks": [
+					{
+						"kind": "invoice",
+						"url": "https://www.amazon.de/your-orders/invoice/popover?orderId=302-5512345-6677889&ref_=ppx_hzod_invoiceConns_dt_b_fed_invoice_pos_dss"
+					},
+					{
+						"kind": "invoice",
+						"url": "https://www.amazon.de/gp/css/summary/print.html?orderID=302-5512345-6677889"
+					},
+					{
+						"kind": "invoice",
+						"url": "https://www.amazon.de/documents/download/9f1c2d3e-4b5a-6789-abcd-ef0123456789/invoice.pdf"
+					}
+				]
+			}
+		]
+	}
+}

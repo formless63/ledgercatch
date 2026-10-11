@@ -1,0 +1,32 @@
+{
+	"description": "Order details page of a combined checkout: one .order-box per order, each with its own \"Total $x (n items)\"; the summary region covers the whole purchase and is not attributed",
+	"input": {
+		"kind": "html_snapshot",
+		"pageType": "order_detail",
+		"pageUrl": "https://order.ebay.com/ord/show?orderId=25-55555-66667"
+	},
+	"payload": {
+		"file": "order-details-combined.html"
+	},
+	"expect": {
+		"outcome": "orders",
+		"orderCount": 2,
+		"orders": [
+			{
+				"externalOrderId": "25-55555-66666",
+				"orderDate": "2026-09-12",
+				"totalMinor": 1835,
+				"status": "delivered",
+				"orderUrl": "https://order.ebay.com/ord/show?orderId=25-55555-66666#/"
+			},
+			{
+				"externalOrderId": "25-55555-66667",
+				"orderDate": "2026-09-12",
+				"totalMinor": 9801,
+				"status": "delivered",
+				"orderUrl": "https://order.ebay.com/ord/show?orderId=25-55555-66667#/"
+			}
+		],
+		"warnings": []
+	}
+}

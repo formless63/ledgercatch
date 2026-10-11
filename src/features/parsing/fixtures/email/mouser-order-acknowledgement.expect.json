@@ -1,0 +1,34 @@
+{
+	"description": "Mouser order acknowledgement keyed by web order #",
+	"mime": {
+		"source": "mouser"
+	},
+	"expect": {
+		"outcome": "orders",
+		"parserId": "mouser-email",
+		"orders": [
+			{
+				"externalOrderId": "271234567",
+				"merchantName": "Mouser Electronics",
+				"status": "placed",
+				"totalMinor": 2108,
+				"subtotalMinor": 1309,
+				"shippingMinor": 799,
+				"taxMinor": 0,
+				"paymentLast4": "4821",
+				"items": [
+					{
+						"sku": "595-TPS7A4701RGWR",
+						"quantity": 2,
+						"totalMinor": 1224
+					},
+					{
+						"sku": "81-GRM188R71C104KA1D",
+						"quantity": 50,
+						"totalMinor": 85
+					}
+				]
+			}
+		]
+	}
+}

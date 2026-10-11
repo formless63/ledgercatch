@@ -1,0 +1,37 @@
+{
+	"description": "OrderHistory/List invoices collection: cents orderValue/salesTax/freightValue, decimal invoiceTotalPrice; 16-digit numeric order number recovered from hints",
+	"input": {
+		"kind": "api_json",
+		"pageType": "order_list",
+		"pageUrl": "https://www.digikey.com/OrderHistory/List",
+		"orderIdHints": ["91234567", "9910000352694747"]
+	},
+	"payload": {
+		"file": "invoices.json",
+		"requestUrl": "https://www.digikey.com/OrderHistory/api/invoices?page=1"
+	},
+	"expect": {
+		"outcome": "orders",
+		"orderCount": 2,
+		"orders": [
+			{
+				"externalOrderId": "91234567",
+				"merchantName": "DigiKey",
+				"orderUrl": "https://www.digikey.com/OrderHistory/ReviewOrder/91234567",
+				"orderDate": "2026-09-18",
+				"currency": "USD",
+				"subtotalMinor": 4870,
+				"taxMinor": 312,
+				"shippingMinor": 699,
+				"totalMinor": 5881,
+				"paymentHint": "PO LAB-2026-114"
+			},
+			{
+				"externalOrderId": "9910000352694747",
+				"currency": "CAD",
+				"totalMinor": 2214,
+				"orderDate": "2026-10-01"
+			}
+		]
+	}
+}

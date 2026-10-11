@@ -1,0 +1,21 @@
+{
+	"description": "Purchase history page snapshot whose secondaryMessage labels end with a colon (\"Order total:\")",
+	"input": {
+		"kind": "html_snapshot",
+		"pageType": "order_list",
+		"pageUrl": "https://www.ebay.com/mye/myebay/purchase"
+	},
+	"payload": { "file": "purchase-history-colon-labels.html" },
+	"expect": {
+		"outcome": "orders",
+		"orderCount": 1,
+		"orders": [
+			{
+				"externalOrderId": "25-55555-66666",
+				"orderDate": "2026-09-12",
+				"status": "delivered",
+				"totalMinor": 1835
+			}
+		]
+	}
+}

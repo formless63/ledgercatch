@@ -1,0 +1,34 @@
+From: "Acme Parts" <store+12345@t.shopifyemail.com>
+To: william@example.com
+Subject: Order #1001 confirmed
+Date: Sun, 04 Oct 2026 20:15:00 -0400
+Message-ID: <shopify-order-1001@acmeparts.com>
+MIME-Version: 1.0
+Content-Type: text/html; charset="utf-8"
+Content-Transfer-Encoding: quoted-printable
+
+<html><body><table class=3D"body"><tr><td>
+<table class=3D"header"><tr><td><img src=3D"https://cdn.shopify.com/s/files/1=
+/0123/files/logo.png" alt=3D"Acme Parts"></td><td>Order #1001</td></tr></tabl=
+e>
+<h2>Thank you for your purchase!</h2>
+<p>We're getting your order ready to be shipped. We will notify you when it h=
+as been sent.</p>
+<p><a href=3D"https://acmeparts.com/12345/orders/abc123def/authenticate?key=
+=3Df00">View your order</a> or <a href=3D"https://acmeparts.com">Visit our st=
+ore</a></p>
+<h3>Order summary</h3>
+<table class=3D"order-list">
+<tr><td>Brass standoff kit M3 =C3=97 2</td><td>$24.00</td></tr>
+<tr><td>Silicone wire 22AWG =C3=97 1</td><td>$9.50</td></tr>
+</table>
+<table class=3D"subtotal-table">
+<tr><td>Subtotal</td><td>$33.50</td></tr>
+<tr><td>Shipping</td><td>$5.00</td></tr>
+<tr><td>Taxes</td><td>$2.68</td></tr>
+<tr><td>Total</td><td>$41.18 USD</td></tr>
+</table>
+<h3>Customer information</h3><p>Payment method: Visa ending with 4821</p>
+<p>If you have any questions, reply to this email or contact us at <a href=3D=
+"mailto:hello@acmeparts.com">hello@acmeparts.com</a></p>
+</td></tr></table></body></html>

@@ -1,0 +1,30 @@
+{
+	"description": "Purchase history page snapshot (.m-order-card with secondaryMessage label/value wrappers)",
+	"input": {
+		"kind": "html_snapshot",
+		"pageType": "order_list",
+		"pageUrl": "https://www.ebay.com/mye/myebay/purchase"
+	},
+	"payload": { "file": "purchase-history.html" },
+	"expect": {
+		"outcome": "orders",
+		"orderCount": 1,
+		"orders": [
+			{
+				"externalOrderId": "12-13579-24680",
+				"orderUrl": "https://order.ebay.com/ord/show?orderId=12-13579-24680&purchaseOrderId=1234567890123#/",
+				"orderDate": "2026-09-26",
+				"status": "delivered",
+				"totalMinor": 4638,
+				"items": [
+					{
+						"sku": "305512345678",
+						"title": "Fluke 101 Basic Digital Multimeter",
+						"quantity": 1,
+						"unitPriceMinor": 3999
+					}
+				]
+			}
+		]
+	}
+}

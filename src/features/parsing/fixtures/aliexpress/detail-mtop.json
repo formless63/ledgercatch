@@ -1,0 +1,113 @@
+{
+	"api": "mtop.aliexpress.trade.buyer.order.detail",
+	"data": {
+		"data": {
+			"detail_order_status_block_1": {
+				"id": "1",
+				"tag": "detail_order_status_block",
+				"type": "detail_order_status_block",
+				"fields": {
+					"title": "Awaiting delivery",
+					"buttonVOList": [
+						{ "type": "CONFIRM_RECEIPT", "text": "Confirm received" },
+						{
+							"type": "DOWNLOAD_INVOICE",
+							"text": "Download invoice",
+							"href": "https://www.aliexpress.com/p/invoice-download/index.html?orderId=8203145566781234&invoiceNo=INV2026092800123"
+						}
+					]
+				}
+			},
+			"detail_service_progress_bar_2": {
+				"id": "2",
+				"tag": "detail_service_progress_bar",
+				"type": "detail_service_progress_bar",
+				"fields": {
+					"nodes": [
+						{ "text": "Order placed", "time": "Sep 28, 2026" },
+						{ "text": "Shipped", "time": "Sep 30, 2026" }
+					]
+				}
+			},
+			"detail_simple_order_info_component_3": {
+				"id": "3",
+				"tag": "detail_simple_order_info_component",
+				"type": "detail_simple_order_info_component",
+				"fields": {
+					"tradeOrderId": 8203145566781234,
+					"orderCreatTime": "Sep 28, 2026, 10:21",
+					"payTime": "Sep 28, 2026, 10:22",
+					"orderShipTime": "Sep 30, 2026, 14:05",
+					"paymentMethod": "Visa ****4821",
+					"addressVO": {
+						"contactName": "Alex Example",
+						"detailAddress": "1 Main St",
+						"postCode": "60007",
+						"countryCode": "US"
+					}
+				}
+			},
+			"detail_order_price_block_4": {
+				"id": "4",
+				"tag": "detail_order_price_block",
+				"type": "detail_order_price_block",
+				"fields": {
+					"priceDetails": [
+						{ "title": "Subtotal", "value": "US $23.47" },
+						{ "title": "Shipping fee", "value": "US $1.99" },
+						{ "title": "Store discount", "value": "-US $2.00" },
+						{ "title": "Coupon", "value": "-US $0.50" },
+						{ "title": "Tax", "value": "US $1.62" }
+					],
+					"totalPrice": {
+						"value": "US $24.58",
+						"formatPriceInfo": "US $24.58|24|58",
+						"currencyCode": "USD"
+					}
+				}
+			},
+			"detail_product_block_5": {
+				"id": "5",
+				"tag": "detail_product_block",
+				"type": "detail_product_block",
+				"fields": {
+					"sellerVO": {
+						"sellerName": "Shenzhen Maker Store",
+						"storeUrl": "//www.aliexpress.com/store/1102345678"
+					},
+					"productVOList": [
+						{
+							"orderLineId": "8203145566791234",
+							"productId": "1005006123456789",
+							"skuId": "12000036123456789",
+							"itemTitle": "ESP32-C3 SuperMini Development Board WiFi Bluetooth",
+							"itemImgUrl": "//ae01.alicdn.com/kf/S1a2b3c4d5e6f.jpg",
+							"itemDetailUrl": "//www.aliexpress.com/item/1005006123456789.html",
+							"snapshotUrl": "//www.aliexpress.com/snapshot/8203145566791234.html",
+							"itemPriceText": "US $3.12",
+							"formatPriceInfo": "US $3.12|3|12",
+							"quantity": 5,
+							"currencyCode": "USD",
+							"skuAttrs": [{ "name": "Color", "text": "With pins" }]
+						},
+						{
+							"orderLineId": "8203145566801234",
+							"productId": "1005005987654321",
+							"skuId": "12000035987654321",
+							"itemTitle": "100PCS 0805 SMD Resistor Kit",
+							"itemImgUrl": "//ae01.alicdn.com/kf/H9f8e7d6c5b4a.jpg",
+							"itemDetailUrl": "//www.aliexpress.com/item/1005005987654321.html",
+							"itemPriceText": "US $7.87",
+							"formatPriceInfo": "US $7.87|7|87",
+							"quantity": 1,
+							"currencyCode": "USD"
+						}
+					]
+				}
+			}
+		},
+		"hierarchy": { "root": "detail_root" }
+	},
+	"ret": ["SUCCESS::调用成功"],
+	"v": "1.0"
+}

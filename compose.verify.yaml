@@ -1,0 +1,10 @@
+# Used only by scripts/container-smoke.ts with generated local credentials.
+services:
+  worker:
+    environment:
+      LEDGERCATCH_DEMO: "true"
+networks:
+  default:
+    ipam:
+      config:
+        - subnet: ${VERIFY_SUBNET:-10.238.0.0/24}

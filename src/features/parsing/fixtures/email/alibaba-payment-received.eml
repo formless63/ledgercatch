@@ -1,0 +1,25 @@
+From: "Alibaba.com" <notification@service.alibaba.com>
+To: william@example.com
+Subject: Payment received for order 268518575501029968
+Date: Fri, 02 Oct 2026 08:00:00 +0800
+Message-ID: <ta.268518575501029968.paid@service.alibaba.com>
+MIME-Version: 1.0
+Content-Type: text/html; charset="utf-8"
+Content-Transfer-Encoding: quoted-printable
+
+<html><body>
+<p>Hi William,</p>
+<p>We have received your payment for Trade Assurance order 268518575501029968=
+.</p>
+<p>Supplier: Shenzhen Example Electronic Technology Co., Ltd.</p>
+<table>
+<tr><th>Product</th><th>Quantity</th><th>Unit price</th><th>Subtotal</th></tr>
+<tr><td>Custom 4-layer PCB assembly, FR4 1.6mm, HASL lead free</td><td>100 pi=
+eces</td><td>US $1.10</td><td>US $110.00</td></tr>
+</table>
+<p>Product total: US $110.00</p>
+<p>Shipping fee: US $15.40</p>
+<p>Total amount: US $125.40</p>
+<p><a href=3D"https://biz.alibaba.com/ta/detail.htm?orderId=3D268518575501029=
+968">View order</a></p>
+</body></html>

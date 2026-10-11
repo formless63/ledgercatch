@@ -1,0 +1,29 @@
+{
+	"description": "No structured data: visible-text heuristics (labeled order id, date, totals, last-4, UPS tracking)",
+	"input": {
+		"kind": "html_snapshot",
+		"pageType": "order_confirmation",
+		"pageUrl": "https://smallrobot.example.com/checkout/complete"
+	},
+	"payload": { "file": "text-confirmation.html" },
+	"expect": {
+		"outcome": "orders",
+		"orders": [
+			{
+				"externalOrderId": "SRS-48213",
+				"merchantName": "smallrobot.example.com",
+				"orderDate": "2026-10-03",
+				"currency": "USD",
+				"subtotalMinor": 8400,
+				"shippingMinor": 0,
+				"taxMinor": 693,
+				"discountMinor": 500,
+				"totalMinor": 8593,
+				"paymentLast4": "4242",
+				"shipments": [
+					{ "trackingNumber": "1Z999AA10123456784", "carrier": "UPS" }
+				]
+			}
+		]
+	}
+}

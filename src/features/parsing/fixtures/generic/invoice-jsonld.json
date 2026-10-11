@@ -1,0 +1,26 @@
+{
+	"@context": "http://schema.org",
+	"@type": "Invoice",
+	"url": "https://billing.example.io/invoices/INV-2026-0042.pdf",
+	"accountId": "CUST-77",
+	"provider": { "@type": "Organization", "name": "Cloud Example Inc." },
+	"paymentDueDate": "2026-10-15",
+	"paymentStatus": "http://schema.org/PaymentDue",
+	"totalPaymentDue": {
+		"@type": "PriceSpecification",
+		"price": 249.0,
+		"priceCurrency": "USD"
+	},
+	"referencesOrder": {
+		"@type": "Order",
+		"orderNumber": "SO-55120",
+		"orderDate": "2026-10-01",
+		"orderedItem": [
+			{
+				"@type": "OrderItem",
+				"orderQuantity": 1,
+				"orderedItem": { "@type": "Service", "name": "Pro plan (annual)" }
+			}
+		]
+	}
+}

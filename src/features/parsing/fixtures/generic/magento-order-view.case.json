@@ -1,0 +1,32 @@
+{
+	"description": "Magento 2.4 Luma customer order view (Magento_Sales order/items.phtml, items/renderer/default.phtml, totals.phtml): increment id, not entity id",
+	"input": {
+		"kind": "html_snapshot",
+		"pageType": "order_detail",
+		"pageUrl": "https://shop.alpinegear.example/sales/order/view/order_id/4127/"
+	},
+	"payload": { "file": "magento-order-view.html" },
+	"expect": {
+		"outcome": "orders",
+		"orderCount": 1,
+		"orders": [
+			{
+				"externalOrderId": "000004127",
+				"orderDate": "2026-10-01",
+				"status": "processing",
+				"statusText": "Processing",
+				"currency": "USD",
+				"subtotalMinor": 18350,
+				"discountMinor": 2753,
+				"shippingMinor": 1000,
+				"taxMinor": 1287,
+				"totalMinor": 17884,
+				"paymentHint": "Check / Money order",
+				"items": [
+					{ "title": "Summit Trekking Pole", "sku": "STP-GR-135", "variant": "Color: Graphite, Length: 135 cm", "quantity": 2, "unitPriceMinor": 6400, "totalMinor": 12800 },
+					{ "title": "Merino Hiking Socks", "sku": "MHS-L", "quantity": 3, "unitPriceMinor": 1850, "totalMinor": 5550 }
+				]
+			}
+		]
+	}
+}

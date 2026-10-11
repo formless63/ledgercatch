@@ -1,0 +1,61 @@
+{
+	"description": "MTOP order.list page 1 (one USD order with two lines, one EUR order whose orderLines is an object map)",
+	"input": {
+		"kind": "api_json",
+		"pageType": "order_list",
+		"pageUrl": "https://www.aliexpress.com/p/order/index.html"
+	},
+	"payload": {
+		"file": "list-mtop.json",
+		"requestUrl": "https://acs.aliexpress.com/h5/mtop.aliexpress.trade.buyer.order.list/1.0/?jsv=2.5.1&appKey=12574478&t=1791200000000&api=mtop.aliexpress.trade.buyer.order.list&v=1.0"
+	},
+	"expect": {
+		"outcome": "orders",
+		"orderCount": 2,
+		"orders": [
+			{
+				"externalOrderId": "8203145566781234",
+				"merchantName": "Shenzhen Maker Store",
+				"orderUrl": "https://www.aliexpress.com/p/order/detail.html?orderId=8203145566781234",
+				"orderDate": "2026-09-28",
+				"status": "shipped",
+				"statusText": "Awaiting delivery",
+				"currency": "USD",
+				"totalMinor": 2347,
+				"itemsPartial": true,
+				"items": [
+					{
+						"externalItemId": "8203145566791234",
+						"title": "ESP32-C3 SuperMini Development Board WiFi Bluetooth",
+						"sku": "12000036123456789",
+						"variant": "Color: With pins",
+						"quantity": 5,
+						"unitPriceMinor": 312,
+						"totalMinor": 1560,
+						"imageUrl": "https://ae01.alicdn.com/kf/S1a2b3c4d5e6f.jpg",
+						"itemUrl": "https://www.aliexpress.com/item/1005006123456789.html"
+					},
+					{
+						"title": "100PCS 0805 SMD Resistor Kit",
+						"quantity": 1,
+						"unitPriceMinor": 787
+					}
+				]
+			},
+			{
+				"externalOrderId": "8199871234506677",
+				"orderDate": "2026-08-02",
+				"status": "delivered",
+				"currency": "EUR",
+				"totalMinor": 1205,
+				"items": [
+					{
+						"title": "WS2812B LED Strip 1m 60 LEDs",
+						"variant": "Color: Black PCB, Length: 1m 60leds",
+						"unitPriceMinor": 1205
+					}
+				]
+			}
+		]
+	}
+}

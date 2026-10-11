@@ -1,0 +1,28 @@
+{
+	"description": "BigCommerce optimized checkout order confirmation (checkout-js OrderStatus / OrderSummaryItem / OrderSummaryPrice data-test hooks), coupon + discounted line",
+	"input": {
+		"kind": "html_snapshot",
+		"pageType": "order_confirmation",
+		"pageUrl": "https://ridgeback.example/checkout/order-confirmation/3071?t=4a5b6c7d8e9f"
+	},
+	"payload": { "file": "bigcommerce-order-confirmation.html" },
+	"expect": {
+		"outcome": "orders",
+		"orderCount": 1,
+		"orders": [
+			{
+				"externalOrderId": "3071",
+				"currency": "USD",
+				"subtotalMinor": 8200,
+				"discountMinor": 240,
+				"shippingMinor": 900,
+				"taxMinor": 730,
+				"totalMinor": 9590,
+				"items": [
+					{ "title": "Trail Gloves", "variant": "Size M", "quantity": 2, "totalMinor": 5800, "unitPriceMinor": 2900 },
+					{ "title": "Tubeless Sealant 500ml", "quantity": 1, "totalMinor": 2160 }
+				]
+			}
+		]
+	}
+}

@@ -1,0 +1,52 @@
+{
+	"description": "MTOP order.detail with price breakdown, payment, seller, invoice button; numeric tradeOrderId (safe int)",
+	"input": {
+		"kind": "api_json",
+		"pageType": "order_detail",
+		"pageUrl": "https://www.aliexpress.com/p/order/detail.html?orderId=8203145566781234"
+	},
+	"payload": {
+		"file": "detail-mtop.json",
+		"requestUrl": "https://acs.aliexpress.com/h5/mtop.aliexpress.trade.buyer.order.detail/1.0/?jsv=2.5.1&appKey=12574478&api=mtop.aliexpress.trade.buyer.order.detail&data=%7B%22tradeOrderId%22%3A%228203145566781234%22%2C%22terminalType%22%3A%22PC%22%7D"
+	},
+	"expect": {
+		"outcome": "orders",
+		"orderCount": 1,
+		"orders": [
+			{
+				"externalOrderId": "8203145566781234",
+				"merchantName": "Shenzhen Maker Store",
+				"orderDate": "2026-09-28",
+				"status": "shipped",
+				"statusText": "Awaiting delivery",
+				"currency": "USD",
+				"subtotalMinor": 2347,
+				"shippingMinor": 199,
+				"discountMinor": 250,
+				"taxMinor": 162,
+				"totalMinor": 2458,
+				"paymentHint": "Visa ****4821",
+				"paymentLast4": "4821",
+				"items": [
+					{
+						"title": "ESP32-C3 SuperMini Development Board WiFi Bluetooth",
+						"quantity": 5,
+						"unitPriceMinor": 312,
+						"totalMinor": 1560
+					},
+					{
+						"title": "100PCS 0805 SMD Resistor Kit",
+						"quantity": 1,
+						"unitPriceMinor": 787
+					}
+				],
+				"documentLinks": [
+					{
+						"kind": "invoice",
+						"url": "https://www.aliexpress.com/p/invoice-download/index.html?orderId=8203145566781234&invoiceNo=INV2026092800123"
+					}
+				]
+			}
+		]
+	}
+}

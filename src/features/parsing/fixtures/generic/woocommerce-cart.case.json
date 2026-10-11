@@ -1,0 +1,10 @@
+{
+	"description": "WooCommerce cart page (order-overview class only in inline CSS) is not an order → no_orders",
+	"input": {
+		"kind": "html_snapshot",
+		"pageType": "unknown",
+		"pageUrl": "https://trailhead.example.com/cart/"
+	},
+	"payload": { "file": "woocommerce-cart.html" },
+	"expect": { "outcome": "no_orders" }
+}

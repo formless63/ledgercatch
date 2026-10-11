@@ -1,0 +1,32 @@
+{
+	"description": "WooCommerce My Account view-order (myaccount/view-order.php + order/order-details.php): status, free shipping, tax, card in payment method",
+	"input": {
+		"kind": "html_snapshot",
+		"pageType": "order_detail",
+		"pageUrl": "https://trailhead.example.com/my-account/view-order/8312/"
+	},
+	"payload": { "file": "woocommerce-view-order.html" },
+	"expect": {
+		"outcome": "orders",
+		"orderCount": 1,
+		"orders": [
+			{
+				"externalOrderId": "8312",
+				"merchantName": "Trailhead Outfitters",
+				"orderDate": "2026-09-28",
+				"status": "delivered",
+				"statusText": "Completed",
+				"currency": "USD",
+				"subtotalMinor": 32898,
+				"shippingMinor": 0,
+				"taxMinor": 2714,
+				"totalMinor": 35612,
+				"paymentHint": "Visa credit card - 4242",
+				"items": [
+					{ "title": "Ultralight Tent 2P", "variant": "Color: Sage", "quantity": 1, "totalMinor": 28900 },
+					{ "title": "Titanium Stakes (6 pack)", "quantity": 2, "totalMinor": 3998, "unitPriceMinor": 1999 }
+				]
+			}
+		]
+	}
+}

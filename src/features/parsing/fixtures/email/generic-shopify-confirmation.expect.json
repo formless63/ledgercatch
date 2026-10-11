@@ -1,0 +1,24 @@
+{
+	"description": "Shopify order confirmation sent via shopifyemail.com; shop host from links",
+	"mime": {
+		"source": "generic"
+	},
+	"expect": {
+		"outcome": "orders",
+		"parserId": "generic-email",
+		"orders": [
+			{
+				"externalOrderId": "1001",
+				"merchantName": "Acme Parts",
+				"orderDate": "2026-10-04",
+				"currency": "USD",
+				"totalMinor": 4118,
+				"subtotalMinor": 3350,
+				"shippingMinor": 500,
+				"taxMinor": 268,
+				"paymentLast4": "4821",
+				"orderUrl": "https://acmeparts.com/12345/orders/abc123def/authenticate?key=f00"
+			}
+		]
+	}
+}

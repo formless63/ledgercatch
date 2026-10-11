@@ -1,0 +1,27 @@
+{
+  "success": true,
+  "status": "Delivered",
+  "trackingNumber": "123456789012",
+  "shipmentMethod": "FedEx Ground",
+  "activity": [
+    {
+      "status": "Delivered",
+      "activityDateTime": "2026-08-12T10:27:28",
+      "activityLocation": {
+        "address": {
+          "city": "Example City",
+          "postalCode": "00000",
+          "countryCode": "US"
+        }
+      }
+    },
+    {
+      "status": "On FedEx vehicle for delivery",
+      "activityDateTime": "2026-08-12T06:47:00"
+    }
+  ],
+  "currentStatus": {
+    "status": "Delivered",
+    "activityDateTime": "2026-08-12T10:27:28"
+  }
+}

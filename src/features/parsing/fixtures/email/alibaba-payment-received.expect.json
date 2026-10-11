@@ -1,0 +1,28 @@
+{
+	"description": "Alibaba Trade Assurance payment received",
+	"mime": {
+		"source": "alibaba"
+	},
+	"expect": {
+		"outcome": "orders",
+		"parserId": "alibaba-email",
+		"orders": [
+			{
+				"externalOrderId": "268518575501029968",
+				"status": "placed",
+				"merchantName": "Shenzhen Example Electronic Technology Co., Ltd.",
+				"currency": "USD",
+				"totalMinor": 12540,
+				"subtotalMinor": 11000,
+				"shippingMinor": 1540,
+				"items": [
+					{
+						"quantity": 100,
+						"unitPriceMinor": 110,
+						"totalMinor": 11000
+					}
+				]
+			}
+		]
+	}
+}

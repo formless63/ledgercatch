@@ -1,0 +1,48 @@
+{
+	"description": "ASP.NET order detail (id-suffix selectors from WhatDidIBuy; unverified vs 2026 markup). Keyed by Web Order #",
+	"input": {
+		"kind": "html_snapshot",
+		"pageType": "order_detail",
+		"pageUrl": "https://www.mouser.com/OrderHistory/OrderDetail.aspx?qs=AbCdEf123"
+	},
+	"payload": { "file": "order-detail.html" },
+	"expect": {
+		"outcome": "orders",
+		"orders": [
+			{
+				"externalOrderId": "271234567",
+				"merchantName": "Mouser Electronics",
+				"orderDate": "2026-09-14",
+				"status": "shipped",
+				"currency": "USD",
+				"subtotalMinor": 1814,
+				"shippingMinor": 799,
+				"taxMinor": 163,
+				"totalMinor": 2776,
+				"paymentLast4": "9911",
+				"items": [
+					{
+						"sku": "595-LM358DR",
+						"title": "Operational Amplifiers - Op Amps Dual Gen Purpose",
+						"variant": "MPN LM358DR",
+						"quantity": 25,
+						"unitPriceMinor": 27,
+						"totalMinor": 670
+					},
+					{
+						"sku": "652-3296W-1-103LF",
+						"quantity": 4,
+						"unitPriceMinor": 286,
+						"totalMinor": 1144
+					}
+				],
+				"documentLinks": [
+					{
+						"kind": "invoice",
+						"url": "https://www.mouser.com/OrderHistory/InvoiceDetail.aspx?qs=Inv998877"
+					}
+				]
+			}
+		]
+	}
+}

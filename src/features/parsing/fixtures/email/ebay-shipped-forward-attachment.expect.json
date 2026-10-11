@@ -1,0 +1,24 @@
+{
+	"description": "eBay shipped notice forwarded as an attached .eml",
+	"mime": {
+		"source": "ebay",
+		"from": "ebay@ebay.com",
+		"forwarded": "attachment",
+		"attachments": []
+	},
+	"expect": {
+		"outcome": "orders",
+		"orders": [
+			{
+				"externalOrderId": "12-13579-24680",
+				"status": "shipped",
+				"shipments": [
+					{
+						"trackingNumber": "9400111899223197428490",
+						"carrier": "USPS"
+					}
+				]
+			}
+		]
+	}
+}

@@ -1,0 +1,13 @@
+# Privacy and data handling
+
+LedgerCatch is a self-hosted purchase ledger. The project does not operate a central collection service. Your configured server operator controls its accounts, storage, backups, logs and retention. Before connecting the extension, confirm that you trust that operator and its privacy practices.
+
+The extension captures order details, prices, item names, merchant and shipment information, order pages and invoices. These may include names, addresses, email addresses and partial payment information visible on the source page. It sends captures to the server you configure using your API key. The key, settings, capture queue and local history are stored in the browser profile. Protect that profile and revoke the key if it is lost. Removing the extension removes its browser data; server records and backups require separate deletion by the operator.
+
+Automatic capture on supported stores is enabled by default after connection. The options page provides a master switch and per-store switches. Manual capture acts on the current page. Optional platform detection on other sites requires an additional all-sites permission. Optional recorder mode collects broader page and JSON responses for parser troubleshooting; leave it disabled for ordinary use. Review recordings before sharing them. No captures should be attached to public bug reports.
+
+Missing-order enrichment can fetch store pages using your existing browser session. Store cookies are used by the browser when making those requests; the extension does not export the cookie jar or passwords to the ledger. Fetched pages and invoice responses may themselves contain personal information. Background-tab enrichment is separately opt-in. The downloadable standard build does not request debugger permission or print through the debugger API.
+
+The project includes no advertising or capture-data resale service. Operators may separately configure email, accounting connectors, AI extraction, tracking services or telemetry. Those services receive the data needed for the enabled operation under the operator's configuration. Review their policies before enabling them. A self-hosted installation is not a guarantee that enabled third-party services receive no data.
+
+The extension requires HTTPS for remote servers and rejects redirects. Local HTTP is a development convenience and does not encrypt traffic. Do not send financial captures or credentials to arbitrary remote HTTP servers. The Chrome listing must link to a publicly accessible copy of this policy and identify the publisher's support/contact channel before submission. This repository document does not assert store approval.

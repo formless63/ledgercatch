@@ -1,0 +1,33 @@
+From: "DigiKey" <orders@digikey.com>
+To: william@example.com
+Subject: DigiKey Order Shipped =?utf-8?q?=E2=80=93_Sales_Order_91234567_?=
+ =?utf-8?b?4oCT?= Invoice 87654321
+Date: Tue, 06 Oct 2026 18:05:00 -0500
+Message-ID: <dk.so.91234567.ship@digikey.com>
+MIME-Version: 1.0
+Content-Type: multipart/mixed; boundary="===============7719274899821906021=="
+
+--===============7719274899821906021==
+Content-Type: text/plain; charset="utf-8"
+Content-Transfer-Encoding: 7bit
+
+Your order has shipped.
+
+Sales Order: 91234567
+Invoice: 87654321
+Carrier: UPS Ground
+Tracking #: 1Z999AA10123456784
+
+Your invoice is attached.
+
+--===============7719274899821906021==
+Content-Type: application/pdf
+Content-Transfer-Encoding: base64
+Content-Disposition: attachment; filename="Invoice_87654321.pdf"
+MIME-Version: 1.0
+
+JVBERi0xLjQKMSAwIG9iajw8L1R5cGUvQ2F0YWxvZy9QYWdlcyAyIDAgUj4+ZW5kb2JqCjIgMCBv
+Ymo8PC9UeXBlL1BhZ2VzL0NvdW50IDAvS2lkc1tdPj5lbmRvYmoKdHJhaWxlcjw8L1Jvb3QgMSAw
+IFI+PgolJUVPRgo=
+
+--===============7719274899821906021==--

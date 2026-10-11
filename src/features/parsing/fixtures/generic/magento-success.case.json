@@ -1,0 +1,19 @@
+{
+	"description": "Magento 2 checkout/onepage/success (Magento_Checkout::success.phtml, logged-in variant): order number + link to the order view only",
+	"input": {
+		"kind": "html_snapshot",
+		"pageType": "order_confirmation",
+		"pageUrl": "https://shop.alpinegear.example/checkout/onepage/success/"
+	},
+	"payload": { "file": "magento-success.html" },
+	"expect": {
+		"outcome": "orders",
+		"orderCount": 1,
+		"orders": [
+			{
+				"externalOrderId": "000004128",
+				"orderUrl": "https://shop.alpinegear.example/sales/order/view/order_id/4128/"
+			}
+		]
+	}
+}

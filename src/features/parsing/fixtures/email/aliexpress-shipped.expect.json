@@ -1,0 +1,32 @@
+{
+	"description": "AliExpress shipped (plain text) with Cainiao tracking",
+	"mime": {
+		"source": "aliexpress",
+		"forwarded": null
+	},
+	"expect": {
+		"outcome": "orders",
+		"parserId": "aliexpress-email",
+		"orders": [
+			{
+				"externalOrderId": "8203145566781234",
+				"status": "shipped",
+				"merchantName": "Shenzhen Maker Store",
+				"itemsPartial": true,
+				"items": [
+					{
+						"title": "ESP32-S3 DevKitC-1 N16R8 Development Board",
+						"quantity": 2,
+						"totalMinor": 1840
+					}
+				],
+				"shipments": [
+					{
+						"trackingNumber": "LP00612345678901",
+						"carrier": "Cainiao"
+					}
+				]
+			}
+		]
+	}
+}

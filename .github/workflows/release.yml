@@ -1,0 +1,85 @@
+name: Prepare or publish release
+on:
+  workflow_dispatch:
+    inputs:
+      version:
+        description: Exact numeric version in package.json
+        required: true
+        type: string
+      publish:
+        description: Publish approved GitHub release and GHCR image
+        type: boolean
+        default: false
+permissions:
+  contents: read
+concurrency:
+  group: release
+  cancel-in-progress: false
+jobs:
+  verify:
+    uses: ./.github/workflows/ci.yml
+  publish:
+    if: inputs.publish && github.ref == 'refs/heads/main'
+    needs: verify
+    environment: release
+    runs-on: ubuntu-24.04
+    permissions:
+      contents: write
+      packages: write
+      id-token: write
+    steps:
+      - uses: actions/checkout@3d3c42e5aac5ba805825da76410c181273ba90b1 # v7.0.1
+      - uses: oven-sh/setup-bun@0c5077e51419868618aeaa5fe8019c62421857d6 # v2.2.0
+        with:
+          bun-version: 1.4.2
+      - uses: actions/download-artifact@9000827ccba6bdab643e8b6fd33ac0654aef8333 # v8.0.2
+        with:
+          name: release-inputs
+          path: .
+      - uses: actions/download-artifact@9000827ccba6bdab643e8b6fd33ac0654aef8333 # v8.0.2
+        with:
+          name: container-verification
+          path: artifacts
+      - name: Validate exact source and approved license
+        env:
+          RELEASE_VERSION: ${{ inputs.version }}
+        run: |
+          bun -e 'const p=await Bun.file("package.json").json(); if(p.version!==process.env.RELEASE_VERSION || !/^\d+\.\d+\.\d+$/.test(p.version)) throw Error("Version mismatch"); if(!(await Bun.file("LICENSE").exists())) throw Error("Final license required");'
+          cd artifacts && sha256sum -c SHA256SUMS
+      - run: |
+          mkdir -p public/downloads
+          cp artifacts/ledgercatch-extension-*.zip public/downloads/ledgercatch-extension.zip
+          sha256sum public/downloads/ledgercatch-extension.zip | sed 's@public/downloads/@@' > public/downloads/SHA256SUMS
+      - uses: docker/setup-buildx-action@f87e5991a6d7451dcb8d9637bfbc97413f497069 # v4.4.1
+      - uses: docker/login-action@dbcb813823bdd20940b903addbd779551569679f # v4.6.0
+        with:
+          registry: ghcr.io
+          username: ${{ github.actor }}
+          password: ${{ secrets.GITHUB_TOKEN }}
+      - name: Image names
+        id: image
+        env:
+          REPOSITORY: ${{ github.repository }}
+        run: printf 'name=ghcr.io/%s\n' "${REPOSITORY,,}" >> "$GITHUB_OUTPUT"
+      - uses: docker/build-push-action@c3c9e263c25d99ce0380d002d59b67737d91b0dc # v7.4.0
+        id: build
+        with:
+          context: .
+          push: true
+          platforms: linux/amd64
+          provenance: mode=max
+          sbom: true
+          tags: |
+            ${{ steps.image.outputs.name }}:${{ inputs.version }}
+            ${{ steps.image.outputs.name }}:sha-${{ github.sha }}
+            ${{ steps.image.outputs.name }}:latest
+      - name: Source archive and release
+        env:
+          GH_TOKEN: ${{ secrets.GITHUB_TOKEN }}
+          VERSION: ${{ inputs.version }}
+          DIGEST: ${{ steps.build.outputs.digest }}
+        run: |
+          git archive --format=tar.gz --prefix="ledgercatch-$VERSION/" HEAD > "artifacts/ledgercatch-$VERSION.tar.gz"
+          (cd artifacts && sha256sum "ledgercatch-$VERSION.tar.gz" >> SHA256SUMS)
+          printf 'Source: %s\nImage digest: %s\nArchitecture: linux/amd64\nChrome store: not submitted by this workflow.\n' "$GITHUB_SHA" "$DIGEST" > artifacts/RELEASE.txt
+          gh release create "v$VERSION" --target "$GITHUB_SHA" --generate-notes --notes-file artifacts/RELEASE.txt artifacts/*

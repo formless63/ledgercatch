@@ -1,0 +1,31 @@
+{
+  "input": {
+    "pageType": "order_list",
+    "pageUrl": "https://biz.alibaba.com/ta/detail.htm?orderId=200000000000000001"
+  },
+  "payload": {
+    "file": "buyer-list.html"
+  },
+  "expect": {
+    "outcome": "orders",
+    "orderCount": 2,
+    "orders": [
+      {
+        "externalOrderId": "200000000000000001",
+        "totalMinor": 3000,
+        "status": "processing",
+        "items": [
+          {
+            "title": "Example part",
+            "quantity": 20
+          }
+        ]
+      },
+      {
+        "externalOrderId": "200000000000000002",
+        "totalMinor": 5000,
+        "status": "cancelled"
+      }
+    ]
+  }
+}

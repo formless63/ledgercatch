@@ -1,0 +1,26 @@
+{
+  "input": {
+    "pageType": "order_detail",
+    "pageUrl": "https://biz.alibaba.com/ta/detail.htm?orderId=200000000000000001"
+  },
+  "payload": {
+    "file": "contract.html"
+  },
+  "expect": {
+    "outcome": "orders",
+    "orderCount": 1,
+    "orders": [
+      {
+        "externalOrderId": "200000000000000001",
+        "totalMinor": 25000,
+        "status": "placed",
+        "items": [
+          {
+            "title": "Example tooling",
+            "quantity": 1
+          }
+        ]
+      }
+    ]
+  }
+}

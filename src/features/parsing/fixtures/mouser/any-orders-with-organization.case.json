@@ -1,0 +1,13 @@
+{
+	"description": "Unrelated order-history helper API is not order data",
+	"input": {
+		"kind": "api_json",
+		"pageType": "unknown",
+		"pageUrl": "https://www.mouser.com/en/account/orders"
+	},
+	"payload": {
+		"file": "any-orders-with-organization.json",
+		"requestUrl": "https://www.mouser.com/api/OrderHistory/AnyOrderswithOrganization?_=1"
+	},
+	"expect": { "outcome": "no_orders" }
+}

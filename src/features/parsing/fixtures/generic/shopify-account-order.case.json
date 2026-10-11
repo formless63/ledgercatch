@@ -1,0 +1,45 @@
+{
+	"description": "Shopify classic customer account order page (Dawn v15 sections/main-order.liquid): sale prices, cart discount, shipping, tax, UPS fulfillment",
+	"input": {
+		"kind": "html_snapshot",
+		"pageType": "order_detail",
+		"pageUrl": "https://northwindcoffee.example/account/orders/8f1d2c3b4a5e6f708192a3b4c5d6e7f8"
+	},
+	"payload": { "file": "shopify-account-order.html" },
+	"expect": {
+		"outcome": "orders",
+		"orderCount": 1,
+		"orders": [
+			{
+				"externalOrderId": "1047",
+				"merchantName": "Northwind Coffee Co.",
+				"orderDate": "2026-10-02",
+				"currency": "USD",
+				"subtotalMinor": 4460,
+				"discountMinor": 446,
+				"shippingMinor": 695,
+				"taxMinor": 0,
+				"totalMinor": 4709,
+				"items": [
+					{
+						"title": "Ethiopia Guji Natural",
+						"sku": "NW-ETH-GUJI-16",
+						"variant": "1 lb / Whole bean",
+						"quantity": 2,
+						"unitPriceMinor": 1950,
+						"totalMinor": 3900,
+						"itemUrl": "https://northwindcoffee.example/products/ethiopia-guji-whole-bean?variant=44012345678901"
+					},
+					{
+						"title": "Cone Paper Filters #02 (100 ct)",
+						"sku": "NW-FLT-02",
+						"quantity": 1,
+						"unitPriceMinor": 560,
+						"totalMinor": 560
+					}
+				],
+				"shipments": [{ "trackingNumber": "1Z999AA10123456784", "carrier": "UPS" }]
+			}
+		]
+	}
+}

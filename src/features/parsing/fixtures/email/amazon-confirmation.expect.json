@@ -1,0 +1,41 @@
+{
+	"description": "Amazon.com order confirmation with items and totals",
+	"mime": {
+		"source": "amazon",
+		"from": "auto-confirm@amazon.com",
+		"forwarded": null,
+		"dateStartsWith": "2026-10-05"
+	},
+	"expect": {
+		"outcome": "orders",
+		"parserId": "amazon-email",
+		"orderCount": 1,
+		"orders": [
+			{
+				"externalOrderId": "112-4567890-1234567",
+				"merchantName": "Amazon",
+				"status": "placed",
+				"orderDate": "2026-10-05",
+				"currency": "USD",
+				"totalMinor": 5347,
+				"subtotalMinor": 4997,
+				"shippingMinor": 0,
+				"taxMinor": 350,
+				"orderUrl": "https://www.amazon.com/gp/your-account/order-details?orderID=112-4567890-1234567",
+				"items": [
+					{
+						"title": "Anker USB C Charger, 735 Charger (Nano II 65W)",
+						"quantity": 1,
+						"totalMinor": 3599
+					},
+					{
+						"title": "ELEGOO 120pcs Multicolored Dupont Wire 40pin Male to Female",
+						"quantity": 2,
+						"totalMinor": 1398,
+						"unitPriceMinor": 699
+					}
+				]
+			}
+		]
+	}
+}

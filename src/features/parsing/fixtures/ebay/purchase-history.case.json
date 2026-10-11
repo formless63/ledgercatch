@@ -1,0 +1,59 @@
+{
+	"description": "Purchase history ajax JSON (RIVER module): labeled secondaryMessage, Quantity aspect, order details URL in actions",
+	"input": {
+		"kind": "api_json",
+		"pageType": "order_list",
+		"pageUrl": "https://www.ebay.com/mye/myebay/purchase?filter=year_filter:CURRENT_YEAR"
+	},
+	"payload": {
+		"file": "purchase-history.json",
+		"requestUrl": "https://www.ebay.com/mye/myebay/ajax/v2/purchase/mp/get?filter=year_filter%3ACURRENT_YEAR&page=1&modules=ALL_TRANSACTIONS&moduleId=122164&pg=purchase&mp=purchase-module-v2"
+	},
+	"expect": {
+		"outcome": "orders",
+		"orderCount": 2,
+		"orders": [
+			{
+				"externalOrderId": "12-13579-24680",
+				"merchantName": "tooldepot_usa",
+				"orderUrl": "https://order.ebay.com/ord/show?orderId=12-13579-24680&purchaseOrderId=1234567890123#/",
+				"orderDate": "2026-09-26",
+				"status": "delivered",
+				"currency": "USD",
+				"totalMinor": 4638,
+				"itemsPartial": true,
+				"items": [
+					{
+						"externalItemId": "305512345678",
+						"title": "Fluke 101 Basic Digital Multimeter",
+						"quantity": 1,
+						"unitPriceMinor": 3999,
+						"totalMinor": 3999,
+						"imageUrl": "https://i.ebayimg.com/images/g/AbCdEfGh/s-l140.jpg",
+						"itemUrl": "https://www.ebay.com/itm/305512345678"
+					}
+				]
+			},
+			{
+				"externalOrderId": "04-55443-32211",
+				"merchantName": "fastenerhub",
+				"orderDate": "2026-09-30",
+				"status": "shipped",
+				"totalMinor": 2750,
+				"items": [
+					{
+						"title": "M3 Brass Standoff Assortment Kit 300pcs",
+						"quantity": 2,
+						"variant": "Color: Gold",
+						"totalMinor": 1500
+					},
+					{
+						"title": "Heat Set Inserts M3 100pcs",
+						"quantity": 1,
+						"totalMinor": 1250
+					}
+				]
+			}
+		]
+	}
+}

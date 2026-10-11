@@ -1,0 +1,41 @@
+<!doctype html>
+<html><head><meta charset="utf-8"><title>Order Detail | Mouser</title></head>
+<body>
+<form method="post" action="./OrderDetail.aspx?qs=AbCdEf123" id="aspnetForm">
+<div id="ctl00_ContentMain_OrderDetailHeader_pnlHeader" class="order-detail-header">
+ <h1>Order Detail</h1>
+ <table class="order-header-table">
+  <tr><td>Web Order #:</td><td><span id="ctl00_ContentMain_OrderDetailHeader_lblWebOrderNumber">271234567</span></td></tr>
+  <tr><td>Sales Order #:</td><td><span id="ctl00_ContentMain_OrderDetailHeader_lblSalesOrderNumber">81005659</span></td></tr>
+  <tr><td>Order Date:</td><td><span id="ctl00_ContentMain_OrderDetailHeader_lblOrderDateHeader">14-Sep-26</span></td></tr>
+  <tr><td>Order Status:</td><td><span id="ctl00_ContentMain_OrderDetailHeader_lblOrderStatus">Shipped</span></td></tr>
+ </table>
+</div>
+<table id="ctl00_ContentMain_CartGrid_grid" class="table table-cart">
+ <thead><tr><th>Mouser #</th><th>Mfr. #</th><th>Description</th><th>Qty.</th><th>Price</th><th>Ext.</th><th>Invoice</th></tr></thead>
+ <tbody>
+  <tr data-index="0">
+   <td><a id="ctl00_ContentMain_CartGrid_grid_ctl02_lnkMouserPartNumber" href="/ProductDetail/Texas-Instruments/LM358DR?qs=X1y2Z3">595-LM358DR</a></td>
+   <td><a id="ctl00_ContentMain_CartGrid_grid_ctl02_lnkManufacturerPartNumber" href="/ProductDetail/Texas-Instruments/LM358DR?qs=X1y2Z3">LM358DR</a></td>
+   <td><a id="ctl00_ContentMain_CartGrid_grid_ctl02_lnkDescription" href="/ProductDetail/Texas-Instruments/LM358DR?qs=X1y2Z3">Operational Amplifiers - Op Amps Dual Gen Purpose</a></td>
+   <td class="td-qty">25</td><td class="td-price">$0.268</td><td class="td-ext-price">$6.70</td>
+   <td><a id="ctl00_ContentMain_CartGrid_grid_ctl02_lnkInvoice" href="/OrderHistory/InvoiceDetail.aspx?qs=Inv998877">99887766</a></td>
+  </tr>
+  <tr data-index="1">
+   <td><a id="ctl00_ContentMain_CartGrid_grid_ctl03_lnkMouserPartNumber" href="/ProductDetail/Bourns/3296W-1-103LF?qs=Q4r5">652-3296W-1-103LF</a></td>
+   <td><a id="ctl00_ContentMain_CartGrid_grid_ctl03_lnkManufacturerPartNumber" href="/ProductDetail/Bourns/3296W-1-103LF?qs=Q4r5">3296W-1-103LF</a></td>
+   <td><a id="ctl00_ContentMain_CartGrid_grid_ctl03_lnkDescription" href="/ProductDetail/Bourns/3296W-1-103LF?qs=Q4r5">Trimmer Resistors - Through Hole 10K OHM 25TURN</a></td>
+   <td class="td-qty">4</td><td class="td-price">$2.86</td><td class="td-ext-price">$11.44</td>
+   <td><a id="ctl00_ContentMain_CartGrid_grid_ctl03_lnkInvoice" href="/OrderHistory/InvoiceDetail.aspx?qs=Inv998877">99887766</a></td>
+  </tr>
+ </tbody>
+</table>
+<table id="ctl00_ContentMain_SummaryInfo_tblSummary" class="order-summary">
+ <tr><td>Merchandise Total:</td><td>$18.14</td></tr>
+ <tr><td>Shipping:</td><td>$7.99</td></tr>
+ <tr><td>Tax:</td><td>$1.63</td></tr>
+ <tr id="ctl00_ContentMain_SummaryInfo_trOrderTotal"><td>Order Total:</td><td>$27.76</td></tr>
+</table>
+<div class="payment-info">Payment Method: Visa ending in 9911</div>
+</form>
+</body></html>

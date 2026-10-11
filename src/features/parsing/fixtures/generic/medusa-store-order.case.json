@@ -1,0 +1,31 @@
+{
+	"description": "Medusa v2 Store API GET /store/orders/:id body: decimal major-unit amounts, display_id as the order number, fulfillment label tracking",
+	"input": {
+		"kind": "api_json",
+		"pageType": "order_confirmation",
+		"pageUrl": "https://kilnandclay.example/de/order/order_01JA8M3T2W7Z9K4N6P8R0S2V4X/confirmed"
+	},
+	"payload": { "file": "medusa-store-order.json", "requestUrl": "https://api.kilnandclay.example/store/orders/order_01JA8M3T2W7Z9K4N6P8R0S2V4X" },
+	"expect": {
+		"outcome": "orders",
+		"orderCount": 1,
+		"orders": [
+			{
+				"externalOrderId": "57",
+				"orderDate": "2026-10-04",
+				"status": "shipped",
+				"currency": "EUR",
+				"subtotalMinor": 7210,
+				"shippingMinor": 589,
+				"taxMinor": 1464,
+				"discountMinor": 420,
+				"totalMinor": 9169,
+				"items": [
+					{ "title": "Stoneware Mug", "variant": "Speckled / 350 ml", "sku": "MUG-SPK-350", "quantity": 2, "unitPriceMinor": 2400, "totalMinor": 4800 },
+					{ "title": "Nesting Bowl Set", "variant": "Sand", "sku": "BWL-SET-SND", "quantity": 1, "unitPriceMinor": 4200, "totalMinor": 3780 }
+				],
+				"shipments": [{ "trackingNumber": "00340434161094042557" }]
+			}
+		]
+	}
+}

@@ -1,0 +1,24 @@
+{
+	"description": "DigiKey shipped notice with UPS tracking and invoice PDF",
+	"mime": {
+		"source": "digikey",
+		"attachments": [
+			"Invoice_87654321.pdf"
+		]
+	},
+	"expect": {
+		"outcome": "orders",
+		"orders": [
+			{
+				"externalOrderId": "91234567",
+				"status": "shipped",
+				"shipments": [
+					{
+						"trackingNumber": "1Z999AA10123456784",
+						"carrier": "UPS"
+					}
+				]
+			}
+		]
+	}
+}

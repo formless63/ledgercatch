@@ -1,0 +1,138 @@
+{
+	"modules": {
+		"RIVER": [
+			{
+				"_type": "RiverModule",
+				"meta": { "name": "RIVER" },
+				"data": {
+					"items": [
+						{
+							"_type": "PurchaseOrderWrapper",
+							"primaryMessage": {
+								"_type": "TextualDisplay",
+								"textSpans": [
+									{ "_type": "TextSpan", "text": "Delivered on Thu, Oct 2" }
+								]
+							},
+							"secondaryMessage": [
+								{
+									"_type": "TextualDisplay",
+									"textSpans": [{ "text": "Order date" }]
+								},
+								{
+									"_type": "TextualDisplay",
+									"textSpans": [{ "text": "Sep 26, 2026" }]
+								},
+								{
+									"_type": "TextualDisplay",
+									"textSpans": [{ "text": "Order total" }]
+								},
+								{
+									"_type": "TextualDisplay",
+									"textSpans": [{ "text": "US $46.38" }]
+								},
+								{
+									"_type": "TextualDisplay",
+									"textSpans": [{ "text": "Order number" }]
+								},
+								{
+									"_type": "TextualDisplay",
+									"textSpans": [{ "text": "12-13579-24680" }]
+								}
+							],
+							"itemCards": [
+								{
+									"_type": "ItemCard",
+									"listingId": "305512345678",
+									"title": {
+										"_type": "TextualDisplay",
+										"textSpans": [
+											{ "text": "Fluke 101 Basic Digital Multimeter" }
+										]
+									},
+									"image": {
+										"_type": "Image",
+										"URL": "https://i.ebayimg.com/images/g/AbCdEfGh/s-l140.jpg",
+										"title": "Fluke 101 Basic Digital Multimeter"
+									},
+									"additionalPrice": {
+										"_type": "TextualDisplay",
+										"value": { "value": 39.99, "currency": "USD" },
+										"textSpans": [{ "text": "US $39.99" }]
+									},
+									"aspectValuesList": [],
+									"__myb": {
+										"orderId": "12-13579-24680",
+										"sellerInfo": [
+											{ "textSpans": [{ "text": "Seller" }] },
+											{ "textSpans": [{ "text": "tooldepot_usa" }] }
+										],
+										"actionList": [
+											{
+												"text": "View order details",
+												"action": {
+													"URL": "https://order.ebay.com/ord/show?orderId=12-13579-24680&purchaseOrderId=1234567890123#/"
+												}
+											}
+										]
+									}
+								}
+							]
+						},
+						{
+							"_type": "PurchaseOrderWrapper",
+							"primaryMessage": { "textSpans": [{ "text": "Shipped" }] },
+							"secondaryMessage": [
+								{ "textSpans": [{ "text": "Order date" }] },
+								{ "textSpans": [{ "text": "Sep 30, 2026" }] },
+								{ "textSpans": [{ "text": "Order total" }] },
+								{ "textSpans": [{ "text": "US $27.50" }] }
+							],
+							"itemCards": [
+								{
+									"listingId": "126611223344",
+									"image": {
+										"URL": "https://i.ebayimg.com/images/g/XyZ/s-l140.jpg",
+										"title": "M3 Brass Standoff Assortment Kit 300pcs"
+									},
+									"additionalPrice": {
+										"value": { "value": 15.0, "currency": "USD" }
+									},
+									"aspectValuesList": [
+										{ "textSpans": [{ "text": "Quantity: 2" }] },
+										{ "textSpans": [{ "text": "Color: Gold" }] }
+									],
+									"__myb": {
+										"orderId": "04-55443-32211",
+										"sellerInfo": [
+											{ "textSpans": [{ "text": "Seller" }] },
+											{ "textSpans": [{ "text": "fastenerhub" }] }
+										]
+									}
+								},
+								{
+									"listingId": "126699887766",
+									"image": {
+										"URL": "https://i.ebayimg.com/images/g/QrS/s-l140.jpg",
+										"title": "Heat Set Inserts M3 100pcs"
+									},
+									"additionalPrice": {
+										"value": { "value": 12.5, "currency": "USD" }
+									},
+									"aspectValuesList": [],
+									"__myb": {
+										"orderId": "04-55443-32211",
+										"sellerInfo": [
+											{ "textSpans": [{ "text": "Seller" }] },
+											{ "textSpans": [{ "text": "fastenerhub" }] }
+										]
+									}
+								}
+							]
+						}
+					]
+				}
+			}
+		]
+	}
+}

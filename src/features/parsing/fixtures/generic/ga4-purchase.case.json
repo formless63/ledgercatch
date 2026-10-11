@@ -1,0 +1,38 @@
+{
+	"description": "GA4 dataLayer purchase event in an inline script (JS object literal, single quotes, unquoted keys)",
+	"input": {
+		"kind": "html_snapshot",
+		"pageType": "order_confirmation",
+		"pageUrl": "https://gadget.example.net/checkout/success"
+	},
+	"payload": { "file": "ga4-purchase.html" },
+	"expect": {
+		"outcome": "orders",
+		"orders": [
+			{
+				"externalOrderId": "T-20261003-77",
+				"merchantName": "Gadget Outlet",
+				"currency": "USD",
+				"totalMinor": 12947,
+				"taxMinor": 962,
+				"shippingMinor": 499,
+				"items": [
+					{
+						"title": "Logic Analyzer 24MHz 8ch",
+						"sku": "SKU_12345",
+						"variant": "black",
+						"quantity": 1,
+						"unitPriceMinor": 5999
+					},
+					{
+						"title": "Jumper Wire Kit",
+						"sku": "SKU_67890",
+						"quantity": 2,
+						"unitPriceMinor": 2743,
+						"totalMinor": 5486
+					}
+				]
+			}
+		]
+	}
+}

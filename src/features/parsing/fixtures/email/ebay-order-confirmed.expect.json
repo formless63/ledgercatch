@@ -1,0 +1,33 @@
+{
+	"description": "eBay 'Order confirmed' with item, seller, totals and card",
+	"mime": {
+		"source": "ebay",
+		"dateStartsWith": "2026-10-03"
+	},
+	"expect": {
+		"outcome": "orders",
+		"parserId": "ebay-email",
+		"orders": [
+			{
+				"externalOrderId": "12-13579-24680",
+				"status": "placed",
+				"orderDate": "2026-10-03",
+				"merchantName": "tooldepot_usa",
+				"currency": "USD",
+				"totalMinor": 9286,
+				"subtotalMinor": 7999,
+				"shippingMinor": 599,
+				"taxMinor": 688,
+				"paymentLast4": "4821",
+				"items": [
+					{
+						"title": "Raspberry Pi 5 Model B 8GB RAM",
+						"quantity": 1,
+						"totalMinor": 7999,
+						"externalItemId": "315123456789"
+					}
+				]
+			}
+		]
+	}
+}

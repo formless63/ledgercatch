@@ -1,0 +1,26 @@
+{
+	"description": "19-digit numeric tradeOrderId loses precision in JSON.parse; id must come from the URL/hint",
+	"input": {
+		"kind": "api_json",
+		"pageType": "order_detail",
+		"pageUrl": "https://www.aliexpress.com/p/order/detail.html?orderId=3045678912345678912",
+		"orderIdHints": ["3045678912345678912"]
+	},
+	"payload": {
+		"file": "detail-unsafe-id.json",
+		"requestUrl": "https://acs.aliexpress.com/h5/mtop.aliexpress.trade.buyer.order.detail/1.0/"
+	},
+	"expect": {
+		"outcome": "orders",
+		"orders": [
+			{
+				"externalOrderId": "3045678912345678912",
+				"orderDate": "2026-10-01",
+				"status": "processing",
+				"currency": "BRL",
+				"totalMinor": 12659,
+				"paymentHint": "PayPal"
+			}
+		]
+	}
+}

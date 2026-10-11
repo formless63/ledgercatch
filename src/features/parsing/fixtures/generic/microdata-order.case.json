@@ -1,0 +1,29 @@
+{
+	"description": "schema.org Order as microdata (itemprop content attributes, nested offer scope)",
+	"input": {
+		"kind": "html_snapshot",
+		"pageType": "order_confirmation",
+		"pageUrl": "https://market.example.org/orders/88213"
+	},
+	"payload": { "file": "microdata-order.html" },
+	"expect": {
+		"outcome": "orders",
+		"orders": [
+			{
+				"externalOrderId": "88213",
+				"orderDate": "2026-09-30",
+				"status": "shipped",
+				"currency": "EUR",
+				"totalMinor": 4250,
+				"items": [
+					{
+						"title": "USB-C Power Delivery Trigger Board",
+						"sku": "PD-TRIG-2",
+						"quantity": 2,
+						"unitPriceMinor": 2125
+					}
+				]
+			}
+		]
+	}
+}

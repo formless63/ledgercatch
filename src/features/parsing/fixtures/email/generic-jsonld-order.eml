@@ -1,0 +1,19 @@
+From: "Gadget Hub" <orders@gadgethub.example>
+To: william@example.com
+Subject: Your Gadget Hub receipt
+Date: Sat, 03 Oct 2026 17:01:00 +0000
+Message-ID: <receipt-GH-778812@gadgethub.example>
+MIME-Version: 1.0
+Content-Type: text/html; charset="utf-8"
+Content-Transfer-Encoding: quoted-printable
+
+<html><head><script type=3D"application/ld+json">
+{"@context":"http://schema.org","@type":"Order","merchant":{"@type":"Organiza=
+tion","name":"Gadget Hub"},"orderNumber":"GH-778812","priceCurrency":"USD","p=
+rice":"129.00","orderDate":"2026-10-03T10:00:00-07:00","orderStatus":"http://=
+schema.org/OrderProcessing","acceptedOffer":{"@type":"Offer","itemOffered":{"=
+@type":"Product","name":"USB-C Logic Analyzer 24MHz 8ch","sku":"LA-8"},"price=
+":"119.00","priceCurrency":"USD","eligibleQuantity":{"@type":"QuantitativeVal=
+ue","value":"1"}},"url":"https://gadgethub.example/account/orders/GH-778812"}
+</script></head><body><p>Thanks for shopping at Gadget Hub.</p><p>Your receip=
+t is below.</p></body></html>

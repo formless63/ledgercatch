@@ -1,0 +1,55 @@
+{
+  "description": "Amazon Business (2026) order history: #orderCard.a-box-group cards, #orderCardHeader label/value columns, id in #orderIdField, .itemDetails rows with .itemQuantity; an empty .js-order-card template must not hide the cards",
+  "input": {
+    "kind": "html_snapshot",
+    "pageType": "order_list",
+    "pageUrl": "https://www.amazon.com/gp/css/order-history?ref_=abn_yadd_ad_your_orders"
+  },
+  "payload": {
+    "file": "list-business.html"
+  },
+  "expect": {
+    "outcome": "orders",
+    "orderCount": 2,
+    "orders": [
+      {
+        "externalOrderId": "111-1000001-2000001",
+        "orderDate": "2026-10-07",
+        "statusText": "Arriving Monday",
+        "currency": "USD",
+        "totalMinor": 4809,
+        "itemsPartial": true,
+        "items": [
+          {
+            "sku": "B0EXAMPLE1",
+            "title": "Example HDMI Converter Box",
+            "quantity": 1,
+            "unitPriceMinor": 2685,
+            "itemUrl": "https://www.amazon.com/dp/B0EXAMPLE1"
+          },
+          {
+            "sku": "B0EXAMPLE2",
+            "quantity": 1,
+            "unitPriceMinor": 2124
+          }
+        ],
+        "placedByGroup": "Example Hardware LLC",
+        "shipToAddress": "1 EXAMPLE ST ANYTOWN, NY 10000"
+      },
+      {
+        "externalOrderId": "112-3000003-4000004",
+        "orderDate": "2026-09-09",
+        "status": "delivered",
+        "totalMinor": 1944,
+        "items": [
+          {
+            "sku": "B0EXAMPLE3",
+            "quantity": 4,
+            "unitPriceMinor": 486,
+            "totalMinor": 1944
+          }
+        ]
+      }
+    ]
+  }
+}

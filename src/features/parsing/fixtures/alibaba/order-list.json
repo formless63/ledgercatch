@@ -1,0 +1,46 @@
+{
+	"api": "mtop.alibaba.intl.buyer.order.list",
+	"data": {
+		"success": true,
+		"result": {
+			"total": 2,
+			"orderList": [
+				{
+					"orderIdStr": "268518575501029968",
+					"orderId": 268518575501029968,
+					"gmtCreate": 1790380800000,
+					"orderStatus": "WAIT_SELLER_SEND_GOODS",
+					"orderStatusText": "Awaiting shipment",
+					"sellerCompanyName": "Shenzhen Example Electronic Technology Co., Ltd.",
+					"totalAmount": { "amount": "1245.60", "currency": "USD" },
+					"shippingFee": { "amount": "85.00", "currency": "USD" },
+					"productList": [
+						{
+							"productId": "1600123456789",
+							"productName": "Custom PCB Assembly SMT Service 2-layer FR4",
+							"quantity": 200,
+							"unitPrice": { "amount": "5.80", "currency": "USD" },
+							"productImage": "//s.alicdn.com/@sc04/kf/H1234567890.jpg",
+							"productUrl": "//www.alibaba.com/product-detail/_1600123456789.html"
+						}
+					]
+				},
+				{
+					"orderIdStr": "271122334455667788",
+					"gmtCreate": "2026-08-14 10:02:33",
+					"orderStatus": "TRADE_SUCCESS",
+					"sellerCompanyName": "Dongguan Sample Hardware Co., Ltd.",
+					"totalAmount": "US $310.00",
+					"productList": [
+						{
+							"productName": "M3 Stainless Hex Standoffs 10000pcs",
+							"quantity": 2,
+							"unitPrice": "155.00"
+						}
+					]
+				}
+			]
+		}
+	},
+	"ret": ["SUCCESS::调用成功"]
+}

@@ -1,0 +1,35 @@
+{
+	"description": "Shopify legacy checkout.liquid thank-you page: Shopify.checkout global for amounts/items, visible .os-order-number for the human order name (not the internal order_id)",
+	"input": {
+		"kind": "html_snapshot",
+		"pageType": "order_confirmation",
+		"pageUrl": "https://maple-leaf-tea.ca/12345678/checkouts/9f8e7d6c5b4a39281706f5e4d3c2b1a0/thank_you"
+	},
+	"payload": { "file": "shopify-legacy-thankyou.html" },
+	"expect": {
+		"outcome": "orders",
+		"orderCount": 1,
+		"orders": [
+			{
+				"externalOrderId": "MLT1188",
+				"orderDate": "2024-03-02",
+				"currency": "CAD",
+				"subtotalMinor": 3510,
+				"shippingMinor": 995,
+				"taxMinor": 586,
+				"discountMinor": 390,
+				"totalMinor": 5091,
+				"items": [
+					{
+						"title": "Earl Grey Cream; Loose Leaf",
+						"sku": "MLT-EG-250",
+						"variant": "250 g",
+						"quantity": 2,
+						"unitPriceMinor": 1950,
+						"totalMinor": 3900
+					}
+				]
+			}
+		]
+	}
+}

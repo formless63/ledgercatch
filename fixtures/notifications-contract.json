@@ -1,0 +1,80 @@
+{
+  "types": {
+    "accepted": [
+      "fixture.created",
+      "app-v1.user_2.updated"
+    ],
+    "rejected": [
+      "",
+      "single",
+      "Upper.created",
+      "fixture..created",
+      ".fixture",
+      "fixture.",
+      " fixture.created "
+    ]
+  },
+  "titles": {
+    "accepted": [
+      "Title",
+      "  plain text  ",
+      "<tag>",
+      "<script>alert(1)</script>",
+      "xxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxx"
+    ],
+    "rejected": [
+      "",
+      " ",
+      "\u00a0",
+      "xxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxx"
+    ]
+  },
+  "metadataKeys": {
+    "accepted": [
+      " ",
+      " safe ",
+      "xxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxx"
+    ],
+    "rejected": [
+      "",
+      "xxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxx"
+    ]
+  },
+  "emailErrors": [
+    {
+      "code": "connection",
+      "retryable": true,
+      "settlement": "retry"
+    },
+    {
+      "code": "temporary-rejection",
+      "retryable": true,
+      "settlement": "retry"
+    },
+    {
+      "code": "connection",
+      "retryable": false,
+      "settlement": "ambiguous"
+    },
+    {
+      "code": "timeout",
+      "retryable": true,
+      "settlement": "ambiguous"
+    },
+    {
+      "code": "timeout",
+      "retryable": false,
+      "settlement": "ambiguous"
+    },
+    {
+      "code": "unknown",
+      "retryable": true,
+      "settlement": "ambiguous"
+    },
+    {
+      "code": "temporary-rejection",
+      "retryable": false,
+      "settlement": "permanent"
+    }
+  ]
+}

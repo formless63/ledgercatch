@@ -1,0 +1,35 @@
+{
+	"description": "PrestaShop 8 classic theme order-confirmation (checkout/order-confirmation.tpl + _partials/order-confirmation-table.tpl), French locale; id = order reference",
+	"input": {
+		"kind": "html_snapshot",
+		"pageType": "order_confirmation",
+		"pageUrl": "https://atelier-papier.example.fr/index.php?controller=order-confirmation&id_cart=2214&id_module=31&id_order=1842&key=4f1e2d3c4b5a69788796a5b4c3d2e1f0"
+	},
+	"payload": { "file": "prestashop-order-confirmation.html" },
+	"expect": {
+		"outcome": "orders",
+		"orderCount": 1,
+		"orders": [
+			{
+				"externalOrderId": "QWZRTPLKX",
+				"currency": "EUR",
+				"subtotalMinor": 7370,
+				"discountMinor": 737,
+				"shippingMinor": 690,
+				"taxMinor": 1221,
+				"totalMinor": 7323,
+				"paymentHint": "Carte bancaire",
+				"items": [
+					{
+						"title": "Carnet A5 pointillé - Couleur : Bleu nuit",
+						"quantity": 3,
+						"unitPriceMinor": 1490,
+						"totalMinor": 4470,
+						"imageUrl": "https://atelier-papier.example.fr/112-medium_default/carnet-a5-pointille.jpg"
+					},
+					{ "title": "Stylo plume acier", "quantity": 1, "unitPriceMinor": 2900, "totalMinor": 2900 }
+				]
+			}
+		]
+	}
+}

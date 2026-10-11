@@ -1,0 +1,27 @@
+{
+	"description": "Order details of a fully refunded order: \"2 items\" is the subtotal, \"Item discount\" a discount (not the subtotal), and Total refunded = Amount paid marks it returned while Order total nets to $0.00",
+	"input": {
+		"kind": "html_snapshot",
+		"pageType": "order_detail",
+		"pageUrl": "https://order.ebay.com/ord/show?orderId=11-33333-44444"
+	},
+	"payload": { "file": "order-details-refunded.html" },
+	"expect": {
+		"outcome": "orders",
+		"orderCount": 1,
+		"orders": [
+			{
+				"externalOrderId": "11-33333-44444",
+				"orderDate": "2025-01-28",
+				"status": "returned",
+				"statusText": "Refunded",
+				"subtotalMinor": 3798,
+				"discountMinor": 380,
+				"shippingMinor": 0,
+				"taxMinor": 273,
+				"totalMinor": 0,
+				"paymentLast4": "1007"
+			}
+		]
+	}
+}

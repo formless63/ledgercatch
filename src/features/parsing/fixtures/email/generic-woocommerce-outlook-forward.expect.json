@@ -1,0 +1,22 @@
+{
+	"description": "WooCommerce 'order received' forwarded from Outlook (plain text)",
+	"mime": {
+		"source": "generic",
+		"from": "orders@makershop.example",
+		"forwarded": "inline",
+		"subject": "Your Maker Shop order has been received!"
+	},
+	"expect": {
+		"outcome": "orders",
+		"orders": [
+			{
+				"externalOrderId": "4521",
+				"merchantName": "Maker Shop",
+				"orderUrl": "https://makershop.example/",
+				"totalMinor": 6495,
+				"subtotalMinor": 5800,
+				"shippingMinor": 695
+			}
+		]
+	}
+}

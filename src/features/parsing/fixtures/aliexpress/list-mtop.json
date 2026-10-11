@@ -1,0 +1,106 @@
+{
+	"api": "mtop.aliexpress.trade.buyer.order.list",
+	"data": {
+		"data": {
+			"pc_om_list_header_action_2245": {
+				"id": "2245",
+				"tag": "pc_om_list_header_action",
+				"type": "pc_om_list_header_action",
+				"fields": { "statusTab": "all" }
+			},
+			"pc_om_list_order_8203145566781234": {
+				"id": "8203145566781234",
+				"tag": "pc_om_list_order",
+				"type": "pc_om_list_order",
+				"fields": {
+					"orderId": "8203145566781234",
+					"orderDateText": "Sep 28, 2026",
+					"statusText": "Awaiting delivery",
+					"totalPriceText": "US $23.47",
+					"formatPriceInfo": "US $23.47|23|47",
+					"currencyCode": "USD",
+					"baseCurrency": "USD",
+					"storeName": "Shenzhen Maker Store",
+					"storePageUrl": "//www.aliexpress.com/store/1102345678",
+					"orderDetailUrl": "//www.aliexpress.com/p/order/detail.html?orderId=8203145566781234",
+					"paymentOutId": "54201299817262",
+					"orderLines": [
+						{
+							"orderLineId": "8203145566791234",
+							"productId": "1005006123456789",
+							"skuId": "12000036123456789",
+							"itemTitle": "ESP32-C3 SuperMini Development Board WiFi Bluetooth",
+							"itemImgUrl": "//ae01.alicdn.com/kf/S1a2b3c4d5e6f.jpg",
+							"itemDetailUrl": "//www.aliexpress.com/item/1005006123456789.html",
+							"itemPriceText": "US $3.12",
+							"formatPriceInfo": "US $3.12|3|12",
+							"quantity": 5,
+							"currencyCode": "USD",
+							"skuAttrs": [{ "name": "Color", "text": "With pins" }]
+						},
+						{
+							"orderLineId": "8203145566801234",
+							"productId": "1005005987654321",
+							"skuId": "12000035987654321",
+							"itemTitle": "100PCS 0805 SMD Resistor Kit",
+							"itemImgUrl": "//ae01.alicdn.com/kf/H9f8e7d6c5b4a.jpg",
+							"itemDetailUrl": "//www.aliexpress.com/item/1005005987654321.html",
+							"itemPriceText": "US $7.87",
+							"formatPriceInfo": "US $7.87|7|87",
+							"quantity": 1,
+							"currencyCode": "USD",
+							"skuAttrs": []
+						}
+					]
+				}
+			},
+			"pc_om_list_order_8199871234506677": {
+				"id": "8199871234506677",
+				"tag": "pc_om_list_order",
+				"type": "pc_om_list_order",
+				"fields": {
+					"orderId": "8199871234506677",
+					"orderDateText": "Aug 2, 2026",
+					"statusText": "Completed",
+					"totalPriceText": "€12,05",
+					"formatPriceInfo": "€12,05|12|05",
+					"storeName": "BTF-LIGHTING Official Store",
+					"orderLines": {
+						"0": {
+							"orderLineId": "8199871234516677",
+							"productId": "1005004111222333",
+							"itemTitle": "WS2812B LED Strip 1m 60 LEDs",
+							"itemPriceText": "€12,05",
+							"formatPriceInfo": "€12,05|12|05",
+							"quantity": 1,
+							"currencyCode": "EUR",
+							"skuAttrs": [
+								{ "name": "Color", "text": "Black PCB" },
+								{ "name": "Length", "text": "1m 60leds" }
+							]
+						}
+					}
+				}
+			},
+			"pc_om_list_body_2251": {
+				"id": "2251",
+				"tag": "pc_om_list_body",
+				"type": "pc_om_list_body",
+				"fields": { "hasMore": true, "pageIndex": 1, "pageSize": 10 }
+			}
+		},
+		"hierarchy": {
+			"root": "pc_om_list_root_1",
+			"structure": {
+				"pc_om_list_body_2251": [
+					"pc_om_list_order_8203145566781234",
+					"pc_om_list_order_8199871234506677"
+				]
+			}
+		},
+		"linkage": { "signature": "e2b9c1" },
+		"endpoint": { "mode": "pc", "osVersion": "pc", "protocolVersion": "3.0" }
+	},
+	"ret": ["SUCCESS::调用成功"],
+	"v": "1.0"
+}

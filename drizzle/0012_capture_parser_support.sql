@@ -1,0 +1,1 @@
+ALTER TABLE "order_captures" ADD COLUMN "supported_by_parser" boolean;

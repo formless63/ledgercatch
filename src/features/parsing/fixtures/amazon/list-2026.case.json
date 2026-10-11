@@ -1,0 +1,61 @@
+{
+	"description": "2024+ Your Orders layout (order-header__header-list-item, delivery-box, item-box); session-id decoy in telemetry",
+	"input": {
+		"kind": "html_snapshot",
+		"pageType": "order_list",
+		"pageUrl": "https://www.amazon.com/your-orders/orders?timeFilter=months-3"
+	},
+	"payload": { "file": "list-2026.html" },
+	"expect": {
+		"outcome": "orders",
+		"orderCount": 2,
+		"orders": [
+			{
+				"externalOrderId": "113-4829104-5562210",
+				"orderUrl": "https://www.amazon.com/gp/your-account/order-details?orderID=113-4829104-5562210",
+				"orderDate": "2026-10-03",
+				"status": "delivered",
+				"statusText": "Delivered October 5",
+				"currency": "USD",
+				"totalMinor": 6437,
+				"itemsPartial": true,
+				"items": [
+					{
+						"externalItemId": "B0C1H26C46",
+						"sku": "B0C1H26C46",
+						"title": "Hakko FX888DX-010BY Digital Soldering Station",
+						"quantity": 1,
+						"itemUrl": "https://www.amazon.com/dp/B0C1H26C46",
+						"imageUrl": "https://m.media-amazon.com/images/I/61AbCdEfGhL._SS284_.jpg"
+					},
+					{
+						"sku": "B07Q2X1TQG",
+						"title": "Kester 24-6337-0027 Solder Wire",
+						"quantity": 2
+					}
+				],
+				"documentLinks": [
+					{
+						"kind": "invoice",
+						"url": "https://www.amazon.com/gp/css/summary/print.html?orderID=113-4829104-5562210&ref=ppx_yo2ov_dt_b_fed_invoice_pos"
+					}
+				]
+			},
+			{
+				"externalOrderId": "114-0093321-7781045",
+				"orderDate": "2026-09-21",
+				"status": "processing",
+				"totalMinor": 124999,
+				"items": [
+					{ "title": "Rigol DS1054Z Digital Oscilloscope", "quantity": 1 }
+				],
+				"documentLinks": [
+					{
+						"kind": "invoice",
+						"url": "https://www.amazon.com/your-orders/invoice/popover?orderId=114-0093321-7781045&ref_=fed_invoice_ajax"
+					}
+				]
+			}
+		]
+	}
+}

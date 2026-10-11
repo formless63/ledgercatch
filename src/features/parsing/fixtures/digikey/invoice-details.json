@@ -1,0 +1,27 @@
+[
+	{
+		"orderNumber": 91234567,
+		"invoiceDetails": [
+			{
+				"productId": 1234567,
+				"description": "IC MCU 32BIT 64KB FLASH 48LQFP",
+				"manufacturerProductNumber": "STM32F103C8T6",
+				"manufacturerName": "STMicroelectronics",
+				"quantityTotal": 5,
+				"unitPrice": 742000,
+				"extendedPrice": 3710,
+				"thumbnailUrl": "//mm.digikey.com/Volume0/opasdata/d220001/medias/images/1234/48-LQFP_t.jpg",
+				"imageUrl": "//mm.digikey.com/Volume0/opasdata/d220001/medias/images/1234/48-LQFP.jpg"
+			},
+			{
+				"productId": 7654321,
+				"description": "CAP CER 0.1UF 50V X7R 0805",
+				"manufacturerProductNumber": "CL21B104KBCNNNC",
+				"manufacturerName": "Samsung Electro-Mechanics",
+				"quantityTotal": 100,
+				"unitPrice": 11600,
+				"extendedPrice": 1160
+			}
+		]
+	}
+]

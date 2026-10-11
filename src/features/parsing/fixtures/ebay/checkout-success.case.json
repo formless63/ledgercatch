@@ -1,0 +1,26 @@
+{
+	"description": "pay.ebay.com checkout success: order id and total from the summary __xo block, not the data layer's transactionId (-1); evening capture keeps the local purchase day despite the next UTC day",
+	"input": {
+		"kind": "html_snapshot",
+		"pageType": "order_confirmation",
+		"pageUrl": "https://pay.ebay.com/rxo?action=success&sessionid=1000000000001",
+		"capturedAt": "2026-10-08T21:30:00.000-04:00"
+	},
+	"payload": {
+		"file": "checkout-success.html"
+	},
+	"expect": {
+		"outcome": "orders",
+		"orderCount": 1,
+		"orders": [
+			{
+				"externalOrderId": "01-00000-00042",
+				"status": "placed",
+				"currency": "USD",
+				"totalMinor": 9714,
+				"checkoutEmailDomain": "example.test",
+				"orderDate": "2026-10-08"
+			}
+		]
+	}
+}

@@ -1,0 +1,38 @@
+From: William C <william@example.com>
+To: orders-inbox@example.com
+Subject: Fwd: Your order is on its way: Raspberry Pi 5 Model B 8GB RAM
+Date: Mon, 05 Oct 2026 19:30:00 +0000
+Message-ID: <outer-fwd-attach-001@example.com>
+MIME-Version: 1.0
+Content-Type: multipart/mixed; boundary="===============2873324018756960375=="
+
+--===============2873324018756960375==
+Content-Type: text/plain; charset="utf-8"
+Content-Transfer-Encoding: 7bit
+
+Forwarding as attachment.
+
+--===============2873324018756960375==
+Content-Type: message/rfc822
+Content-Transfer-Encoding: 8bit
+Content-Disposition: attachment; filename="Your order is on its way.eml"
+MIME-Version: 1.0
+
+From: "eBay" <ebay@ebay.com>
+To: william@example.com
+Subject: Your order is on its way: Raspberry Pi 5 Model B 8GB RAM
+Date: Mon, 05 Oct 2026 11:00:00 -0700
+Message-ID: <shipped.987654@ebay.com>
+MIME-Version: 1.0
+Content-Type: text/plain; charset="utf-8"
+Content-Transfer-Encoding: 7bit
+
+Your order is on its way!
+
+Raspberry Pi 5 Model B 8GB RAM
+Order number: 12-13579-24680
+Shipped with USPS
+Tracking number: 9400111899223197428490
+Estimated delivery: Oct 12 - Oct 15
+
+--===============2873324018756960375==--

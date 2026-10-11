@@ -1,0 +1,38 @@
+name: ledgercatch-demo
+services:
+  postgres:
+    image: postgres:18.6-alpine3.24
+    environment:
+      POSTGRES_USER: demo
+      POSTGRES_PASSWORD: ${DEMO_DB_PASSWORD:?run demo:setup}
+      POSTGRES_DB: ledgercatch_demo
+    ports: ["127.0.0.1:55432:5432"]
+    volumes: [demo-db:/var/lib/postgresql]
+    healthcheck:
+      test: [CMD-SHELL, "pg_isready -U demo -d ledgercatch_demo"]
+      interval: 2s
+      retries: 30
+    networks: [demo]
+  storage:
+    image: rustfs/rustfs:1.0.0
+    environment:
+      RUSTFS_ACCESS_KEY: ${STORAGE_ACCESS_KEY_ID}
+      RUSTFS_SECRET_KEY: ${STORAGE_SECRET_ACCESS_KEY}
+      RUSTFS_CONSOLE_ENABLE: "false"
+      RUSTFS_OBS_LOGGER_LEVEL: warn
+    ports: ["127.0.0.1:59000:9000"]
+    volumes: [demo-storage:/data, demo-storage-logs:/logs]
+    networks: [demo]
+  mailpit:
+    image: axllent/mailpit:v1.31.5
+    ports: ["127.0.0.1:58025:8025", "127.0.0.1:51025:1025"]
+    networks: [demo]
+networks:
+  demo:
+    ipam:
+      config:
+        - subnet: ${DEMO_SUBNET:-10.237.0.0/24}
+volumes:
+  demo-db:
+  demo-storage:
+  demo-storage-logs:

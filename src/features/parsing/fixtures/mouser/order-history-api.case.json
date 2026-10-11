@@ -1,0 +1,37 @@
+{
+	"description": "Order history JSON (api/OrderHistory/Orders, DataTables aaData) from a real capture, identifiers replaced",
+	"input": {
+		"kind": "api_json",
+		"pageType": "unknown",
+		"pageUrl": "https://www.mouser.com/en/account/orders"
+	},
+	"payload": {
+		"file": "order-history-api.json",
+		"requestUrl": "https://www.mouser.com/api/OrderHistory/Orders?cultureCode=en-US&currencyCulture=en-US"
+	},
+	"expect": {
+		"outcome": "orders",
+		"orderCount": 3,
+		"orders": [
+			{
+				"externalOrderId": "10004444",
+				"orderDate": "2025-08-20",
+				"status": "delivered",
+				"statusText": "Complete",
+				"currency": "USD",
+				"subtotalMinor": 4476,
+				"totalMinor": 5697,
+				"orderUrl": "https://www.mouser.com/en/account/orders/detail?qs=TESTQS",
+				"shipments": [{ "carrier": "UPS", "trackingNumber": "1Z999AA10000000001" }],
+				"documentLinks": [
+					{
+						"kind": "invoice",
+						"url": "https://www.mouser.com/account/invoices/detail/10005555/pdf?hashId=TEST01"
+					}
+				]
+			},
+			{ "externalOrderId": "10006666", "orderDate": "2025-01-04", "totalMinor": 3487 },
+			{ "externalOrderId": "10008888", "orderDate": "2022-08-10", "totalMinor": 9501 }
+		]
+	}
+}

@@ -1,0 +1,38 @@
+{
+	"description": "2026 order list DOM: amounts rendered one character per es--char span, \"Date:\" and \"Ref. Number:\" header labels",
+	"input": {
+		"kind": "html_snapshot",
+		"pageType": "order_list",
+		"pageUrl": "https://www.aliexpress.com/p/order/index.html"
+	},
+	"payload": { "file": "list-page-split-digits.html" },
+	"expect": {
+		"outcome": "orders",
+		"orderCount": 2,
+		"orders": [
+			{
+				"externalOrderId": "8299000000000001",
+				"merchantName": "Example Choice Store",
+				"orderDate": "2026-10-03",
+				"currency": "USD",
+				"totalMinor": 1617,
+				"items": [
+					{
+						"title": "SCART to HDMI Adapter",
+						"variant": "With USB Cable",
+						"quantity": 4,
+						"unitPriceMinor": 459,
+						"totalMinor": 1836
+					}
+				]
+			},
+			{
+				"externalOrderId": "8299000000000002",
+				"orderDate": "2026-09-17",
+				"status": "delivered",
+				"totalMinor": 1085,
+				"items": [{ "title": "Soldering Tip Set", "quantity": 1, "unitPriceMinor": 1206 }]
+			}
+		]
+	}
+}

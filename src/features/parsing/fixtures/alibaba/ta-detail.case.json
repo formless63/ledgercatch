@@ -1,0 +1,38 @@
+{
+	"description": "Trade Assurance detail page (LOW confidence DOM; label + product table heuristics)",
+	"input": {
+		"kind": "html_snapshot",
+		"pageType": "order_detail",
+		"pageUrl": "https://biz.alibaba.com/ta/detail.htm?orderId=268518575501029968"
+	},
+	"payload": { "file": "ta-detail.html" },
+	"expect": {
+		"outcome": "orders",
+		"orders": [
+			{
+				"externalOrderId": "268518575501029968",
+				"merchantName": "Shenzhen Example Electronic Technology Co., Ltd.",
+				"orderDate": "2026-09-26",
+				"status": "processing",
+				"currency": "USD",
+				"subtotalMinor": 116000,
+				"shippingMinor": 8500,
+				"totalMinor": 124560,
+				"items": [
+					{
+						"title": "Custom PCB Assembly SMT Service 2-layer FR4",
+						"quantity": 200,
+						"unitPriceMinor": 580,
+						"totalMinor": 116000
+					}
+				],
+				"documentLinks": [
+					{
+						"kind": "invoice",
+						"url": "https://biz.alibaba.com/ta/pi/download.htm?orderId=268518575501029968"
+					}
+				]
+			}
+		]
+	}
+}

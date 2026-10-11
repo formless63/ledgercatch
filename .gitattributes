@@ -1,0 +1,2 @@
+# Raw RFC 822 email fixtures keep CRLF line endings byte-exact.
+*.eml binary

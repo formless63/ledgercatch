@@ -1,0 +1,31 @@
+{
+	"description": "JSON payload holding a schema.org Invoice that references an Order",
+	"input": {
+		"kind": "api_json",
+		"pageType": "invoice",
+		"pageUrl": "https://billing.example.io/invoices/INV-2026-0042"
+	},
+	"payload": {
+		"file": "invoice-jsonld.json",
+		"requestUrl": "https://billing.example.io/api/invoices/INV-2026-0042"
+	},
+	"expect": {
+		"outcome": "orders",
+		"orders": [
+			{
+				"externalOrderId": "SO-55120",
+				"merchantName": "Cloud Example Inc.",
+				"orderDate": "2026-10-01",
+				"currency": "USD",
+				"totalMinor": 24900,
+				"items": [{ "title": "Pro plan (annual)", "quantity": 1 }],
+				"documentLinks": [
+					{
+						"kind": "invoice",
+						"url": "https://billing.example.io/invoices/INV-2026-0042.pdf"
+					}
+				]
+			}
+		]
+	}
+}

@@ -1,0 +1,31 @@
+{
+	"description": "Medusa v2 Next.js starter /[cc]/order/[id]/confirmed (OrderCompletedTemplate, OrderDetails, Item, CartTotals data-testid hooks; data-value major units)",
+	"input": {
+		"kind": "html_snapshot",
+		"pageType": "order_confirmation",
+		"pageUrl": "https://kilnandclay.example/de/order/order_01JA8M3T2W7Z9K4N6P8R0S2V4X/confirmed"
+	},
+	"payload": { "file": "medusa-order-confirmed.html" },
+	"expect": {
+		"outcome": "orders",
+		"orderCount": 1,
+		"orders": [
+			{
+				"externalOrderId": "57",
+				"orderDate": "2026-10-04",
+				"currency": "EUR",
+				"subtotalMinor": 7210,
+				"shippingMinor": 495,
+				"discountMinor": 420,
+				"taxMinor": 1464,
+				"totalMinor": 9169,
+				"paymentHint": "Credit card",
+				"paymentLast4": "4242",
+				"items": [
+					{ "title": "Stoneware Mug", "variant": "Speckled / 350 ml", "quantity": 2, "unitPriceMinor": 2400, "totalMinor": 4800 },
+					{ "title": "Nesting Bowl Set", "variant": "Sand", "quantity": 1, "unitPriceMinor": 3780, "totalMinor": 3780 }
+				]
+			}
+		]
+	}
+}

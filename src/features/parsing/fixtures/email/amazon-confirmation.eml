@@ -1,0 +1,43 @@
+From: "Amazon.com" <auto-confirm@amazon.com>
+To: william@example.com
+Subject: Your Amazon.com order #112-4567890-1234567
+Date: Mon, 05 Oct 2026 09:12:44 +0000
+Message-ID: <0100018f-1234-abcd-ef00-1234567890ab-000000@email.amazonses.com>
+MIME-Version: 1.0
+Content-Type: text/html; charset="utf-8"
+Content-Transfer-Encoding: quoted-printable
+
+<!doctype html><html><head><meta charset=3D"utf-8"><title>Amazon.com order co=
+nfirmation</title></head><body>
+<table width=3D"100%"><tr><td><img src=3D"https://m.media-amazon.com/images/G=
+/01/x-locale/common/amazon-logo.png" alt=3D"amazon.com"></td></tr>
+<tr><td><h2>Thanks for your order, William!</h2></td></tr>
+<tr><td><p>We'll send a confirmation when your items ship.</p></td></tr>
+<tr><td><p>Order #112-4567890-1234567</p><p>Placed on Monday, October 5, 2026=
+</p></td></tr>
+<tr><td><p>Arriving: Thursday, October 8</p><p>Ship to: William C., Portland,=
+ OR</p></td></tr>
+<tr><td><table>
+<tr><td><img src=3D"https://m.media-amazon.com/images/I/61a.jpg" alt=3D""></t=
+d><td>
+<p><a href=3D"https://www.amazon.com/dp/B0B9ZP4B9Z">Anker USB C Charger, 735 =
+Charger (Nano II 65W)</a></p>
+<p>Sold by: AnkerDirect</p><p>Quantity: 1</p><p>$35.99</p></td></tr>
+<tr><td><img src=3D"https://m.media-amazon.com/images/I/71b.jpg" alt=3D""></t=
+d><td>
+<p><a href=3D"https://www.amazon.com/dp/B01EV70C78">ELEGOO 120pcs Multicolore=
+d Dupont Wire 40pin Male to Female</a></p>
+<p>Sold by: ELEGOO Official</p><p>Quantity: 2</p><p>$13.98</p></td></tr>
+</table></td></tr>
+<tr><td><table>
+<tr><td>Item(s) Subtotal:</td><td>$49.97</td></tr>
+<tr><td>Shipping &amp; Handling:</td><td>$0.00</td></tr>
+<tr><td>Total before tax:</td><td>$49.97</td></tr>
+<tr><td>Estimated tax to be collected:</td><td>$3.50</td></tr>
+<tr><td><b>Order Total:</b></td><td><b>$53.47</b></td></tr>
+</table></td></tr>
+<tr><td><a href=3D"https://www.amazon.com/gp/your-account/order-details?order=
+ID=3D112-4567890-1234567">View or manage order</a></td></tr>
+<tr><td><p>By placing your order, you agree to Amazon.com's Conditions of Use=
+ and Privacy Notice.</p></td></tr>
+</table></body></html>

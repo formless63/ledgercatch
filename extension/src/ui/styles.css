@@ -1,0 +1,90 @@
+@import "@fontsource-variable/geist/wght.css";
+@import "@fontsource/jetbrains-mono/latin-400.css";
+@import "@fontsource/jetbrains-mono/latin-500.css";
+@import "@fontsource/jetbrains-mono/latin-600.css";
+@import "tailwindcss";
+
+/* Operator-cockpit palette. Dark is the default; light mode mirrors it. */
+:root {
+	color-scheme: dark light;
+	--c-bg: #0b0f17;
+	--c-panel: #111827;
+	--c-raised: #1f2937;
+	--c-border: #374151;
+	--c-text: #e5e7eb;
+	--c-muted: #9ca3af;
+	--c-accent: #38bdf8;
+	--c-accent-ink: #0b0f17;
+	--c-success: #10b981;
+	--c-warning: #f59e0b;
+	--c-danger: #ef4444;
+}
+
+@media (prefers-color-scheme: light) {
+	:root {
+		--c-bg: #f3f5f8;
+		--c-panel: #ffffff;
+		--c-raised: #e9edf2;
+		--c-border: #cbd2dc;
+		--c-text: #111827;
+		--c-muted: #5b6574;
+		--c-accent: #0284c7;
+		--c-accent-ink: #ffffff;
+		--c-success: #047857;
+		--c-warning: #b45309;
+		--c-danger: #dc2626;
+	}
+}
+
+@theme {
+	--color-bg: var(--c-bg);
+	--color-panel: var(--c-panel);
+	--color-raised: var(--c-raised);
+	--color-line: var(--c-border);
+	--color-fg: var(--c-text);
+	--color-muted: var(--c-muted);
+	--color-accent: var(--c-accent);
+	--color-accent-ink: var(--c-accent-ink);
+	--color-ok: var(--c-success);
+	--color-warn: var(--c-warning);
+	--color-bad: var(--c-danger);
+	--font-sans: "Geist Variable", ui-sans-serif, system-ui, sans-serif;
+	--font-mono: "JetBrains Mono", ui-monospace, SFMono-Regular, Menlo, monospace;
+	--radius-xs: 2px;
+	--radius-sm: 3px;
+	--radius-md: 4px;
+}
+
+/*
+ * Unlayered on purpose: Chrome injects a default stylesheet into extension
+ * pages (body { font-family: system font; font-size: 75% }) that would beat
+ * anything inside @layer base.
+ */
+html,
+body {
+	background: var(--c-bg);
+	color: var(--c-text);
+	font-family: var(--font-sans);
+	font-size: 13px;
+	line-height: 1.4;
+	-webkit-font-smoothing: antialiased;
+}
+
+@layer base {
+	* {
+		scrollbar-width: thin;
+		scrollbar-color: var(--c-border) transparent;
+	}
+	:focus-visible {
+		outline: 1px solid var(--c-accent);
+		outline-offset: 1px;
+	}
+}
+
+@utility label-mono {
+	font-family: var(--font-mono);
+	font-size: 10px;
+	letter-spacing: 0.06em;
+	text-transform: uppercase;
+	color: var(--c-muted);
+}

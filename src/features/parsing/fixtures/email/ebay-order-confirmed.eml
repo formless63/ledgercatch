@@ -1,0 +1,31 @@
+From: "eBay" <ebay@ebay.com>
+To: william@example.com
+Subject: Order confirmed: Raspberry Pi 5 Model B 8GB RAM
+Date: Sat, 03 Oct 2026 17:22:10 -0700
+Message-ID: <1234567890.ebay.order.confirm@ebay.com>
+MIME-Version: 1.0
+Content-Type: text/html; charset="utf-8"
+Content-Transfer-Encoding: quoted-printable
+
+<html><body><table>
+<tr><td><h1>Order confirmed</h1></td></tr>
+<tr><td><p>Hi William, thanks for your purchase. We'll let you know when your=
+ order ships.</p></td></tr>
+<tr><td><table><tr><td><img src=3D"https://i.ebayimg.com/images/g/abc/s-l140.=
+jpg"></td><td>
+<p><a href=3D"https://www.ebay.com/itm/315123456789">Raspberry Pi 5 Model B 8=
+GB RAM</a></p>
+<p>Price: $79.99</p><p>Quantity: 1</p><p>Item ID: 315123456789</p><p>Seller: =
+tooldepot_usa</p></td></tr></table></td></tr>
+<tr><td><p>Order number: 12-13579-24680</p></td></tr>
+<tr><td><p>Estimated delivery: Oct 12 =E2=80=93 Oct 15</p></td></tr>
+<tr><td><table>
+<tr><td>Item subtotal</td><td>$79.99</td></tr>
+<tr><td>Shipping</td><td>$5.99</td></tr>
+<tr><td>Sales tax</td><td>$6.88</td></tr>
+<tr><td><b>Order total</b></td><td><b>$92.86</b></td></tr>
+</table></td></tr>
+<tr><td><p>Paid with Visa ending in 4821</p></td></tr>
+<tr><td><a href=3D"https://order.ebay.com/ord/show?orderId=3D12-13579-24680">=
+View order details</a></td></tr>
+</table></body></html>

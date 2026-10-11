@@ -1,0 +1,52 @@
+{
+	"description": "2025+ order-details page (data-component blocks, chargeSummary, payment testids, quantity block)",
+	"input": {
+		"kind": "html_snapshot",
+		"pageType": "order_detail",
+		"pageUrl": "https://www.amazon.com/your-orders/order-details?orderID=113-4829104-5562210"
+	},
+	"payload": { "file": "detail-2026.html" },
+	"expect": {
+		"outcome": "orders",
+		"orderCount": 1,
+		"orders": [
+			{
+				"externalOrderId": "113-4829104-5562210",
+				"merchantName": "Amazon.com Services LLC",
+				"orderDate": "2026-10-03",
+				"status": "delivered",
+				"statusText": "Delivered October 5",
+				"currency": "USD",
+				"subtotalMinor": 6397,
+				"shippingMinor": 599,
+				"discountMinor": 919,
+				"taxMinor": 360,
+				"totalMinor": 6437,
+				"paymentHint": "Prime Visa ending in 4821",
+				"paymentLast4": "4821",
+				"items": [
+					{
+						"sku": "B0C1H26C46",
+						"title": "Hakko FX888DX-010BY Digital Soldering Station",
+						"quantity": 1,
+						"unitPriceMinor": 4999,
+						"totalMinor": 4999
+					},
+					{
+						"sku": "B07Q2X1TQG",
+						"title": "Kester 24-6337-0027 Solder Wire",
+						"quantity": 2,
+						"unitPriceMinor": 699,
+						"totalMinor": 1398
+					}
+				],
+				"documentLinks": [
+					{
+						"kind": "invoice",
+						"url": "https://www.amazon.com/gp/css/summary/print.html?orderID=113-4829104-5562210&ref_=ppx_hzod_invoiceConns_dt_b_fed_invoice_pos_dss"
+					}
+				]
+			}
+		]
+	}
+}

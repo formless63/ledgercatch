@@ -1,0 +1,41 @@
+{
+	"description": "Legacy (≤2023) order-details: order-date-invoice-item, #od-subtotals a-row pairs, pmts payment list, yohtmlc-item rows",
+	"input": {
+		"kind": "html_snapshot",
+		"pageType": "order_detail",
+		"pageUrl": "https://www.amazon.com/gp/your-account/order-details?orderID=113-1625648-3437067"
+	},
+	"payload": { "file": "detail-legacy.html" },
+	"expect": {
+		"outcome": "orders",
+		"orders": [
+			{
+				"externalOrderId": "113-1625648-3437067",
+				"merchantName": "Amazon.com Services, Inc",
+				"orderDate": "2020-10-26",
+				"status": "delivered",
+				"currency": "USD",
+				"subtotalMinor": 2648,
+				"shippingMinor": 0,
+				"taxMinor": 232,
+				"totalMinor": 2880,
+				"paymentHint": "American Express ending in 1234",
+				"paymentLast4": "1234",
+				"items": [
+					{
+						"sku": "B00LH3DMUO",
+						"title": "AmazonBasics 36 Pack AAA High-Performance Alkaline Batteries",
+						"quantity": 1,
+						"unitPriceMinor": 1099
+					},
+					{
+						"sku": "B00MNV8E0C",
+						"title": "AmazonBasics 48 Pack AA High-Performance Alkaline Batteries",
+						"quantity": 1,
+						"unitPriceMinor": 1549
+					}
+				]
+			}
+		]
+	}
+}

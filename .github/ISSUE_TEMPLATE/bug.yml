@@ -1,0 +1,15 @@
+name: Bug report
+description: Report a reproducible application problem
+body:
+  - type: textarea
+    id: reproduction
+    attributes:
+      label: Reproduction and expected behavior
+      description: Use synthetic data. Include app/extension versions and relevant environment details without secrets.
+    validations:
+      required: true
+  - type: textarea
+    id: evidence
+    attributes:
+      label: Sanitized evidence
+      description: Never include real captures, invoices, session cookies or credentials.

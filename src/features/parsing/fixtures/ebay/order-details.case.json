@@ -1,0 +1,50 @@
+{
+	"description": "order.ebay.com/ord/show details (= receipt): order-info dl pairs, tracking-info dl, summary-region totals",
+	"input": {
+		"kind": "html_snapshot",
+		"pageType": "order_detail",
+		"pageUrl": "https://order.ebay.com/ord/show?orderId=12-13579-24680&purchaseOrderId=1234567890123#/"
+	},
+	"payload": {
+		"file": "order-details.html"
+	},
+	"expect": {
+		"outcome": "orders",
+		"orders": [
+			{
+				"externalOrderId": "12-13579-24680",
+				"merchantName": "tooldepot_usa",
+				"orderDate": "2026-09-26",
+				"status": "delivered",
+				"currency": "USD",
+				"subtotalMinor": 3999,
+				"shippingMinor": 325,
+				"taxMinor": 314,
+				"totalMinor": 4638,
+				"paymentLast4": "1007",
+				"paymentHint": "Visa ending in 1007",
+				"items": [
+					{
+						"sku": "305512345678",
+						"title": "Fluke 101 Basic Digital Multimeter",
+						"quantity": 1,
+						"unitPriceMinor": 3999
+					}
+				],
+				"shipments": [
+					{
+						"trackingNumber": "9400111202548765432109",
+						"carrier": "USPS Ground Advantage",
+						"status": "Delivered on Thu, Oct 2"
+					}
+				],
+				"documentLinks": [
+					{
+						"kind": "receipt",
+						"url": "https://order.ebay.com/ord/show?orderId=12-13579-24680#/"
+					}
+				]
+			}
+		]
+	}
+}

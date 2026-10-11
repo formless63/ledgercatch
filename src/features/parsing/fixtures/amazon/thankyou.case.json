@@ -1,0 +1,10 @@
+{
+	"description": "Checkout thank-you page carries no order id (purchaseId ≠ order id) → no_orders",
+	"input": {
+		"kind": "html_snapshot",
+		"pageType": "order_confirmation",
+		"pageUrl": "https://www.amazon.com/gp/buy/thankyou/handlers/display.html?purchaseId=106-1112223-3334445"
+	},
+	"payload": { "file": "thankyou.html" },
+	"expect": { "outcome": "no_orders" }
+}

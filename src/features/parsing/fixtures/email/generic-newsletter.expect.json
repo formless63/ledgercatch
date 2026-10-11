@@ -1,0 +1,9 @@
+{
+	"description": "Marketing email is not an order",
+	"mime": {
+		"source": "generic"
+	},
+	"expect": {
+		"outcome": "no_orders"
+	}
+}

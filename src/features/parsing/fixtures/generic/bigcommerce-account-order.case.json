@@ -1,0 +1,49 @@
+{
+	"description": "BigCommerce Stencil (Cornerstone) account order details: page heading, account-product rows, account-orderTotal dl, sidebar status/date/payment",
+	"input": {
+		"kind": "html_snapshot",
+		"pageType": "order_detail",
+		"pageUrl": "https://ridgeback.example/account.php?action=view_order&order_id=3054"
+	},
+	"payload": {
+		"file": "bigcommerce-account-order.html"
+	},
+	"expect": {
+		"outcome": "orders",
+		"orderCount": 1,
+		"orders": [
+			{
+				"externalOrderId": "3054",
+				"merchantName": "Ridgeback Cycles",
+				"orderDate": "2026-09-21",
+				"status": "shipped",
+				"currency": "USD",
+				"subtotalMinor": 8248,
+				"shippingMinor": 795,
+				"taxMinor": 683,
+				"totalMinor": 9726,
+				"paymentLast4": "1881",
+				"items": [
+					{
+						"title": "11-Speed Chain",
+						"quantity": 2,
+						"totalMinor": 6998,
+						"unitPriceMinor": 3499
+					},
+					{
+						"title": "Dry Chain Lube",
+						"quantity": 1,
+						"totalMinor": 1250
+					}
+				],
+				"shipments": [
+					{
+						"trackingNumber": "9400111899223197428491",
+						"carrier": "USPS",
+						"shippedAt": "2026-09-22"
+					}
+				]
+			}
+		]
+	}
+}

@@ -1,0 +1,29 @@
+{
+	"description": "Order history grid (header-mapped columns)",
+	"input": {
+		"kind": "html_snapshot",
+		"pageType": "order_list",
+		"pageUrl": "https://www.mouser.com/OrderHistory/OrdersView.aspx"
+	},
+	"payload": { "file": "order-history.html" },
+	"expect": {
+		"outcome": "orders",
+		"orderCount": 2,
+		"orders": [
+			{
+				"externalOrderId": "271234567",
+				"orderDate": "2026-09-14",
+				"status": "shipped",
+				"currency": "USD",
+				"totalMinor": 2776,
+				"orderUrl": "https://www.mouser.com/OrderHistory/OrderDetail.aspx?qs=AbCdEf123"
+			},
+			{
+				"externalOrderId": "271299001",
+				"orderDate": "2026-10-02",
+				"status": "processing",
+				"totalMinor": 11240
+			}
+		]
+	}
+}

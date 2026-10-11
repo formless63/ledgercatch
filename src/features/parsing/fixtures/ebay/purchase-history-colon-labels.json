@@ -1,0 +1,83 @@
+{
+	"modules": {
+		"RIVER": [
+			{
+				"_type": "RiverModule",
+				"data": {
+					"items": [
+						{
+							"_type": "PurchaseActivityCard",
+							"actions": [
+								{
+									"text": "View order details",
+									"_type": "CallToAction",
+									"action": {
+										"URL": "https://order.ebay.com/ord/show?orderId=21-11111-22222&purchaseOrderId=21-1111-122221",
+										"name": "VIEW_ORDER_DETAILS",
+										"type": "NAV"
+									}
+								}
+							],
+							"primaryMessage": [
+								{ "_type": "TextualDisplay", "textSpans": [{ "text": "Delivered", "_type": "TextSpan" }] }
+							],
+							"secondaryMessage": [
+								{ "_type": "TextualDisplay", "textSpans": [{ "text": "Order date:", "_type": "TextSpan" }] },
+								{ "_type": "TextualDisplay", "textSpans": [{ "text": "Jan 17, 2025", "_type": "TextSpan" }] },
+								{ "_type": "TextualDisplay", "textSpans": [{ "text": "Order total:", "_type": "TextSpan" }] },
+								{
+									"_type": "TextualDisplay",
+									"textSpans": [{ "text": "US $398.97", "_type": "TextSpan", "styles": ["BOLD"] }]
+								},
+								{ "_type": "TextualDisplay", "textSpans": [{ "text": "Order number:", "_type": "TextSpan" }] },
+								{ "_type": "TextualDisplay", "textSpans": [{ "text": "21-11111-22222", "_type": "TextSpan" }] }
+							],
+							"itemCards": [
+								{
+									"_type": "ItemCard",
+									"listingId": "123456789012",
+									"__myb": { "orderId": "21-11111-22222" },
+									"title": {
+										"_type": "TextualDisplay",
+										"textSpans": [{ "text": "Pre-owned Laser Printer", "_type": "TextSpan" }]
+									},
+									"additionalPrice": {
+										"_type": "TextualDisplay",
+										"textSpans": [{ "text": "US $398.97", "_type": "TextSpan" }]
+									},
+									"aspectValuesList": []
+								}
+							]
+						},
+						{
+							"_type": "PurchaseActivityCard",
+							"primaryMessage": [
+								{ "_type": "TextualDisplay", "textSpans": [{ "text": "Refunded", "_type": "TextSpan" }] }
+							],
+							"secondaryMessage": [
+								{ "_type": "TextualDisplay", "textSpans": [{ "text": "Order date:", "_type": "TextSpan" }] },
+								{ "_type": "TextualDisplay", "textSpans": [{ "text": "Jan 28, 2025", "_type": "TextSpan" }] },
+								{ "_type": "TextualDisplay", "textSpans": [{ "text": "Order total:", "_type": "TextSpan" }] },
+								{ "_type": "TextualDisplay", "textSpans": [{ "text": "US $0.00", "_type": "TextSpan" }] },
+								{ "_type": "TextualDisplay", "textSpans": [{ "text": "Order number:", "_type": "TextSpan" }] },
+								{ "_type": "TextualDisplay", "textSpans": [{ "text": "11-33333-44444", "_type": "TextSpan" }] }
+							],
+							"itemCards": [
+								{
+									"_type": "ItemCard",
+									"listingId": "210987654321",
+									"__myb": { "orderId": "11-33333-44444" },
+									"title": {
+										"_type": "TextualDisplay",
+										"textSpans": [{ "text": "USB Logic Analyzer 8CH", "_type": "TextSpan" }]
+									},
+									"aspectValuesList": []
+								}
+							]
+						}
+					]
+				}
+			}
+		]
+	}
+}

@@ -1,0 +1,34 @@
+{
+	"description": "PrestaShop 8 classic theme customer order-detail (customer/order-detail.tpl + _partials/order-detail-no-return.tpl): reference, en-GB day-first date, newest status, PDF invoice link",
+	"input": {
+		"kind": "html_snapshot",
+		"pageType": "order_detail",
+		"pageUrl": "https://brickandbolt.example.co.uk/index.php?controller=order-detail&id_order=377"
+	},
+	"payload": { "file": "prestashop-order-detail.html" },
+	"expect": {
+		"outcome": "orders",
+		"orderCount": 1,
+		"orders": [
+			{
+				"externalOrderId": "HGBXWKQRT",
+				"orderDate": "2026-10-03",
+				"status": "shipped",
+				"statusText": "Shipped",
+				"currency": "GBP",
+				"subtotalMinor": 11499,
+				"shippingMinor": 495,
+				"taxMinor": 1999,
+				"totalMinor": 11994,
+				"paymentHint": "Payments by check",
+				"items": [
+					{ "title": "M6 Stainless Hex Bolts (50 pack)", "sku": "BB-M6-50", "quantity": 4, "unitPriceMinor": 625, "totalMinor": 2500 },
+					{ "title": "Cordless Drill Driver 18V", "sku": "BB-DRL-18", "quantity": 1, "unitPriceMinor": 8999, "totalMinor": 8999 }
+				],
+				"documentLinks": [
+					{ "kind": "invoice", "url": "https://brickandbolt.example.co.uk/index.php?controller=pdf-invoice&id_order=377" }
+				]
+			}
+		]
+	}
+}

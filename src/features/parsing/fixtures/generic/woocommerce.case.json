@@ -1,0 +1,32 @@
+{
+	"description": "WooCommerce order-received page (standard template classes)",
+	"input": {
+		"kind": "html_snapshot",
+		"pageType": "order_confirmation",
+		"pageUrl": "https://makersupplies.example.co.uk/checkout/order-received/5521/?key=wc_order_AbC123"
+	},
+	"payload": { "file": "woocommerce.html" },
+	"expect": {
+		"outcome": "orders",
+		"orders": [
+			{
+				"externalOrderId": "5521",
+				"merchantName": "Maker Supplies UK",
+				"orderDate": "2026-10-03",
+				"currency": "GBP",
+				"subtotalMinor": 3198,
+				"shippingMinor": 450,
+				"totalMinor": 3648,
+				"paymentHint": "Credit Card (Stripe)",
+				"items": [
+					{
+						"title": "PLA Filament 1kg – Black",
+						"quantity": 2,
+						"totalMinor": 3198,
+						"unitPriceMinor": 1599
+					}
+				]
+			}
+		]
+	}
+}

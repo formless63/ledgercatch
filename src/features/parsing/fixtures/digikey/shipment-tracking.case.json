@@ -1,0 +1,31 @@
+{
+  "description": "Synthetic ShipmentTracking response shaped from live recorder; exact 16-digit page order identity, delivered status and carrier",
+  "input": {
+    "pageType": "order_detail",
+    "pageUrl": "https://www.digikey.com/OrderHistory/ReviewOrder/9007199254740993",
+    "orderIdHints": [
+      "9007199254740993"
+    ]
+  },
+  "payload": {
+    "file": "shipment-tracking.json",
+    "requestUrl": "https://www.digikey.com/OrderHistory/api/ShipmentTracking/TrackingInfo?method=FedEx%20Ground&tnum=123456789012"
+  },
+  "expect": {
+    "outcome": "orders",
+    "orderCount": 1,
+    "orders": [
+      {
+        "externalOrderId": "9007199254740993",
+        "shipments": [
+          {
+            "trackingNumber": "123456789012",
+            "carrier": "FedEx",
+            "status": "Delivered",
+            "deliveredAt": "2026-08-12"
+          }
+        ]
+      }
+    ]
+  }
+}

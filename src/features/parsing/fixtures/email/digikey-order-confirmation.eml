@@ -1,0 +1,36 @@
+From: "DigiKey" <orders@digikey.com>
+To: william@example.com
+Subject: Order Confirmation =?utf-8?b?4oCT?= Sales Order #91234567
+Date: Mon, 05 Oct 2026 14:46:00 -0500
+Message-ID: <dk.so.91234567.ack@digikey.com>
+MIME-Version: 1.0
+Content-Type: text/html; charset="utf-8"
+Content-Transfer-Encoding: quoted-printable
+
+<html><body>
+<h2>Thank you for your order!</h2>
+<p>Your order is being processed. You will receive a separate email when your=
+ order ships.</p>
+<h3>Order Details</h3>
+<p>Sales Order #: 91234567</p><p>Web ID: 112233445</p><p>Order Date: 10/05/20=
+26</p><p>Customer Reference: LAB-PSU</p>
+<table>
+<thead><tr><th>Index</th><th>Quantity</th><th>Part Number</th><th>Manufacture=
+r Part Number</th><th>Description</th><th>Customer Reference</th><th>Unit Pri=
+ce USD</th><th>Extended Price USD</th></tr></thead>
+<tbody>
+<tr><td>1</td><td>1</td><td>296-49421-ND</td><td>TPS7A54EVM-006</td><td>EVAL =
+MODULE FOR TPS7A54</td><td></td><td>$30.11</td><td>$30.11</td></tr>
+<tr><td>2</td><td>10</td><td>311-10.0KHRCT-ND</td><td>RC0603FR-0710KL</td><td=
+>RES 10K OHM 1% 1/10W 0603</td><td></td><td>$0.10000</td><td>$1.00</td></tr>
+</tbody></table>
+<table>
+<tr><td>Subtotal</td><td>$31.11</td></tr>
+<tr><td>Shipping</td><td>$8.99</td></tr>
+<tr><td>Sales Tax</td><td>$0.00</td></tr>
+<tr><td>Total</td><td>$40.10</td></tr>
+</table>
+<p>Payment: Visa ending in 1234</p>
+<p><a href=3D"https://www.digikey.com/OrderHistory/ReviewOrder/91234567">Revi=
+ew your order</a></p>
+</body></html>

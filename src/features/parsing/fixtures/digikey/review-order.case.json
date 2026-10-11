@@ -1,0 +1,49 @@
+{
+	"description": "ReviewOrder page snapshot (DOM inferred; table + labeled totals fallback)",
+	"input": {
+		"kind": "html_snapshot",
+		"pageType": "order_detail",
+		"pageUrl": "https://www.digikey.com/OrderHistory/ReviewOrder/91234567"
+	},
+	"payload": { "file": "review-order.html" },
+	"expect": {
+		"outcome": "orders",
+		"orders": [
+			{
+				"externalOrderId": "91234567",
+				"orderDate": "2026-09-18",
+				"status": "shipped",
+				"currency": "USD",
+				"subtotalMinor": 4870,
+				"shippingMinor": 699,
+				"taxMinor": 312,
+				"totalMinor": 5881,
+				"items": [
+					{
+						"title": "IC MCU 32BIT 64KB FLASH 48LQFP",
+						"sku": "497-6063-ND",
+						"quantity": 5,
+						"unitPriceMinor": 742,
+						"totalMinor": 3710
+					},
+					{
+						"title": "CAP CER 0.1UF 50V X7R 0805",
+						"quantity": 100,
+						"unitPriceMinor": 12,
+						"totalMinor": 1160
+					}
+				],
+				"documentLinks": [
+					{
+						"kind": "invoice",
+						"url": "https://www.digikey.com/OrderHistory/ReviewOrder/91234567/Invoice/120044551.pdf"
+					},
+					{
+						"kind": "packing_slip",
+						"url": "https://www.digikey.com/OrderHistory/ReviewOrder/91234567/PackingList"
+					}
+				]
+			}
+		]
+	}
+}

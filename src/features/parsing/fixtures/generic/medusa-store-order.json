@@ -1,0 +1,96 @@
+{
+	"order": {
+		"id": "order_01JA8M3T2W7Z9K4N6P8R0S2V4X",
+		"version": 1,
+		"status": "pending",
+		"display_id": 57,
+		"region_id": "reg_01J9Z3Q4R5S6T7U8V9W0X1Y2Z3",
+		"customer_id": "cus_01J9Z4A5B6C7D8E9F0G1H2J3K4",
+		"sales_channel_id": "sc_01J9Z1A2B3C4D5E6F7G8H9J0K1",
+		"email": "lena@example.de",
+		"currency_code": "eur",
+		"payment_status": "captured",
+		"fulfillment_status": "shipped",
+		"created_at": "2026-10-04T09:12:44.512Z",
+		"updated_at": "2026-10-05T14:03:10.004Z",
+		"items": [
+			{
+				"id": "ordli_01JA8M3T4A5B6C7D8E9F0G1H2J",
+				"title": "Speckled / 350 ml",
+				"subtitle": "Stoneware Mug",
+				"thumbnail": "https://medusa-public-images.s3.eu-west-1.amazonaws.com/mug-stoneware-01.png",
+				"variant_id": "variant_01J9Z5M6N7P8Q9R0S1T2U3V4W5",
+				"product_id": "prod_01J9Z5A6B7C8D9E0F1G2H3J4K5",
+				"product_title": "Stoneware Mug",
+				"variant_sku": "MUG-SPK-350",
+				"variant_title": "Speckled / 350 ml",
+				"quantity": 2,
+				"unit_price": 24,
+				"original_total": 57.12,
+				"original_subtotal": 48,
+				"original_tax_total": 9.12,
+				"item_total": 57.12,
+				"item_subtotal": 48,
+				"item_tax_total": 9.12,
+				"total": 48,
+				"subtotal": 48,
+				"tax_total": 9.12,
+				"discount_total": 0
+			},
+			{
+				"id": "ordli_01JA8M3T4K5L6M7N8P9Q0R1S2T",
+				"title": "Sand",
+				"subtitle": "Nesting Bowl Set",
+				"thumbnail": "https://medusa-public-images.s3.eu-west-1.amazonaws.com/bowl-set-01.png",
+				"product_title": "Nesting Bowl Set",
+				"variant_sku": "BWL-SET-SND",
+				"variant_title": "Sand",
+				"quantity": 1,
+				"unit_price": 42,
+				"original_total": 49.98,
+				"item_subtotal": 42,
+				"total": 37.8,
+				"subtotal": 42,
+				"tax_total": 7.18,
+				"discount_total": 4.2
+			}
+		],
+		"shipping_methods": [
+			{ "id": "ordsm_01JA8M3T5X6Y7Z8A9B0C1D2E3F", "name": "DHL Paket", "amount": 4.95, "total": 5.89, "subtotal": 4.95, "tax_total": 0.94 }
+		],
+		"fulfillments": [
+			{
+				"id": "ful_01JA9C2D3E4F5G6H7J8K9L0M1N",
+				"shipped_at": "2026-10-05T14:03:09.000Z",
+				"labels": [
+					{ "id": "fulla_01JA9C2D4P5Q6R7S8T9U0V1W2X", "tracking_number": "00340434161094042557", "tracking_url": "https://www.dhl.de/de/privatkunden/pakete-empfangen/verfolgen.html?piececode=00340434161094042557", "label_url": "" }
+				]
+			}
+		],
+		"payment_collections": [
+			{ "id": "pay_col_01JA8M3T6A7B8C9D0E1F2G3H4J", "currency_code": "eur", "amount": 91.69, "status": "completed", "payments": [ { "id": "pay_01JA8M3T7K8L9M0N1P2Q3R4S5T", "amount": 91.69, "currency_code": "eur", "provider_id": "pp_stripe_stripe", "data": {} } ] }
+		],
+		"original_item_total": 107.1,
+		"original_item_subtotal": 90,
+		"original_item_tax_total": 17.1,
+		"item_total": 86.24,
+		"item_subtotal": 72.1,
+		"item_tax_total": 13.7,
+		"original_total": 113.0,
+		"original_subtotal": 94.95,
+		"original_tax_total": 18.05,
+		"total": 91.69,
+		"subtotal": 77.05,
+		"tax_total": 14.64,
+		"discount_total": 4.2,
+		"discount_tax_total": 0.8,
+		"gift_card_total": 0,
+		"gift_card_tax_total": 0,
+		"shipping_total": 5.89,
+		"shipping_subtotal": 4.95,
+		"shipping_tax_total": 0.94,
+		"original_shipping_total": 5.89,
+		"original_shipping_subtotal": 4.95,
+		"original_shipping_tax_total": 0.94
+	}
+}

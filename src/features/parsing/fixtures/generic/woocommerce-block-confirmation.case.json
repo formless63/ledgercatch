@@ -1,0 +1,36 @@
+{
+	"description": "WooCommerce block-theme order confirmation (Blocks/BlockTypes/OrderConfirmation Summary + Totals), German labels, custom order number, refunded qty, tax included",
+	"input": {
+		"kind": "html_snapshot",
+		"pageType": "order_confirmation",
+		"pageUrl": "https://werkbank.example.de/kasse/order-received/20417/?key=wc_order_Zx81PqLm"
+	},
+	"payload": { "file": "woocommerce-block-confirmation.html" },
+	"expect": {
+		"outcome": "orders",
+		"orderCount": 1,
+		"orders": [
+			{
+				"externalOrderId": "WB-20417",
+				"merchantName": "Werkbank Elektronik",
+				"orderDate": "2026-10-04",
+				"currency": "EUR",
+				"discountMinor": 849,
+				"shippingMinor": 390,
+				"taxMinor": 1011,
+				"totalMinor": 6329,
+				"paymentHint": "PayPal",
+				"items": [
+					{
+						"title": "Lötstation T12 Digital",
+						"variant": "Spannung: 230 V",
+						"quantity": 1,
+						"totalMinor": 4990,
+						"itemUrl": "https://werkbank.example.de/produkt/loetstation-t12/"
+					},
+					{ "title": "Lötzinn Sn99 0,8 mm 100 g", "quantity": 2, "totalMinor": 1798, "unitPriceMinor": 899 }
+				]
+			}
+		]
+	}
+}
