@@ -280,5 +280,13 @@
     "sha256": "71032bb5602ac2dff362c656df9d496e11de5096179e4582c9372fc91941ad1f",
     "versionRef": true,
     "basis": "MIT declaration in exact upstream package metadata; no separate upstream license file"
+  },
+  {
+    "name": "@rolldown/binding-linux-x64-gnu",
+    "version": "1.2.15",
+    "url": "https://raw.githubusercontent.com/rolldown/rolldown/v1.2.15/LICENSE",
+    "file": "@rolldown__binding-linux-x64-gnu@1.2.15.txt",
+    "sha256": "23ecfff35a5a2e80d92142f75228912c3b1abc4b5a8337a821ff4397e2f9f734",
+    "versionRef": true
   }
 ]

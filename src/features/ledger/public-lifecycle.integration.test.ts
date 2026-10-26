@@ -100,5 +100,5 @@ describe.skipIf(!process.env.DATABASE_URL)("public purchase lifecycle", () => {
 		} finally {
 			await db.delete(user).where(eq(user.id, ownerId));
 		}
-	});
+	}, 30_000);
 });

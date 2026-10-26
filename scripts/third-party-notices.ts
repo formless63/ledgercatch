@@ -9,8 +9,8 @@ for(const root of ['node_modules','extension/node_modules']){
  for(const path of paths){if(!existsSync(join(path,'package.json')))continue;const pkg=JSON.parse(readFileSync(join(path,'package.json'),'utf8'));if(!pkg.name||!pkg.version)continue;const key=`${pkg.name}@${pkg.version}`;if(entries.has(key)||!locked.has(key))continue;
  const files=readdirSync(path).filter(f=>/^(license|licence|copying|notice)([-_.]|$)/i.test(f));
  if(!files.length)files.push(...readdirSync(path).filter(f=>/^readme/i.test(f)&&/license|copyright/i.test(readFileSync(join(path,f),'utf8'))));
- let text=files.map(file=>{try{return readFileSync(join(path,file),'utf8');}catch{return '';}}).join('\n');if(!text){const source=upstream.find(s=>s.name===pkg.name&&s.version===pkg.version&&s.file);if(source?.file)text=readFileSync(join('docs/licenses',source.file),'utf8');}
- entries.set(key,{name:pkg.name,version:pkg.version,license:pkg.license??pkg.licenses??'UNDECLARED',text});
+ let text=files.map(file=>{try{return readFileSync(join(path,file),'utf8');}catch{return '';}}).join('\n').replace(/[ \t]+$/gm,'');if(!text){const source=upstream.find(s=>s.name===pkg.name&&s.version===pkg.version&&s.file);if(source?.file)text=readFileSync(join('docs/licenses',source.file),'utf8');}
+ entries.set(key,{name:pkg.name,version:pkg.version,license:pkg.license??pkg.licenses??'UNDECLARED',text:text.replace(/\r\n/g,'\n').replace(/[ \t]+$/gm,'')});
  }
 }
 const sorted=[...entries.values()].sort((a,b)=>`${a.name}@${a.version}`.localeCompare(`${b.name}@${b.version}`));
