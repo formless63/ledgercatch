@@ -26,6 +26,22 @@ describe("crypto", () => {
 		expect(encryptSecret("x")).not.toBe(encryptSecret("x"));
 	});
 
+	it("reads a predecessor credential without rewriting it or weakening authentication", () => {
+		// Fixed synthetic fixture produced by the predecessor implementation.
+		const legacy =
+			"v1.BwcHBwcHBwcHBwcH.7Pltck-hSXstQVtagGMkyA.KHbcq1oX9bSuph5ixAKF726BXh_smM-XV_HWzsYk_kizrg";
+		expect(decryptSecret(legacy)).toEqual({ token: "synthetic-legacy-token" });
+		const parts = legacy.split(".");
+		const bytes = Buffer.from(parts[3] ?? "", "base64url");
+		bytes[0] = (bytes[0] ?? 0) ^ 1;
+		parts[3] = bytes.toString("base64url");
+		expect(() => decryptSecret(parts.join("."))).toThrow(/tampered/);
+		process.env.APP_ENCRYPTION_KEY = "z".repeat(40);
+		expect(() => decryptSecret(legacy)).toThrow(/key changed/);
+		process.env.APP_ENCRYPTION_KEY = "k".repeat(40);
+		expect(decryptSecret(legacy)).toEqual({ token: "synthetic-legacy-token" });
+	});
+
 	it("detects tampering", () => {
 		const ct = encryptSecret({ a: 1 });
 		const [v, iv, tag, data] = ct.split(".") as [

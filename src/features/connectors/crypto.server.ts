@@ -14,11 +14,14 @@ const VERSION = "v1";
 const HKDF_SALT = "ledgercatch/connectors";
 const HKDF_INFO = "connector-secret-encryption/v1";
 const AAD = Buffer.from("ledgercatch:connector-secret:v1");
+// Protocol constants from the predecessor, required to read existing credentials.
+const LEGACY_HKDF_SALT = "order-tracker/connectors";
+const LEGACY_AAD = Buffer.from("order-tracker:connector-secret:v1");
 const MIN_KEY_LENGTH = 32;
 
-let cached: { material: string; key: Buffer } | undefined;
+let cached: { material: string; keys: Map<string, Buffer> } | undefined;
 
-function deriveKey(): Buffer {
+function deriveKey(salt = HKDF_SALT): Buffer {
 	const material =
 		process.env.APP_ENCRYPTION_KEY || process.env.BETTER_AUTH_SECRET || "";
 	if (!material) {
@@ -31,11 +34,13 @@ function deriveKey(): Buffer {
 			`APP_ENCRYPTION_KEY / BETTER_AUTH_SECRET must be at least ${MIN_KEY_LENGTH} characters`,
 		);
 	}
-	if (cached?.material === material) return cached.key;
-	const key = Buffer.from(
-		hkdfSync("sha256", material, HKDF_SALT, HKDF_INFO, 32),
-	);
-	cached = { material, key };
+	if (cached?.material !== material) {
+		cached = { material, keys: new Map() };
+	}
+	const existing = cached.keys.get(salt);
+	if (existing) return existing;
+	const key = Buffer.from(hkdfSync("sha256", material, salt, HKDF_INFO, 32));
+	cached.keys.set(salt, key);
 	return key;
 }
 
@@ -67,23 +72,29 @@ export function decryptSecret<T = unknown>(ciphertext: string): T {
 	if (parts.length !== 4 || parts[0] !== VERSION) {
 		throw new Error("Unsupported connector secret format");
 	}
-	const key = deriveKey();
+	deriveKey(); // Validate configuration before attempting either authenticated format.
 	const [, ivB64, tagB64, dataB64] = parts as [string, string, string, string];
-	try {
-		const iv = Buffer.from(ivB64, "base64url");
-		const tag = Buffer.from(tagB64, "base64url");
-		if (iv.length !== 12 || tag.length !== 16) throw new Error("bad lengths");
-		const decipher = createDecipheriv("aes-256-gcm", key, iv);
-		decipher.setAAD(AAD);
-		decipher.setAuthTag(tag);
-		const plain = Buffer.concat([
-			decipher.update(Buffer.from(dataB64, "base64url")),
-			decipher.final(),
-		]).toString("utf8");
-		return JSON.parse(plain) as T;
-	} catch {
-		throw new Error(
-			"Could not decrypt connector secret (encryption key changed or data tampered); re-enter the credentials",
-		);
+	for (const [salt, aad] of [
+		[HKDF_SALT, AAD],
+		[LEGACY_HKDF_SALT, LEGACY_AAD],
+	] as const) {
+		try {
+			const iv = Buffer.from(ivB64, "base64url");
+			const tag = Buffer.from(tagB64, "base64url");
+			if (iv.length !== 12 || tag.length !== 16) throw new Error("bad lengths");
+			const decipher = createDecipheriv("aes-256-gcm", deriveKey(salt), iv);
+			decipher.setAAD(aad);
+			decipher.setAuthTag(tag);
+			const plain = Buffer.concat([
+				decipher.update(Buffer.from(dataB64, "base64url")),
+				decipher.final(),
+			]).toString("utf8");
+			return JSON.parse(plain) as T;
+		} catch {
+			// A legacy fallback must also pass AES-GCM authentication with the same key material.
+		}
 	}
+	throw new Error(
+		"Could not decrypt connector secret (encryption key changed or data tampered); re-enter the credentials",
+	);
 }
