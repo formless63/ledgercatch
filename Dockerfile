@@ -4,6 +4,7 @@ ENV NITRO_PRESET=node-server
 ARG VITE_APP_NAME=LedgerCatch
 ENV VITE_APP_NAME=$VITE_APP_NAME
 COPY package.json bun.lock ./
+COPY patches ./patches
 RUN bun install --frozen-lockfile
 COPY . .
 # Release preparation builds the extension once; every consumer uses these bytes.

@@ -11,6 +11,7 @@
     "#/*": "./src/*"
   },
   "scripts": {
+    "security:audit": "bun scripts/security-audit.ts",
     "dev": "vite dev --host 127.0.0.1 --port 3000",
     "generate-routes": "tsr generate",
     "build": "vite build",
@@ -163,6 +164,10 @@
     "ip-address": "10.7.4",
     "launch-editor": "2.14.2",
     "serialize-javascript": "7.1.3",
-    "nodemailer": "10.1.4"
+    "nodemailer": "10.1.4",
+    "qs": "6.16.1"
+  },
+  "patchedDependencies": {
+    "deepmerge@4.3.1": "patches/deepmerge@4.3.1.patch"
   }
 }

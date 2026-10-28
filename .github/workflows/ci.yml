@@ -33,7 +33,7 @@ jobs:
           bun-version: 1.4.2
       - run: bun install --frozen-lockfile
       - run: bun install --cwd extension --frozen-lockfile
-      - run: bun audit && bun audit --cwd extension
+      - run: bun run security:audit
       - run: bun run lint && bun run typecheck
       - run: bun run test
         env:
@@ -61,7 +61,10 @@ jobs:
             docs/images/*.png
       - name: Stop only the synthetic demo
         if: always()
-        run: docker compose --env-file .demo/env -f compose.demo.yaml down --volumes
+        run: |
+          if [ -f .demo/env ]; then
+            docker compose --env-file .demo/env -f compose.demo.yaml down --volumes
+          fi
   container:
     needs: verify
     runs-on: ubuntu-24.04
