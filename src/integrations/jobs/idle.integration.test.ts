@@ -52,6 +52,8 @@ describe("low-CPU queue delivery", () => {
 
 	afterAll(async () => {
 		await worker?.stop({ graceful: true, timeout: 10_000 });
+		// Do not leave the deliberate operator-policy fixture for other test files.
+		await producer?.updateQueue("health.probe", { retryLimit: 0 });
 		await producer?.stop({ graceful: true, timeout: 10_000 });
 		await stopJobsClient();
 		await pool.end();
