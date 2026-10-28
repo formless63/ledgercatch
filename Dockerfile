@@ -12,7 +12,7 @@ RUN test -s public/downloads/ledgercatch-extension.zip \
  && cd public/downloads && sha256sum -c SHA256SUMS
 RUN bun run build && bun scripts/bundle-runtime.ts
 
-FROM node:24.21.0-alpine AS runtime
+FROM node:26.12.1-alpine AS runtime
 WORKDIR /app
 ENV NODE_ENV=production PORT=3000 HOST=0.0.0.0
 COPY --from=build --chown=node:node /app/.output ./.output
