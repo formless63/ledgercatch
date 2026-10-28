@@ -103,6 +103,14 @@ it("uses empty optional fallback and rejects malformed Jobs settings before netw
 	}
 	setEnv("PGBOSS_USE_LISTEN_NOTIFY", "yes");
 	expect(jobsListenNotify).toThrow();
+	for (const [raw, expected] of [
+		["", true],
+		["true", true],
+		["false", false],
+	] as const) {
+		setEnv("PGBOSS_USE_LISTEN_NOTIFY", raw);
+		expect(jobsListenNotify()).toBe(expected);
+	}
 	setEnv("PGBOSS_SCHEMA", "x".repeat(64));
 	expect(jobsSchema).toThrow();
 	setEnv(

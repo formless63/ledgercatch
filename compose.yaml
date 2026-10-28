@@ -17,7 +17,9 @@ services:
     volumes: [database:/var/lib/postgresql]
     healthcheck:
       test: [CMD-SHELL, "pg_isready -U ledger -d ledger"]
-      interval: 3s
+      interval: 30s
+      start_period: 15s
+      start_interval: 2s
       retries: 30
     restart: unless-stopped
   storage:

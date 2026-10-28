@@ -25,45 +25,56 @@ export async function startJobsWorker(
 				{
 					includeMetadata: true,
 					localConcurrency: concurrency,
-					pollingIntervalSeconds: 0.5,
+					// Immediate jobs wake through NOTIFY. Polling remains a bounded
+					// backstop for delayed/retry jobs and a disconnected listener.
+					pollingIntervalSeconds: 5,
+					notifyPollingIntervalSeconds: 10,
 				},
 				async ([job]) => {
-					if (!job) throw new Error(`Worker received an empty ${name} batch`);
-					const context = {
-						id: job.id,
-						signal: job.signal,
-						retryCount: job.retryCount,
-						retryLimit: job.retryLimit,
-					};
-					if (options.execute) {
-						return options.execute({ name, id: job.id }, async () => {
-							const payload = parseJobPayload(name, job.data);
-							return jobRegistry[name].handler(payload as never, context);
-						});
-					}
-					const payload = parseJobPayload(name, job.data);
-					console.info(
-						JSON.stringify({ event: "job.started", id: job.id, name }),
-					);
 					try {
-						const output = await jobRegistry[name].handler(
-							payload as never,
-							context,
-						);
+						if (!job) throw new Error(`Worker received an empty ${name} batch`);
+						const context = {
+							id: job.id,
+							signal: job.signal,
+							retryCount: job.retryCount,
+							retryLimit: job.retryLimit,
+						};
+						if (options.execute) {
+							return await options.execute({ name, id: job.id }, async () => {
+								const payload = parseJobPayload(name, job.data);
+								return jobRegistry[name].handler(payload as never, context);
+							});
+						}
+						const payload = parseJobPayload(name, job.data);
 						console.info(
-							JSON.stringify({ event: "job.completed", id: job.id, name }),
+							JSON.stringify({ event: "job.started", id: job.id, name }),
 						);
-						return output;
-					} catch (error) {
-						console.error(
-							JSON.stringify({
-								error: "Job handler failed",
-								event: "job.failed",
-								id: job.id,
-								name,
-							}),
-						);
-						throw error;
+						try {
+							const output = await jobRegistry[name].handler(
+								payload as never,
+								context,
+							);
+							console.info(
+								JSON.stringify({ event: "job.completed", id: job.id, name }),
+							);
+							return output;
+						} catch (error) {
+							console.error(
+								JSON.stringify({
+									error: "Job handler failed",
+									event: "job.failed",
+									id: job.id,
+									name,
+								}),
+							);
+							throw error;
+						}
+					} finally {
+						// Drain a burst without waiting for the idle backstop between
+						// jobs. Empty fetches never enter this callback or wake peers.
+						for (const worker of boss.getWipData()) {
+							if (worker.name === name) boss.notifyWorker(worker.id);
+						}
 					}
 				},
 			);

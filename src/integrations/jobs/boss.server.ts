@@ -26,7 +26,7 @@ export function jobsSchema() {
 }
 
 export function jobsListenNotify() {
-	const value = process.env.PGBOSS_USE_LISTEN_NOTIFY || "false";
+	const value = process.env.PGBOSS_USE_LISTEN_NOTIFY || "true";
 	if (!["true", "false"].includes(value))
 		throw new Error("PGBOSS_USE_LISTEN_NOTIFY must be true or false");
 	return value === "true";
@@ -94,7 +94,7 @@ export function createJobsBoss(
 	const boss = new PgBoss({
 		connectionString: jobsDatabaseUrl(),
 		schema: jobsSchema(),
-		useListenNotify: jobsListenNotify(),
+		useListenNotify: jobsListenNotify() && role === "worker",
 		...overrides,
 		...jobsRoleOptions(role),
 	});

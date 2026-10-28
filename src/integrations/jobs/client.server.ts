@@ -9,10 +9,19 @@ type AppTransaction = Parameters<Parameters<typeof db.transaction>[0]>[0];
 import { createJobsLifecycle } from "./lifecycle.server";
 
 export async function ensureJobQueues(boss: PgBoss) {
+	const names = Object.keys(jobRegistry) as JobName[];
 	await Promise.all(
-		(Object.keys(jobRegistry) as JobName[]).map((name) =>
-			boss.createQueue(name, jobRegistry[name].queue),
+		names.map((name) =>
+			boss.createQueue(name, { ...jobRegistry[name].queue, notify: true }),
 		),
+	);
+	// createQueue leaves existing options unchanged. Upgrade the wakeup flag alone,
+	// preserving existing retention/retry policies and every queued job.
+	const queues = await boss.getQueues(names);
+	await Promise.all(
+		queues
+			.filter((queue) => !queue.notify)
+			.map((queue) => boss.updateQueue(queue.name, { notify: true })),
 	);
 }
 const lifecycle = createJobsLifecycle(
