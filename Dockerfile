@@ -1,4 +1,4 @@
-FROM oven/bun:1.4.2 AS build
+FROM oven/bun:1.4.4 AS build
 WORKDIR /app
 ENV NITRO_PRESET=node-server
 ARG VITE_APP_NAME=LedgerCatch
