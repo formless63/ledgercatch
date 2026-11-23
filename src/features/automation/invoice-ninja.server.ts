@@ -5,7 +5,7 @@
  * capability's projection reports the invoice paid.
  */
 import { randomBytes } from "node:crypto";
-import { and, desc, eq, isNull, like } from "drizzle-orm";
+import { and, desc, eq, isNull, like, sql } from "drizzle-orm";
 import type { z } from "zod";
 import { db } from "#/db";
 import {
@@ -165,6 +165,13 @@ async function recentDraftsForOwner(ownerId: string) {
 				and(
 					eq(bindings.resourceKind, "invoice"),
 					eq(bindings.localResourceId, row.operationId),
+					eq(bindings.scopeKind, "user"),
+					eq(bindings.scopeId, ownerId),
+					eq(
+						bindings.connectionId,
+						invoiceNinjaConnectionRef(row.connectionId),
+					),
+					isNull(bindings.retiredAt),
 				),
 			)
 			.limit(1);
@@ -464,10 +471,37 @@ export async function syncPaidClaims() {
 		})
 		.from(invoiceNinjaClaimDrafts)
 		.innerJoin(
+			connections,
+			and(
+				eq(connections.id, invoiceNinjaClaimDrafts.connectionId),
+				eq(connections.ownerId, invoiceNinjaClaimDrafts.ownerId),
+				eq(connections.provider, "invoice_ninja"),
+			),
+		)
+		.innerJoin(
+			operations,
+			and(
+				eq(operations.id, invoiceNinjaClaimDrafts.operationId),
+				eq(operations.scopeKind, "user"),
+				eq(operations.scopeId, invoiceNinjaClaimDrafts.ownerId),
+				eq(
+					operations.connectionId,
+					sql`'c-' || ${invoiceNinjaClaimDrafts.connectionId}::text`,
+				),
+				eq(operations.kind, "create_draft"),
+				eq(operations.status, "succeeded"),
+			),
+		)
+		.innerJoin(
 			bindings,
 			and(
+				eq(bindings.id, operations.bindingId),
 				eq(bindings.resourceKind, "invoice"),
-				eq(bindings.localResourceId, invoiceNinjaClaimDrafts.operationId),
+				eq(bindings.localResourceId, sql`${operations.id}::text`),
+				eq(bindings.scopeKind, "user"),
+				eq(bindings.scopeId, invoiceNinjaClaimDrafts.ownerId),
+				eq(bindings.connectionId, operations.connectionId),
+				isNull(bindings.retiredAt),
 			),
 		)
 		.innerJoin(invoices, eq(invoices.bindingId, bindings.id))
@@ -475,6 +509,7 @@ export async function syncPaidClaims() {
 			and(
 				isNull(invoiceNinjaClaimDrafts.paidSyncedAt),
 				eq(invoices.status, "paid"),
+				eq(invoices.deleted, false),
 			),
 		)
 		.limit(100);
@@ -487,17 +522,28 @@ export async function syncPaidClaims() {
 			.select()
 			.from(claims)
 			.where(and(eq(claims.id, row.claimId), eq(claims.ownerId, row.ownerId)));
+		if (!claim) continue;
+		if (claim.status !== "paid" && claim.status !== "void")
+			await setClaimStatusForOwner(row.ownerId, {
+				id: claim.id,
+				status: "paid",
+			});
+		// Advance only after the ledger mutation succeeds, so a failed write is retryable.
 		await db
 			.update(invoiceNinjaClaimDrafts)
 			.set({ paidSyncedAt: new Date() })
-			.where(eq(invoiceNinjaClaimDrafts.claimId, row.claimId));
-		if (!claim || claim.status === "paid" || claim.status === "void") continue;
-		await setClaimStatusForOwner(row.ownerId, { id: claim.id, status: "paid" });
+			.where(
+				and(
+					eq(invoiceNinjaClaimDrafts.claimId, row.claimId),
+					eq(invoiceNinjaClaimDrafts.ownerId, row.ownerId),
+				),
+			);
+		if (claim.status === "paid" || claim.status === "void") continue;
 		paid += 1;
 		const [updated] = await db
 			.select()
 			.from(claims)
-			.where(eq(claims.id, claim.id));
+			.where(and(eq(claims.id, claim.id), eq(claims.ownerId, row.ownerId)));
 		if (updated)
 			await emitLedgerWebhook(
 				row.ownerId,

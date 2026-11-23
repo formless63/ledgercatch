@@ -1,8 +1,23 @@
 version: 2
 updates:
+  - package-ecosystem: bun
+    directory: /
+    schedule: {interval: weekly}
+    groups:
+      compatible-updates:
+        update-types: [minor, patch]
+  - package-ecosystem: bun
+    directory: /extension
+    schedule: {interval: weekly}
+    groups:
+      compatible-updates:
+        update-types: [minor, patch]
   - package-ecosystem: github-actions
     directory: /
     schedule: {interval: weekly}
   - package-ecosystem: docker
     directory: /
     schedule: {interval: weekly}
+    ignore:
+      - dependency-name: node
+        update-types: ["version-update:semver-major"]

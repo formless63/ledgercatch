@@ -1,6 +1,6 @@
 # Install and configure
 
-Use Bun 1.4.2, Node 24.21.0, PostgreSQL 18 and an S3-compatible object store. App and worker are separate processes. Authentication is passwordless: SMTP magic links, GitHub OAuth or OIDC. Keep a stable `BETTER_AUTH_SECRET` and `APP_ENCRYPTION_KEY`; losing the latter makes encrypted connector/source credentials unreadable.
+Use Bun 1.4.5, Node 24.22.3, PostgreSQL 18 and an S3-compatible object store. App and worker are separate processes. Authentication is passwordless: SMTP magic links, GitHub OAuth or OIDC. Keep a stable `BETTER_AUTH_SECRET` and `APP_ENCRYPTION_KEY`; losing the latter makes encrypted connector/source credentials unreadable.
 
 Start with the isolated demo to verify the host. For a deployment, copy `.env.example` to ignored `.env`, configure explicit database/auth/public URL and storage settings, and set at least one sign-in provider. Set `ALLOWED_SIGNUP_EMAILS` to your permitted addresses or domains; empty permits only the first account. Generate fresh secrets with a cryptographic random generator. Do not use demo credentials.
 

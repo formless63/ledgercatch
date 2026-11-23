@@ -9013,7 +9013,7 @@ For casual chit-chat with others using the library:
 
 ----------------------------------------
 
-@hono/node-server@2.1.4
+@hono/node-server@2.1.11
 Declared license: "MIT"
 MIT License
 
@@ -9454,16 +9454,8 @@ Declared license: "Apache-2.0"
 
 ----------------------------------------
 
-@isaacs/cliui@9.0.0
+@isaacs/nonrecursive-glob-match@1.1.0
 Declared license: "BlueOak-1.0.0"
-Several modules are vendored under `./src`, which are used and
-distributed according to their respective licenses, each provided
-in the same directory as the code.
-
-Everything else is released under the following license.
-
-----
-
 # Blue Oak Model License
 
 Version 1.0.0
@@ -9477,7 +9469,7 @@ from liability.
 ## Acceptance
 
 In order to receive this license, you must agree to its
-rules. The rules of this license are both obligations
+rules.  The rules of this license are both obligations
 under that agreement and conditions to your license.
 You must not do anything with this software that triggers
 a rule that you cannot or will not follow.
@@ -9500,7 +9492,7 @@ changes, also gets the text of this license or a link to
 If anyone notifies you in writing that you have not
 complied with [Notices](#notices), you can keep your
 license by taking all practical steps to comply within 30
-days after the notice. If you do not do so, your license
+days after the notice.  If you do not do so, your license
 ends immediately.
 
 ## Patent
@@ -9515,10 +9507,10 @@ No contributor can revoke this license.
 
 ## No Liability
 
-**_As far as the law allows, this software comes as is,
+***As far as the law allows, this software comes as is,
 without any warranty or condition, and no contributor
 will be liable to anyone for any damages related to this
-software or this license, under any kind of legal claim._**
+software or this license, under any kind of legal claim.***
 
 
 ----------------------------------------
@@ -10226,7 +10218,7 @@ THE SOFTWARE.
 
 ----------------------------------------
 
-@modelcontextprotocol/sdk@1.32.1
+@modelcontextprotocol/sdk@1.32.2
 Declared license: "MIT"
 MIT License
 
@@ -32441,27 +32433,6 @@ SOFTWARE.
 
 ----------------------------------------
 
-foreground-child@3.3.1
-Declared license: "ISC"
-The ISC License
-
-Copyright (c) 2015-2023 Isaac Z. Schlueter and Contributors
-
-Permission to use, copy, modify, and/or distribute this software for any
-purpose with or without fee is hereby granted, provided that the above
-copyright notice and this permission notice appear in all copies.
-
-THE SOFTWARE IS PROVIDED "AS IS" AND THE AUTHOR DISCLAIMS ALL WARRANTIES
-WITH REGARD TO THIS SOFTWARE INCLUDING ALL IMPLIED WARRANTIES OF
-MERCHANTABILITY AND FITNESS. IN NO EVENT SHALL THE AUTHOR BE LIABLE FOR
-ANY SPECIAL, DIRECT, INDIRECT, OR CONSEQUENTIAL DAMAGES OR ANY DAMAGES
-WHATSOEVER RESULTING FROM LOSS OF USE, DATA OR PROFITS, WHETHER IN AN
-ACTION OF CONTRACT, NEGLIGENCE OR OTHER TORTIOUS ACTION, ARISING OUT OF OR
-IN CONNECTION WITH THE USE OR PERFORMANCE OF THIS SOFTWARE.
-
-
-----------------------------------------
-
 forwarded@0.2.0
 Declared license: "MIT"
 (The MIT License)
@@ -33257,7 +33228,7 @@ software or this license, under any kind of legal claim._**
 
 ----------------------------------------
 
-glob@11.1.0
+glob@14.0.6
 Declared license: "BlueOak-1.0.0"
 All packages under `src/` are licensed according to the terms in
 their respective `LICENSE` or `LICENSE.md` files.
@@ -34232,7 +34203,7 @@ OF THIS SOFTWARE, EVEN IF ADVISED OF THE POSSIBILITY OF SUCH DAMAGE.
 
 ----------------------------------------
 
-hono@4.13.13
+hono@4.13.21
 Declared license: "MIT"
 MIT License
 
@@ -35827,67 +35798,6 @@ ANY SPECIAL, DIRECT, INDIRECT, OR CONSEQUENTIAL DAMAGES OR ANY DAMAGES
 WHATSOEVER RESULTING FROM LOSS OF USE, DATA OR PROFITS, WHETHER IN AN
 ACTION OF CONTRACT, NEGLIGENCE OR OTHER TORTIOUS ACTION, ARISING OUT OF OR
 IN CONNECTION WITH THE USE OR PERFORMANCE OF THIS SOFTWARE.
-
-
-----------------------------------------
-
-jackspeak@4.2.3
-Declared license: "BlueOak-1.0.0"
-# Blue Oak Model License
-
-Version 1.0.0
-
-## Purpose
-
-This license gives everyone as much permission to work with
-this software as possible, while protecting contributors
-from liability.
-
-## Acceptance
-
-In order to receive this license, you must agree to its
-rules. The rules of this license are both obligations
-under that agreement and conditions to your license.
-You must not do anything with this software that triggers
-a rule that you cannot or will not follow.
-
-## Copyright
-
-Each contributor licenses you to do everything with this
-software that would otherwise infringe that contributor's
-copyright in it.
-
-## Notices
-
-You must ensure that everyone who gets a copy of
-any part of this software from you, with or without
-changes, also gets the text of this license or a link to
-<https://blueoakcouncil.org/license/1.0.0>.
-
-## Excuse
-
-If anyone notifies you in writing that you have not
-complied with [Notices](#notices), you can keep your
-license by taking all practical steps to comply within 30
-days after the notice. If you do not do so, your license
-ends immediately.
-
-## Patent
-
-Each contributor licenses you to do everything with this
-software that would otherwise infringe any patent claims
-they can license or become able to license.
-
-## Reliability
-
-No contributor can revoke this license.
-
-## No Liability
-
-**_As far as the law allows, this software comes as is,
-without any warranty or condition, and no contributor
-will be liable to anyone for any damages related to this
-software or this license, under any kind of legal claim._**
 
 
 ----------------------------------------
@@ -42161,7 +42071,7 @@ SOFTWARE OR THE USE OR OTHER DEALINGS IN THE SOFTWARE.
 
 ----------------------------------------
 
-minimatch@10.2.6
+minimatch@11.0.9
 Declared license: "BlueOak-1.0.0"
 # Blue Oak Model License
 
@@ -43351,75 +43261,6 @@ SOFTWARE.
 
 ----------------------------------------
 
-package-json-from-dist@1.0.1
-Declared license: "BlueOak-1.0.0"
-All packages under `src/` are licensed according to the terms in
-their respective `LICENSE` or `LICENSE.md` files.
-
-The remainder of this project is licensed under the Blue Oak
-Model License, as follows:
-
------
-
-# Blue Oak Model License
-
-Version 1.0.0
-
-## Purpose
-
-This license gives everyone as much permission to work with
-this software as possible, while protecting contributors
-from liability.
-
-## Acceptance
-
-In order to receive this license, you must agree to its
-rules.  The rules of this license are both obligations
-under that agreement and conditions to your license.
-You must not do anything with this software that triggers
-a rule that you cannot or will not follow.
-
-## Copyright
-
-Each contributor licenses you to do everything with this
-software that would otherwise infringe that contributor's
-copyright in it.
-
-## Notices
-
-You must ensure that everyone who gets a copy of
-any part of this software from you, with or without
-changes, also gets the text of this license or a link to
-<https://blueoakcouncil.org/license/1.0.0>.
-
-## Excuse
-
-If anyone notifies you in writing that you have not
-complied with [Notices](#notices), you can keep your
-license by taking all practical steps to comply within 30
-days after the notice.  If you do not do so, your license
-ends immediately.
-
-## Patent
-
-Each contributor licenses you to do everything with this
-software that would otherwise infringe any patent claims
-they can license or become able to license.
-
-## Reliability
-
-No contributor can revoke this license.
-
-## No Liability
-
-***As far as the law allows, this software comes as is,
-without any warranty or condition, and no contributor
-will be liable to anyone for any damages related to this
-software or this license, under any kind of legal claim.***
-
-
-----------------------------------------
-
 pako@1.0.11
 Declared license: "(MIT AND Zlib)"
 (The MIT License)
@@ -43689,7 +43530,7 @@ SOFTWARE.
 
 ----------------------------------------
 
-path-scurry@2.0.2
+path-scurry@3.0.0
 Declared license: "BlueOak-1.0.0"
 # Blue Oak Model License
 
@@ -45523,7 +45364,7 @@ WITH THE SOFTWARE OR THE USE OR OTHER DEALINGS IN THE SOFTWARE.
 
 ----------------------------------------
 
-qs@6.16.0
+qs@6.16.1
 Declared license: "BSD-3-Clause"
 BSD 3-Clause License
 
@@ -48206,7 +48047,7 @@ THE SOFTWARE IS PROVIDED "AS IS", WITHOUT WARRANTY OF ANY KIND, EXPRESS OR IMPLI
 
 ----------------------------------------
 
-seroval@1.6.9
+seroval@1.6.12
 Declared license: "MIT"
 MIT License Copyright (c) 2025 Alexis Munsayac <alexis.munsayac@gmail.com>
 
@@ -48565,28 +48406,6 @@ AUTHORS OR COPYRIGHT HOLDERS BE LIABLE FOR ANY CLAIM, DAMAGES OR OTHER
 LIABILITY, WHETHER IN AN ACTION OF CONTRACT, TORT OR OTHERWISE, ARISING FROM,
 OUT OF OR IN CONNECTION WITH THE SOFTWARE OR THE USE OR OTHER DEALINGS IN THE
 SOFTWARE.
-
-
-----------------------------------------
-
-signal-exit@4.1.0
-Declared license: "ISC"
-The ISC License
-
-Copyright (c) 2015-2023 Benjamin Coe, Isaac Z. Schlueter, and Contributors
-
-Permission to use, copy, modify, and/or distribute this software
-for any purpose with or without fee is hereby granted, provided
-that the above copyright notice and this permission notice
-appear in all copies.
-
-THE SOFTWARE IS PROVIDED "AS IS" AND THE AUTHOR DISCLAIMS ALL WARRANTIES
-WITH REGARD TO THIS SOFTWARE INCLUDING ALL IMPLIED WARRANTIES
-OF MERCHANTABILITY AND FITNESS. IN NO EVENT SHALL THE AUTHOR BE
-LIABLE FOR ANY SPECIAL, DIRECT, INDIRECT, OR CONSEQUENTIAL DAMAGES
-OR ANY DAMAGES WHATSOEVER RESULTING FROM LOSS OF USE, DATA OR PROFITS,
-WHETHER IN AN ACTION OF CONTRACT, NEGLIGENCE OR OTHER TORTIOUS ACTION,
-ARISING OUT OF OR IN CONNECTION WITH THE USE OR PERFORMANCE OF THIS SOFTWARE.
 
 
 ----------------------------------------

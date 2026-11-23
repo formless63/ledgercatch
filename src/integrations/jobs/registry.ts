@@ -49,11 +49,11 @@ import { defineJob, type JobDefinition, type JobHandlerContext } from "./types";
 const invoiceNinjaJobs = {
 	"invoice-ninja.operation": withAfter(
 		applicationInvoiceNinjaJobs["invoice-ninja.operation"],
-		syncPaidClaimsQuietly,
+		syncPaidClaimsAfterJob,
 	),
 	"invoice-ninja.receipt": withAfter(
 		applicationInvoiceNinjaJobs["invoice-ninja.receipt"],
-		syncPaidClaimsQuietly,
+		syncPaidClaimsAfterJob,
 	),
 };
 const webhookJobs = {
@@ -104,11 +104,11 @@ function withAfter<T extends JobDefinition<z.ZodType>>(
 		},
 	};
 }
-async function syncPaidClaimsQuietly() {
+async function syncPaidClaimsAfterJob() {
 	const { syncPaidClaims } = await import(
 		"../../features/automation/invoice-ninja.server"
 	);
-	await syncPaidClaims().catch(() => {});
+	await syncPaidClaims();
 }
 
 export const jobRegistry = {

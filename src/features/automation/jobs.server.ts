@@ -44,7 +44,7 @@ export async function handleAutomationTick() {
 		budgetAlerts += (
 			await evaluateBudgetsForOwner(ownerId).catch(() => ({ alerts: 0 }))
 		).alerts;
-	const claims = await syncPaidClaims().catch(() => ({ paid: 0 }));
+	const claims = await syncPaidClaims();
 	return { ...digests, budgetAlerts, claimsPaid: claims.paid };
 }
 

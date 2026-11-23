@@ -19,7 +19,7 @@ The screenshots show fictional demonstration data in the running application.
 
 ## Try the isolated demo
 
-Requires Docker Compose, Bun 1.4.2 and Node 24.21.0. This repository is standalone.
+Requires Docker Compose, Bun 1.4.5 and Node 24.22.3. This repository is standalone.
 
 ```sh
 bun install --frozen-lockfile

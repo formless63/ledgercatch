@@ -1033,7 +1033,7 @@
   },
   {
     "name": "@hono/node-server",
-    "version": "2.1.4",
+    "version": "2.1.11",
     "license": "MIT",
     "licenseTextIncluded": true
   },
@@ -1050,8 +1050,8 @@
     "licenseTextIncluded": true
   },
   {
-    "name": "@isaacs/cliui",
-    "version": "9.0.0",
+    "name": "@isaacs/nonrecursive-glob-match",
+    "version": "1.1.0",
     "license": "BlueOak-1.0.0",
     "licenseTextIncluded": true
   },
@@ -1165,7 +1165,7 @@
   },
   {
     "name": "@modelcontextprotocol/sdk",
-    "version": "1.32.1",
+    "version": "1.32.2",
     "license": "MIT",
     "licenseTextIncluded": true
   },
@@ -3726,12 +3726,6 @@
     "licenseTextIncluded": true
   },
   {
-    "name": "foreground-child",
-    "version": "3.3.1",
-    "license": "ISC",
-    "licenseTextIncluded": true
-  },
-  {
     "name": "forwarded",
     "version": "0.2.0",
     "license": "MIT",
@@ -3841,7 +3835,7 @@
   },
   {
     "name": "glob",
-    "version": "11.1.0",
+    "version": "14.0.6",
     "license": "BlueOak-1.0.0",
     "licenseTextIncluded": true
   },
@@ -4045,7 +4039,7 @@
   },
   {
     "name": "hono",
-    "version": "4.13.13",
+    "version": "4.13.21",
     "license": "MIT",
     "licenseTextIncluded": true
   },
@@ -4413,12 +4407,6 @@
     "name": "isexe",
     "version": "2.0.0",
     "license": "ISC",
-    "licenseTextIncluded": true
-  },
-  {
-    "name": "jackspeak",
-    "version": "4.2.3",
-    "license": "BlueOak-1.0.0",
     "licenseTextIncluded": true
   },
   {
@@ -5071,7 +5059,7 @@
   },
   {
     "name": "minimatch",
-    "version": "10.2.6",
+    "version": "11.0.9",
     "license": "BlueOak-1.0.0",
     "licenseTextIncluded": true
   },
@@ -5286,12 +5274,6 @@
     "licenseTextIncluded": true
   },
   {
-    "name": "package-json-from-dist",
-    "version": "1.0.1",
-    "license": "BlueOak-1.0.0",
-    "licenseTextIncluded": true
-  },
-  {
     "name": "pako",
     "version": "1.0.11",
     "license": "(MIT AND Zlib)",
@@ -5359,7 +5341,7 @@
   },
   {
     "name": "path-scurry",
-    "version": "2.0.2",
+    "version": "3.0.0",
     "license": "BlueOak-1.0.0",
     "licenseTextIncluded": true
   },
@@ -5617,7 +5599,7 @@
   },
   {
     "name": "qs",
-    "version": "6.16.0",
+    "version": "6.16.1",
     "license": "BSD-3-Clause",
     "licenseTextIncluded": true
   },
@@ -6007,7 +5989,7 @@
   },
   {
     "name": "seroval",
-    "version": "1.6.9",
+    "version": "1.6.12",
     "license": "MIT",
     "licenseTextIncluded": true
   },
@@ -6093,12 +6075,6 @@
     "name": "side-channel",
     "version": "1.1.1",
     "license": "MIT",
-    "licenseTextIncluded": true
-  },
-  {
-    "name": "signal-exit",
-    "version": "4.1.0",
-    "license": "ISC",
     "licenseTextIncluded": true
   },
   {
